@@ -16,6 +16,7 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Under Development entries are website-only: no release upload, download link, or download-stat entry until Justin changes their status.
 - Keep Under Development as a section heading only; do not put an under-development status label on each card.
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
+- Keep supplied ZIP names and original display labels. Do not append versions or replace the mod name in asset filenames. GitHub's own space-to-dot normalization is recorded from its returned asset metadata; internal ZIP folders remain unchanged.
 
 ## Available source material
 

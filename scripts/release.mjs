@@ -1,7 +1,7 @@
 import { stat, open, mkdir, copyFile } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { resolve } from 'node:path';
+import { resolve, basename } from 'node:path';
 import { at, project, readJson, writeJson, flags, validateVersion, gh, command } from './lib.mjs';
 
 function findRelease(repo, tag) {
@@ -42,7 +42,7 @@ async function main() {
     const notesPath = resolve(options.notes);
     if (!(await stat(notesPath)).isFile()) throw new Error('Notes must be a file.');
     const tag = `${mod.id}-v${options.version}`;
-    const assetName = `TPG_${mod.id.replaceAll('-', '_')}_${options.version}.zip`;
+    const assetName = basename(zipPath);
     const plan = { repo, mod: mod.id, title: mod.title, version: options.version, status: options.status, tag, assetName, zipPath, notesPath, ...await fingerprint(zipPath) };
     if (options['dry-run'] !== 'true') await writeJson(planPath, plan);
     console.log(JSON.stringify(plan, null, 2));
@@ -62,7 +62,7 @@ async function main() {
     await mkdir(at('.local/assets'), { recursive: true });
     const stagedAsset = at('.local/assets', plan.assetName);
     await copyFile(plan.zipPath, stagedAsset);
-    const args = ['release', 'create', plan.tag, stagedAsset, '--repo', repo, '--target', commit, '--draft', '--title', `${plan.title} ${plan.version}`, '--notes-file', plan.notesPath];
+    const args = ['release', 'create', plan.tag, `${stagedAsset}#${plan.assetName}`, '--repo', repo, '--target', commit, '--draft', '--title', `${plan.title} ${plan.version}`, '--notes-file', plan.notesPath];
     if (plan.status === 'alpha') args.push('--prerelease');
     gh(args, { inherit: true });
     console.log('Draft uploaded. Review in GitHub before npm run release:publish.');
@@ -72,7 +72,7 @@ async function main() {
   const release = findRelease(repo, plan.tag);
   if (!release) throw new Error('Prepared release was not found. Upload the draft first.');
   if (release.prerelease !== (plan.status === 'alpha')) throw new Error('Draft prerelease status differs from the prepared plan.');
-  const asset = release.assets.find(a => a.name === plan.assetName);
+  const asset = release.assets.find(a => a.name === plan.assetName || a.label === plan.assetName);
   if (!asset || asset.size !== plan.size) throw new Error('Uploaded ZIP is missing or its size differs.');
   if (asset.digest && asset.digest !== `sha256:${plan.sha256}`) throw new Error('Uploaded checksum does not match.');
   if (release.draft) gh(['release', 'edit', plan.tag, '--repo', repo, '--draft=false', '--latest=false'], { inherit: true });
@@ -80,7 +80,7 @@ async function main() {
   const publishedAsset = published.assets.find(a => a.id === asset.id);
   const mods = await readJson(at('data/mods.json'));
   const mod = mods.find(m => m.id === plan.mod);
-  Object.assign(mod, { version: plan.version, status: plan.status, statusConfirmed: true, github: { tag: plan.tag, assetName: publishedAsset.name, downloadUrl: publishedAsset.browser_download_url } });
+  Object.assign(mod, { version: plan.version, status: plan.status, statusConfirmed: true, sourceFilename: basename(plan.zipPath), github: { tag: plan.tag, assetName: publishedAsset.name, label: publishedAsset.label || basename(plan.zipPath), downloadUrl: publishedAsset.browser_download_url } });
   await writeJson(at('data/mods.json'), mods);
   console.log('Published release. Updated data/mods.json locally; commit and push that file to update the website.');
 }

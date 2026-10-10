@@ -56,7 +56,7 @@ npm run release:prepare -- --mod grizzly --version 1.0.17 --status released --zi
 npm run release:upload
 ```
 
-`prepare` checks ZIP signature/size, hashes the file, and saves a local plan under ignored `.local/`. `upload` checks the hash again and creates a **draft** with a predictable asset filename, e.g. `TPG_grizzly_1.0.17.zip`. It refuses any existing release with the same tag. Alpha status produces a prerelease. Source ZIPs remain untouched and are never committed.
+`prepare` checks ZIP signature/size, hashes the file, and saves a local plan under ignored `.local/`. `upload` checks the hash again and creates a **draft**, preserving the supplied ZIP filename and display label. GitHub normalizes spaces in asset filenames to dots; the returned actual name and URL are retained. The version stays in the release tag and title rather than being appended to the filename. Existing tags are refused. Alpha status produces a prerelease. ZIP contents remain untouched and are never committed.
 
 Review the draft and ZIP. When ready:
 
