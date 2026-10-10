@@ -79,7 +79,7 @@ The `Refresh download counts` GitHub workflow runs on a published release or whe
 
 ## Design work later
 
-Continue from `docs/DESIGN_NOTES.md`. Replace the plain catalog presentation, add actual screenshots, per-mod documentation URLs, and Quick View behavior, then set `launchReady` to true and remove the page's HTML `noindex` meta tag. Versions and download links can remain in the existing data files.
+Continue from `docs/DESIGN_NOTES.md`. The catalog now has Quick Look modals, Download Now actions and real `/mods/<id>/` detail pages. Popup and page facts come from `data/mod-info.json`, including per-mod source filenames; keep configured limits distinct from measured performance. Replace the plain presentation and add actual screenshots, then set `launchReady` to true and remove the page's HTML `noindex` meta tag. Versions and download links can remain in the existing data files.
 
 Under-development records have no GitHub release link and are excluded from download statistics. The release commands refuse these records. Photo Coming Soon placeholders remain until Justin supplies an actual screenshot or a verified free-use image of the actual object; generated and derived imagery is excluded.
 

@@ -8,7 +8,8 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Use Justin's actual DCS screenshots. Retain the three-container Grizzly firing hero; do not invent or redesign hardware.
 - AN/FPS-132 is a large fixed radar facility.
 - Prioritize Grizzly, Akıncı, Shahed-238.
-- Quick View remains in the tab, with background dim/blur, gallery, quick facts, download and More Info actions, keyboard/backdrop close.
+- Quick Look remains in the tab, with background dim/blur, a photo area, quick facts, Download Now and More Info actions, keyboard/backdrop close, and focus returned to its trigger. Photo Coming Soon remains until real images are supplied.
+- Each mod uses a repeating six-fact layout, adapted to its type (engagement range/projectile speed, aircraft flight limits, drone cruise/envelope, or static facility capabilities). Use supplied source files and manuals, distinguish declared/configured limits from measured performance, and leave unsupported facts unverified.
 - More Info navigates to a real URL such as `/mods/grizzly/`.
 - Site traffic comes from Cloudflare Web Analytics; download counts come from GitHub Release assets.
 - Only statuses explicitly confirmed by Justin are shown. Release versions come from the supplied ZIP entry.lua files, and download URLs come from GitHub.

@@ -37,10 +37,14 @@ Current confirmed inventory:
 
 The Under Development heading appears once for its section; individual cards have no status badge. All nine confirmed cards use Photo Coming Soon placeholders. No generated or derived imagery is used. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
 
+Quick Look opens an in-page modal with a dimmed, blurred base page and six type-specific facts per mod. Available releases have Download Now and More Info actions on both cards and popups. The nine More Info routes are real `/mods/<id>/` pages with the same facts, usage notes and included documentation where supplied. Escape, close-button and backdrop dismissal restore focus to the trigger. Quick Look falls back to the detail page when JavaScript or native dialog support is unavailable.
+
+The supplied FP-132 source is explicitly a non-functional static structure; no functional detection range is claimed. Drone range/endurance envelopes and declared speed limits are not represented as measured in-game performance. Facts and source filenames are retained in `data/mod-info.json`.
+
 Still to finish:
 
 - Original mockup and screenshot bundle import; visitor design intentionally deferred.
 - Actual DCS screenshots or verified free-use photographs of the actual objects, to replace Photo Coming Soon cards.
-- Detailed mod pages, final visitor design, and any future custom domain.
+- Final visitor design, expanded documentation, and any future custom domain.
 
 When resuming, use this checkout and repository rather than creating another project. Keep the existing Git integration, exact release tags, and design decisions in DESIGN_NOTES.md.
