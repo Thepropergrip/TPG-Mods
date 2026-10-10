@@ -4,7 +4,7 @@ const photo = () => '<div class="photo-placeholder">Photo Coming Soon</div>';
 const facts = info => `<dl class="facts">${(info.facts || []).map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>`;
 const download = mod => mod.status !== 'under-development' && mod.github ? `<a class="button primary" href="${escapeHtml(mod.github.downloadUrl)}">Download Now</a>` : '';
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
-const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.version)}</p>` : '';
+const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
 
 export function renderCatalog(mods, info) {
   const groups = [['released', 'Released'], ['alpha', 'Alpha Release Test Candidates'], ['under-development', 'Under Development']];
@@ -12,6 +12,7 @@ export function renderCatalog(mods, info) {
     const entries = mods.filter(m => m.statusConfirmed && m.status === status);
     if (!entries.length) return '';
     return `<section><h2>${heading}</h2><div class="catalog">${entries.map(mod => {
+      if (status === 'under-development') return `<article class="development-placeholder">${photo()}</article>`;
       const details = info[mod.id];
       return `<article>${photo()}<h3>${escapeHtml(mod.title)}</h3><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
     }).join('')}</div></section>`;
@@ -19,7 +20,7 @@ export function renderCatalog(mods, info) {
 }
 
 export function renderQuickLooks(mods, info) {
-  return mods.filter(m => m.statusConfirmed).map(mod => {
+  return mods.filter(m => m.statusConfirmed && m.status !== 'under-development').map(mod => {
     const details = info[mod.id];
     return `<template id="quick-${mod.id}"><p class="kicker">${escapeHtml(details.type)}</p><h2 id="quick-title-${mod.id}">${escapeHtml(mod.title)}</h2>${version(mod)}${photo()}<p>${escapeHtml(details.summary)}</p>${facts(details)}<p class="source-note">Figures from the supplied DCS mod settings and package notes. Declared limits and configured envelopes are distinct from tested performance.</p>${actions(mod)}</template>`;
   }).join('\n');

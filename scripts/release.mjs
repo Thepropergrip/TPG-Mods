@@ -43,7 +43,9 @@ async function main() {
     if (!(await stat(notesPath)).isFile()) throw new Error('Notes must be a file.');
     const tag = `${mod.id}-v${options.version}`;
     const assetName = basename(zipPath);
-    const plan = { repo, mod: mod.id, title: mod.title, version: options.version, status: options.status, tag, assetName, zipPath, notesPath, ...await fingerprint(zipPath) };
+    const publicVersion = options['public-version'] ?? (options.version === mod.version ? mod.publicVersion : null) ?? options.version;
+    validateVersion(publicVersion);
+    const plan = { repo, mod: mod.id, title: mod.title, version: options.version, publicVersion, status: options.status, tag, assetName, zipPath, notesPath, ...await fingerprint(zipPath) };
     if (options['dry-run'] !== 'true') await writeJson(planPath, plan);
     console.log(JSON.stringify(plan, null, 2));
     console.log(options['dry-run'] === 'true' ? 'Dry run only; no plan saved and no upload performed.' : 'Prepared locally. Next: npm run release:upload');
@@ -62,7 +64,7 @@ async function main() {
     await mkdir(at('.local/assets'), { recursive: true });
     const stagedAsset = at('.local/assets', plan.assetName);
     await copyFile(plan.zipPath, stagedAsset);
-    const args = ['release', 'create', plan.tag, `${stagedAsset}#${plan.assetName}`, '--repo', repo, '--target', commit, '--draft', '--title', `${plan.title} ${plan.version}`, '--notes-file', plan.notesPath];
+    const args = ['release', 'create', plan.tag, `${stagedAsset}#${plan.assetName}`, '--repo', repo, '--target', commit, '--draft', '--title', `${plan.title} ${plan.publicVersion ?? plan.version}`, '--notes-file', plan.notesPath];
     if (plan.status === 'alpha') args.push('--prerelease');
     gh(args, { inherit: true });
     console.log('Draft uploaded. Review in GitHub before npm run release:publish.');
@@ -80,7 +82,7 @@ async function main() {
   const publishedAsset = published.assets.find(a => a.id === asset.id);
   const mods = await readJson(at('data/mods.json'));
   const mod = mods.find(m => m.id === plan.mod);
-  Object.assign(mod, { version: plan.version, status: plan.status, statusConfirmed: true, sourceFilename: basename(plan.zipPath), github: { tag: plan.tag, assetName: publishedAsset.name, label: publishedAsset.label || basename(plan.zipPath), downloadUrl: publishedAsset.browser_download_url } });
+  Object.assign(mod, { version: plan.version, publicVersion: plan.publicVersion ?? plan.version, status: plan.status, statusConfirmed: true, sourceFilename: basename(plan.zipPath), github: { tag: plan.tag, assetName: publishedAsset.name, label: publishedAsset.label || basename(plan.zipPath), downloadUrl: publishedAsset.browser_download_url } });
   await writeJson(at('data/mods.json'), mods);
   console.log('Published release. Updated data/mods.json locally; commit and push that file to update the website.');
 }

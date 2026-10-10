@@ -71,6 +71,8 @@ Publishing checks the uploaded size and GitHub checksum when available, publishe
 
 Every new version gets a new tag, such as `grizzly-v1.0.17`. Existing releases and assets are retained. The final visitor design can consume `/data/mods.json` and `/data/downloads.json` without rebuilding this infrastructure.
 
+When a package contains an internal build suffix, pass its verified public version with `--public-version`, for example `--version 1.0.23-ready-cell-state --public-version 1.0.23`. The full package version remains in the tag; release titles and website version labels use the public version. Without an override, the supplied version is preserved, including alpha version suffixes.
+
 ## Statistics
 
 Builds fetch all release pages, aggregate ZIP download counts by mod-specific tags, exclude drafts, and track the exact configured current asset. API failures produce unknown counts or a marked stale snapshot, never fake zeroes. These are file download counts, not installations or unique people.
@@ -81,7 +83,7 @@ The `Refresh download counts` GitHub workflow runs on a published release or whe
 
 Continue from `docs/DESIGN_NOTES.md`. The catalog now has Quick Look modals, Download Now actions and real `/mods/<id>/` detail pages. Popup and page facts come from `data/mod-info.json`, including per-mod source filenames; keep configured limits distinct from measured performance. Replace the plain presentation and add actual screenshots, then set `launchReady` to true and remove the page's HTML `noindex` meta tag. Versions and download links can remain in the existing data files.
 
-Under-development records have no GitHub release link and are excluded from download statistics. The release commands refuse these records. Photo Coming Soon placeholders remain until Justin supplies an actual screenshot or a verified free-use image of the actual object; generated and derived imagery is excluded.
+Under-development records have no GitHub release link and are excluded from download statistics. Their website section contains anonymous Photo Coming Soon cards only, with no names, descriptions, actions, detail pages or published data records. The release commands refuse these records. Photo Coming Soon placeholders remain until Justin supplies an actual screenshot or a verified free-use image of the actual object; generated and derived imagery is excluded.
 
 ## Official references
 

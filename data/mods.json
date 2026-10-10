@@ -1,7 +1,7 @@
 [
   {
     "id": "grizzly",
-    "title": "TPG Grizzly SHORAD",
+    "title": "TPG Containerized SHORAD",
     "status": "released",
     "statusConfirmed": true,
     "featured": true,
@@ -14,7 +14,8 @@
     },
     "sourceFilename": "TPG Containerized SHORAD.zip",
     "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "imagePlaceholder": "Photo Coming Soon",
+    "publicVersion": "1.0.23"
   },
   {
     "id": "akinci",

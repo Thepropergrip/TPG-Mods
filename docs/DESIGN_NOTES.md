@@ -15,7 +15,8 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Only statuses explicitly confirmed by Justin are shown. Release versions come from the supplied ZIP entry.lua files, and download URLs come from GitHub.
 - No generated or derived object imagery. Use actual DCS screenshots or a verified free-use photograph of the actual object. If missing, ask for the required photo and leave a Photo Coming Soon placeholder card.
 - Under Development entries are website-only: no release upload, download link, or download-stat entry until Justin changes their status.
-- Keep Under Development as a section heading only; do not put an under-development status label on each card.
+- Under Development is a section heading above anonymous Photo Coming Soon cards. Do not show development mod names, descriptions, type labels, popup buttons or detail links. Exclude their identities from published JSON and generated routes; source records remain ready for later work.
+- Use the supplied package name TPG Containerized SHORAD in public titles. Grizzly is an internal historical identifier, retained only for existing release tags/routes. Show its public version 1.0.23 rather than internal build wording. Do not describe simulated sensors as onboard physical hardware.
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
 - Keep supplied ZIP names and original display labels. Do not append versions or replace the mod name in asset filenames. GitHub's own space-to-dot normalization is recorded from its returned asset metadata; internal ZIP folders remain unchanged.
 

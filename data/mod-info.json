@@ -1,7 +1,7 @@
 {
   "grizzly": {
     "type": "Containerized surface-to-air missile system",
-    "summary": "An eight-cell container launcher with its own radar and SHORAD interceptor.",
+    "summary": "A containerized air-defense launcher for DCS World.",
     "facts": [
       [
         "Engagement range",

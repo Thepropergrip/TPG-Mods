@@ -25,7 +25,7 @@ Current confirmed inventory:
 
 | Mod | Status | Package version | Download |
 | --- | --- | --- | --- |
-| Grizzly / Containerized SHORAD | Released | 1.0.23-ready-cell-state | GitHub Release |
+| TPG Containerized SHORAD | Released | 1.0.23 | GitHub Release |
 | V2 | Released | 1.0 | GitHub Release |
 | 12 Pounder Cannon | Released | 1.2 | GitHub Release |
 | APKWS VSHORAD | Alpha release test candidate | 0.1.4 | GitHub prerelease |
@@ -35,9 +35,9 @@ Current confirmed inventory:
 | Anduril Rail | Under Development | — | Excluded |
 | FP1 Drone | Under Development | — | Excluded |
 
-The Under Development heading appears once for its section; individual cards have no status badge. All nine confirmed cards use Photo Coming Soon placeholders. No generated or derived imagery is used. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
+The inventory above is retained for maintenance. On the website, the Under Development heading appears once above four anonymous Photo Coming Soon cards, with no names, descriptions or actions. Development identities are excluded from published JSON and detail pages. All nine cards use Photo Coming Soon placeholders. No generated or derived imagery is used. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
 
-Quick Look opens an in-page modal with a dimmed, blurred base page and six type-specific facts per mod. Available releases have Download Now and More Info actions on both cards and popups. The nine More Info routes are real `/mods/<id>/` pages with the same facts, usage notes and included documentation where supplied. Escape, close-button and backdrop dismissal restore focus to the trigger. Quick Look falls back to the detail page when JavaScript or native dialog support is unavailable.
+Quick Look opens an in-page modal with a dimmed, blurred base page and six type-specific facts for each of the five available mods. Available releases have Download Now and More Info actions on both cards and popups. Their five More Info routes are real `/mods/<id>/` pages with the same facts, usage notes and included documentation where supplied. Close-button and backdrop handling were checked with a DOM harness; native Escape and focus containment still need browser verification. Quick Look falls back to the detail page when JavaScript or native dialog support is unavailable.
 
 The supplied FP-132 source is explicitly a non-functional static structure; no functional detection range is claimed. Drone range/endurance envelopes and declared speed limits are not represented as measured in-game performance. Facts and source filenames are retained in `data/mod-info.json`.
 
