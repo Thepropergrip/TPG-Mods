@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T23:29:45.831Z",
+  "generatedAt": "2026-10-10T23:30:01.570Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -60,7 +60,15 @@
     "apkws-vshorad": {
       "currentDownloads": null,
       "lifetimeDownloads": 0,
-      "versions": []
+      "versions": [
+        {
+          "tag": "apkws-vshorad-v0.1.4",
+          "assetName": "TPG_apkws_vshorad_0.1.4.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG_apkws_vshorad_0.1.4.zip",
+          "prerelease": true
+        }
+      ]
     },
     "sahin-cuas": {
       "currentDownloads": null,
