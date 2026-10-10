@@ -14,6 +14,7 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Only statuses explicitly confirmed by Justin are shown. Release versions come from the supplied ZIP entry.lua files, and download URLs come from GitHub.
 - No generated or derived object imagery. Use actual DCS screenshots or a verified free-use photograph of the actual object. If missing, ask for the required photo and leave a Photo Coming Soon placeholder card.
 - Under Development entries are website-only: no release upload, download link, or download-stat entry until Justin changes their status.
+- Keep Under Development as a section heading only; do not put an under-development status label on each card.
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
 
 ## Available source material
