@@ -22,7 +22,15 @@ $taskExistingResponse = Invoke-WebRequest -Headers $taskHeaders -Uri ($taskBaseU
 if ($taskExistingResponse.StatusCode -eq 200) {
     $taskExisting = ($taskExistingResponse.Content | ConvertFrom-Json).result
     if ($taskExisting.source.type -ne 'github' -or $taskExisting.source.config.repo_id -ne [string]$taskRepository.id) { throw 'Existing Pages project points to another source. No changes made.' }
-    Write-Output ('Pages project already connected: https://' + $taskExisting.subdomain)
+    $taskPatch = @{
+        build_config = @{ build_command = $taskConfig.cloudflare.buildCommand; destination_dir = $taskConfig.cloudflare.outputDirectory; root_dir = '' }
+        deployment_configs = @{
+            production = @{ env_vars = @{ NODE_VERSION = @{ type = 'plain_text'; value = '24' } } }
+            preview = @{ env_vars = @{ NODE_VERSION = @{ type = 'plain_text'; value = '24' } } }
+        }
+    } | ConvertTo-Json -Depth 8
+    $taskUpdated = Invoke-RestMethod -Headers $taskHeaders -Uri ($taskBaseUri + '/' + $taskName) -Method Patch -ContentType 'application/json' -Body $taskPatch
+    Write-Output ('Verified source and applied prepared build settings: https://' + $taskUpdated.result.subdomain)
     return
 }
 if ($taskExistingResponse.StatusCode -ne 404) { throw ('Unable to check Pages project: HTTP ' + $taskExistingResponse.StatusCode) }

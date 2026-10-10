@@ -1,7 +1,7 @@
 import { stat, open, mkdir, copyFile } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { resolve, basename } from 'node:path';
+import { resolve } from 'node:path';
 import { at, project, readJson, writeJson, flags, validateVersion, gh, command } from './lib.mjs';
 
 export async function fingerprint(path) {
@@ -34,9 +34,9 @@ async function main() {
     const tag = `${mod.id}-v${options.version}`;
     const assetName = `TPG_${mod.id.replaceAll('-', '_')}_${options.version}.zip`;
     const plan = { repo, mod: mod.id, title: mod.title, version: options.version, status: options.status, tag, assetName, zipPath, notesPath, ...await fingerprint(zipPath) };
-    await writeJson(planPath, plan);
+    if (options['dry-run'] !== 'true') await writeJson(planPath, plan);
     console.log(JSON.stringify(plan, null, 2));
-    console.log('Prepared locally. Next: npm run release:upload');
+    console.log(options['dry-run'] === 'true' ? 'Dry run only; no plan saved and no upload performed.' : 'Prepared locally. Next: npm run release:upload');
     return;
   }
   const plan = await readJson(planPath);

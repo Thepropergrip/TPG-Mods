@@ -43,5 +43,5 @@ export function validateMods(mods) {
   }
 }
 export function validateVersion(version) {
-  if (!/^\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(version)) throw new Error('Version must be X.Y.Z or X.Y.Z-alpha.N, using the actual mod version.');
+  if (!/^\d+(?:\.\d+){0,3}(?:-[A-Za-z0-9.-]+)?$/.test(version)) throw new Error('Use the actual numeric mod version, optionally with an alpha/beta suffix.');
 }
