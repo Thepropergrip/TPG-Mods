@@ -1,8 +1,141 @@
 [
-  { "id": "grizzly", "title": "TPG Grizzly SHORAD", "status": "released", "statusConfirmed": false, "featured": true, "version": null, "github": null },
-  { "id": "akinci", "title": "TPG Akıncı", "status": "released", "statusConfirmed": false, "featured": true, "version": null, "github": null },
-  { "id": "shahed-238", "title": "Shahed-238", "status": "released", "statusConfirmed": false, "featured": true, "version": null, "github": null },
-  { "id": "fps-132", "title": "AN/FPS-132 Radar", "status": "alpha", "statusConfirmed": false, "featured": false, "version": null, "github": null },
-  { "id": "mam-t", "title": "MAM-T", "status": "alpha", "statusConfirmed": false, "featured": false, "version": null, "github": null },
-  { "id": "iha-230", "title": "IHA-230 / TRG-230", "status": "alpha", "statusConfirmed": false, "featured": false, "version": null, "github": null }
+  {
+    "id": "grizzly",
+    "title": "TPG Grizzly SHORAD",
+    "status": "released",
+    "statusConfirmed": true,
+    "featured": true,
+    "version": null,
+    "github": null,
+    "sourceFilename": "TPG Containerized SHORAD.zip",
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "akinci",
+    "title": "TPG Akıncı",
+    "status": "under-development",
+    "statusConfirmed": true,
+    "featured": true,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "shahed-238",
+    "title": "Shahed-238",
+    "status": "released",
+    "statusConfirmed": false,
+    "featured": true,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "fps-132",
+    "title": "TPG FP-132 Radar",
+    "status": "under-development",
+    "statusConfirmed": true,
+    "featured": false,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "mam-t",
+    "title": "MAM-T",
+    "status": "alpha",
+    "statusConfirmed": false,
+    "featured": false,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "iha-230",
+    "title": "IHA-230 / TRG-230",
+    "status": "alpha",
+    "statusConfirmed": false,
+    "featured": false,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "v2",
+    "title": "TPG V2",
+    "featured": false,
+    "version": null,
+    "github": null,
+    "status": "released",
+    "statusConfirmed": true,
+    "sourceFilename": "TPG V2.zip",
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "12-pounder-cannon",
+    "title": "TPG 12 Pounder Cannon",
+    "featured": false,
+    "version": null,
+    "github": null,
+    "status": "released",
+    "statusConfirmed": true,
+    "sourceFilename": "TPG_12_Pounder_Cannon.zip",
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "apkws-vshorad",
+    "title": "TPG APKWS VSHORAD",
+    "featured": false,
+    "version": null,
+    "github": null,
+    "status": "alpha",
+    "statusConfirmed": true,
+    "sourceFilename": "TPG APKWS VSHORAD.zip",
+    "releaseLabel": "Alpha release test candidate",
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "sahin-cuas",
+    "title": "TPG SAHIN 40mm C-UAS",
+    "featured": false,
+    "version": null,
+    "github": null,
+    "status": "alpha",
+    "statusConfirmed": true,
+    "sourceFilename": "TPG_SAHIN_CUAS.zip",
+    "releaseLabel": "Alpha release test candidate",
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "anduril-rail",
+    "title": "TPG Anduril Rail",
+    "featured": false,
+    "status": "under-development",
+    "statusConfirmed": true,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "fp1-drone",
+    "title": "TPG FP1 Drone",
+    "featured": false,
+    "status": "under-development",
+    "statusConfirmed": true,
+    "version": null,
+    "github": null,
+    "image": null,
+    "imagePlaceholder": "Photo Coming Soon"
+  }
 ]

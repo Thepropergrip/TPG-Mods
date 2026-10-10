@@ -2,7 +2,7 @@ import { at, project, readJson, writeJson } from './lib.mjs';
 
 export function aggregate(releases, mods, generatedAt = new Date().toISOString()) {
   const result = { generatedAt, source: 'github-release-assets', status: 'ok', mods: {} };
-  for (const mod of mods) {
+  for (const mod of mods.filter(m => m.status !== 'under-development')) {
     const versions = [];
     for (const release of releases) {
       if (release.draft || !release.tag_name.startsWith(`${mod.id}-v`)) continue;
@@ -30,12 +30,12 @@ export async function fetchReleases(config) {
   }
 }
 export async function loadStats(config) {
-  const mods = await readJson(at('data/mods.json'));
+  const mods = (await readJson(at('data/mods.json'))).filter(m => m.status !== 'under-development');
   try { return aggregate(await fetchReleases(config), mods); }
   catch (error) {
     try {
       const cached = await readJson(at('data/downloads.json'));
-      if (cached.status === 'ok' || cached.status === 'stale') return { ...cached, status: 'stale', warning: error.message };
+      if (cached.status === 'ok' || cached.status === 'stale') return { ...cached, status: 'stale', warning: error.message, mods: Object.fromEntries(mods.map(m => [m.id, cached.mods[m.id] ?? { currentDownloads: null, lifetimeDownloads: null, versions: [] }])) };
     } catch { /* No prior successful stats snapshot. */ }
     return { generatedAt: null, source: 'github-release-assets', status: 'unavailable', warning: error.message, mods: Object.fromEntries(mods.map(m => [m.id, { currentDownloads: null, lifetimeDownloads: null, versions: [] }])) };
   }

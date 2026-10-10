@@ -14,6 +14,12 @@ test('a missing current asset is unknown, not falsely zero', () => {
   const stats = aggregate([], [{ id: 'grizzly', github: { tag: 'grizzly-v9.0.0', assetName: 'missing.zip' } }]);
   assert.equal(stats.mods.grizzly.currentDownloads, null);
 });
+test('under-development entries stay out of download counts and reject download links', () => {
+  const mod = { id: 'akinci', status: 'under-development', github: null };
+  validateMods([mod]);
+  assert.equal(Object.hasOwn(aggregate([], [mod]).mods, 'akinci'), false);
+  assert.throws(() => validateMods([{ ...mod, version: '1.0', github: { tag: 'akinci-v1.0', assetName: 'mod.zip', downloadUrl: 'https://example.test/mod.zip' } }]));
+});
 test('invalid IDs, duplicate IDs, incomplete releases and invented version formats are rejected', () => {
   assert.throws(() => validateMods([{ id: '../oops', status: 'released' }]));
   assert.throws(() => validateMods([{ id: 'grizzly', status: 'released' }, { id: 'grizzly', status: 'released' }]));

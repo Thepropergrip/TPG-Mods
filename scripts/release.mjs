@@ -25,6 +25,7 @@ async function main() {
     const mods = await readJson(at('data/mods.json'));
     const mod = mods.find(m => m.id === options.mod);
     if (!mod) throw new Error('Choose a mod ID from data/mods.json.');
+    if (mod.status === 'under-development') throw new Error('This mod is excluded from downloads while under development. Change its confirmed status before preparing a release.');
     validateVersion(options.version || '');
     if (!['released', 'alpha'].includes(options.status)) throw new Error('Provide --status released or --status alpha.');
     if (!options.zip || !options.notes) throw new Error('Provide --zip path and --notes path.');
@@ -41,6 +42,8 @@ async function main() {
   }
   const plan = await readJson(planPath);
   if (plan.repo !== repo) throw new Error('The prepared release belongs to another repository.');
+  const plannedMod = (await readJson(at('data/mods.json'))).find(m => m.id === plan.mod);
+  if (!plannedMod || plannedMod.status === 'under-development') throw new Error('The prepared mod is absent or excluded from downloads.');
   gh(['auth', 'status']);
   if (action === 'upload') {
     const actual = await fingerprint(plan.zipPath);
