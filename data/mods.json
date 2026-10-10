@@ -5,8 +5,12 @@
     "status": "released",
     "statusConfirmed": true,
     "featured": true,
-    "version": null,
-    "github": null,
+    "version": "1.0.23-ready-cell-state",
+    "github": {
+      "tag": "grizzly-v1.0.23-ready-cell-state",
+      "assetName": "TPG_grizzly_1.0.23-ready-cell-state.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG_grizzly_1.0.23-ready-cell-state.zip"
+    },
     "sourceFilename": "TPG Containerized SHORAD.zip",
     "image": null,
     "imagePlaceholder": "Photo Coming Soon"
@@ -70,8 +74,12 @@
     "id": "v2",
     "title": "TPG V2",
     "featured": false,
-    "version": null,
-    "github": null,
+    "version": "1.0",
+    "github": {
+      "tag": "v2-v1.0",
+      "assetName": "TPG_v2_1.0.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/v2-v1.0/TPG_v2_1.0.zip"
+    },
     "status": "released",
     "statusConfirmed": true,
     "sourceFilename": "TPG V2.zip",
@@ -82,8 +90,12 @@
     "id": "12-pounder-cannon",
     "title": "TPG 12 Pounder Cannon",
     "featured": false,
-    "version": null,
-    "github": null,
+    "version": "1.2",
+    "github": {
+      "tag": "12-pounder-cannon-v1.2",
+      "assetName": "TPG_12_pounder_cannon_1.2.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_pounder_cannon_1.2.zip"
+    },
     "status": "released",
     "statusConfirmed": true,
     "sourceFilename": "TPG_12_Pounder_Cannon.zip",
@@ -94,8 +106,12 @@
     "id": "apkws-vshorad",
     "title": "TPG APKWS VSHORAD",
     "featured": false,
-    "version": null,
-    "github": null,
+    "version": "0.1.4",
+    "github": {
+      "tag": "apkws-vshorad-v0.1.4",
+      "assetName": "TPG_apkws_vshorad_0.1.4.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG_apkws_vshorad_0.1.4.zip"
+    },
     "status": "alpha",
     "statusConfirmed": true,
     "sourceFilename": "TPG APKWS VSHORAD.zip",
@@ -107,8 +123,12 @@
     "id": "sahin-cuas",
     "title": "TPG SAHIN 40mm C-UAS",
     "featured": false,
-    "version": null,
-    "github": null,
+    "version": "1.0.34",
+    "github": {
+      "tag": "sahin-cuas-v1.0.34",
+      "assetName": "TPG_sahin_cuas_1.0.34.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_sahin_cuas_1.0.34.zip"
+    },
     "status": "alpha",
     "statusConfirmed": true,
     "sourceFilename": "TPG_SAHIN_CUAS.zip",

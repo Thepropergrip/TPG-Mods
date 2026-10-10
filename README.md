@@ -1,6 +1,6 @@
 # TPG Mods — infrastructure prepared
 
-This checkout prepares the GitHub Releases and Cloudflare Pages pipeline. The visitor design remains open. `site/` contains only a holding page; replace it when design work begins. `launchReady` is false, so the build discourages search indexing. This is not access control: a deployed holding page is publicly reachable.
+This checkout prepares the GitHub Releases and Cloudflare Pages pipeline. The visitor design remains open. `site/` contains a plain catalog with Photo Coming Soon placeholders; replace its presentation when design work begins. Only confirmed inventory is shown. `launchReady` is false, so the build discourages search indexing. This is not access control: the deployed catalog is publicly reachable.
 
 ## Routine commands
 
@@ -79,7 +79,9 @@ The `Refresh download counts` GitHub workflow runs on a published release or whe
 
 ## Design work later
 
-Continue from `docs/DESIGN_NOTES.md`. Replace the holding page, add the actual screenshots, per-mod documentation URLs, and Quick View behavior, then set `launchReady` to true and remove the holding page's HTML `noindex` meta tag. Versions and download links can remain in the existing data files.
+Continue from `docs/DESIGN_NOTES.md`. Replace the plain catalog presentation, add actual screenshots, per-mod documentation URLs, and Quick View behavior, then set `launchReady` to true and remove the page's HTML `noindex` meta tag. Versions and download links can remain in the existing data files.
+
+Under-development records have no GitHub release link and are excluded from download statistics. The release commands refuse these records. Photo Coming Soon placeholders remain until Justin supplies an actual screenshot or a verified free-use image of the actual object; generated and derived imagery is excluded.
 
 ## Official references
 
