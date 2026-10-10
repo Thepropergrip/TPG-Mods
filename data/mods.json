@@ -1,0 +1,8 @@
+[
+  { "id": "grizzly", "title": "TPG Grizzly SHORAD", "status": "released", "statusConfirmed": false, "featured": true, "version": null, "github": null },
+  { "id": "akinci", "title": "TPG Akıncı", "status": "released", "statusConfirmed": false, "featured": true, "version": null, "github": null },
+  { "id": "shahed-238", "title": "Shahed-238", "status": "released", "statusConfirmed": false, "featured": true, "version": null, "github": null },
+  { "id": "fps-132", "title": "AN/FPS-132 Radar", "status": "alpha", "statusConfirmed": false, "featured": false, "version": null, "github": null },
+  { "id": "mam-t", "title": "MAM-T", "status": "alpha", "statusConfirmed": false, "featured": false, "version": null, "github": null },
+  { "id": "iha-230", "title": "IHA-230 / TRG-230", "status": "alpha", "statusConfirmed": false, "featured": false, "version": null, "github": null }
+]

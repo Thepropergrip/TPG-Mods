@@ -1,0 +1,11 @@
+{
+  "github": { "owner": "Thepropergrip", "repo": "TPG-Mods" },
+  "cloudflare": {
+    "projectName": "tpg-mods",
+    "productionBranch": "main",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "deploymentMode": "git-integration"
+  },
+  "launchReady": false
+}

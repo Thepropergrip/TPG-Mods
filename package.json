@@ -1,0 +1,17 @@
+{
+  "name": "tpg-mods",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/pipeline.test.mjs",
+    "build": "node scripts/build.mjs",
+    "github:setup": "node scripts/setup-github.mjs",
+    "release:prepare": "node scripts/release.mjs prepare",
+    "release:upload": "node scripts/release.mjs upload",
+    "release:publish": "node scripts/release.mjs publish",
+    "stats:refresh": "node scripts/stats.mjs"
+  }
+}

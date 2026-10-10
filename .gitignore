@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.local/
+.tools/
+.env
+.env.*
+!.env.example
+*.zip
+*.7z
+*.rar
+*.exe
+*.msi
+*.blend
+*.edm
+Thumbs.db
