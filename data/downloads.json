@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T23:29:25.379Z",
+  "generatedAt": "2026-10-10T23:29:35.880Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -47,7 +47,15 @@
     "12-pounder-cannon": {
       "currentDownloads": null,
       "lifetimeDownloads": 0,
-      "versions": []
+      "versions": [
+        {
+          "tag": "12-pounder-cannon-v1.2",
+          "assetName": "TPG_12_pounder_cannon_1.2.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_pounder_cannon_1.2.zip",
+          "prerelease": false
+        }
+      ]
     },
     "apkws-vshorad": {
       "currentDownloads": null,
