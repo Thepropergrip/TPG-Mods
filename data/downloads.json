@@ -1,24 +1,22 @@
 {
-  "generatedAt": "2026-10-10T23:23:39.128Z",
+  "generatedAt": "2026-10-10T23:29:25.379Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
     "grizzly": {
       "currentDownloads": null,
       "lifetimeDownloads": 0,
-      "versions": []
-    },
-    "akinci": {
-      "currentDownloads": null,
-      "lifetimeDownloads": 0,
-      "versions": []
+      "versions": [
+        {
+          "tag": "grizzly-v1.0.23-ready-cell-state",
+          "assetName": "TPG_grizzly_1.0.23-ready-cell-state.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG_grizzly_1.0.23-ready-cell-state.zip",
+          "prerelease": false
+        }
+      ]
     },
     "shahed-238": {
-      "currentDownloads": null,
-      "lifetimeDownloads": 0,
-      "versions": []
-    },
-    "fps-132": {
       "currentDownloads": null,
       "lifetimeDownloads": 0,
       "versions": []
@@ -29,6 +27,34 @@
       "versions": []
     },
     "iha-230": {
+      "currentDownloads": null,
+      "lifetimeDownloads": 0,
+      "versions": []
+    },
+    "v2": {
+      "currentDownloads": null,
+      "lifetimeDownloads": 0,
+      "versions": [
+        {
+          "tag": "v2-v1.0",
+          "assetName": "TPG_v2_1.0.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/v2-v1.0/TPG_v2_1.0.zip",
+          "prerelease": false
+        }
+      ]
+    },
+    "12-pounder-cannon": {
+      "currentDownloads": null,
+      "lifetimeDownloads": 0,
+      "versions": []
+    },
+    "apkws-vshorad": {
+      "currentDownloads": null,
+      "lifetimeDownloads": 0,
+      "versions": []
+    },
+    "sahin-cuas": {
       "currentDownloads": null,
       "lifetimeDownloads": 0,
       "versions": []
