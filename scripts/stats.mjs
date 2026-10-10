@@ -30,7 +30,7 @@ export async function fetchReleases(config) {
   }
 }
 export async function loadStats(config) {
-  const mods = (await readJson(at('data/mods.json'))).filter(m => m.status !== 'under-development');
+  const mods = (await readJson(at('data/mods.json'))).filter(m => m.statusConfirmed && m.github && ['released', 'alpha'].includes(m.status));
   try { return aggregate(await fetchReleases(config), mods); }
   catch (error) {
     try {
