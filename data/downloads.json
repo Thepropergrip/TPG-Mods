@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T23:30:01.570Z",
+  "generatedAt": "2026-10-10T23:30:19.415Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -73,7 +73,15 @@
     "sahin-cuas": {
       "currentDownloads": null,
       "lifetimeDownloads": 0,
-      "versions": []
+      "versions": [
+        {
+          "tag": "sahin-cuas-v1.0.34",
+          "assetName": "TPG_sahin_cuas_1.0.34.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_sahin_cuas_1.0.34.zip",
+          "prerelease": true
+        }
+      ]
     }
   }
 }
