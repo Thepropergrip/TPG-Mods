@@ -45,6 +45,8 @@ Use **Git integration** with this repository, not a new Direct Upload project. G
 
 Account sign-in and GitHub App authorization happen in Cloudflare. Enable the project's Web Analytics after creating it; Cloudflare adds the beacon on a subsequent deployment. A custom domain can wait. No R2 is configured and there is no Google Drive download integration.
 
+After authorizing Cloudflare's GitHub App for this repository, `pwsh -File scripts/setup-cloudflare.ps1` creates the project with these settings through the official API. It uses Wrangler's existing login and keeps the credential in process memory. It refuses an existing project connected to a different repository. If your Cloudflare login is missing, use `npm exec --yes --package wrangler@4 -- wrangler login --scopes account:read user:read pages:write --use-keyring` first.
+
 ## Prepare and upload an actual release
 
 Use the actual version and your existing release notes. The following values are illustrative and do not claim that this build exists:
