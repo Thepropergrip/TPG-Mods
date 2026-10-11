@@ -20,6 +20,7 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
 - Keep supplied ZIP names and original display labels. Do not append versions or replace the mod name in asset filenames. GitHub's own space-to-dot normalization is recorded from its returned asset metadata; internal ZIP folders remain unchanged.
 - Kit form 10029231 / UID 19030fcb90 collects email addresses and one required dropdown labeled "Choose your level of alerts". Three cumulative levels: official releases; official releases plus release candidates; all releases, candidates, fixes and news. No separate news checkbox.
+- Subscribe uses SimpliSafe's current yellow #f79e00 with dark text, scoped to the Kit form. Color verified from https://simplisafe.com/assets/styles-CEJifqbz.css (aegis-yellow-500), October 10, 2026.
 - Email frequency: at most one email per week at the highest alert level; lower levels may receive fewer. Combine relevant items into a single digest, leave at least seven days between announcement broadcasts, and skip sends with no relevant updates. No automatic announcement sending has been configured, and the signup form does not enforce a global sending cap.
 
 ## Available source material

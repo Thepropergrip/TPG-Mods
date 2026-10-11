@@ -5,4 +5,5 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 .detail-page{max-width:880px}.detail-page nav{font-size:15px;margin-bottom:32px}.detail-page header{margin-bottom:28px}.detail-page .photo-placeholder{min-height:260px}.documentation{font-size:15px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}.source-files{margin-top:36px;font-size:14px;color:#636d59}.source-files summary{cursor:pointer}.source-files li{overflow-wrap:anywhere}
 .development-placeholder{padding-top:0;border-top:0}
 .email-signup{margin-top:56px;padding-top:8px;border-top:1px solid #d8dad2;max-width:720px}.email-signup>p{font-size:15px}.email-signup .formkit-form{max-width:100%}
+.email-signup .formkit-form .formkit-submit{background:#f79e00!important;color:#1d1d1b!important}.email-signup .formkit-form .formkit-submit:hover{background:#e08e00!important}.email-signup .formkit-form .formkit-submit>span{background:transparent!important}
 @media(max-width:560px){body{font-size:16px}.page-shell{margin:24px auto;padding:20px}dialog{padding:24px 20px}.facts{gap:14px}.facts dd{font-size:15px}dialog .photo-placeholder{min-height:160px}}
