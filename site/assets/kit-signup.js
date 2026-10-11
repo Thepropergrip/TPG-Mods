@@ -1,26 +1,17 @@
 export function customizeSignup(form) {
   const copy = [
     ['[data-element="header"] h2', 'Sign Up For Mod Announcements'],
-    ['[data-element="subheader"] p', 'Choose your desired level of engagement below'],
-    ['[data-element="guarantee"] p', 'No sales, and never more than 1x per week at max engagement'],
+    ['[data-element="subheader"] p', 'New releases, alpha candidates, bug fixes and feature enhancements.'],
+    ['[data-element="guarantee"] p', 'NO sales, once per week at maximum'],
   ];
   for (const [selector, text] of copy) {
     const element = form.querySelector(selector);
     if (element && element.textContent !== text) element.textContent = text;
   }
-  const labels = {
-    '24506150': 'Official releases only',
-    '24506152': 'Official releases + release candidates only',
-    '24506154': 'All releases, candidates, fixes and news',
-  };
-  for (const option of form.querySelectorAll('select[name="tags[]"] option')) {
-    const label = labels[option.value];
-    if (label && option.textContent !== label) option.textContent = label;
-  }
 }
 
 // Kit inserts the real subscription form asynchronously. Change only its copy;
-// its action, field names, required selection and tag values remain Kit's own.
+// its action, email field and subscriber handling remain Kit's own.
 if (typeof document !== 'undefined') {
   const container = document.querySelector('.email-signup');
   if (container) {

@@ -19,9 +19,9 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Use the supplied package name TPG Containerized SHORAD in public titles. Grizzly is an internal historical identifier, retained only for existing release tags/routes. Show its public version 1.0.23 rather than internal build wording. Do not describe simulated sensors as onboard physical hardware.
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
 - Keep supplied ZIP names and original display labels. Do not append versions or replace the mod name in asset filenames. GitHub's own space-to-dot normalization is recorded from its returned asset metadata; internal ZIP folders remain unchanged.
-- Kit form 10029231 / UID 19030fcb90 collects email addresses and one required dropdown labeled "Choose your level of alerts". Three cumulative levels: official releases; official releases plus release candidates; all releases, candidates, fixes and news. No separate news checkbox.
+- Kit form 10029231 / UID 19030fcb90 collects an email address for one announcement list. No signup tiers or level choices.
 - Subscribe uses SimpliSafe's current yellow #f79e00 with dark text, scoped to the Kit form. Color verified from https://simplisafe.com/assets/styles-CEJifqbz.css (aegis-yellow-500), October 10, 2026.
-- Email frequency: at most one email per week at the highest alert level; lower levels may receive fewer. Combine relevant items into a single digest, leave at least seven days between announcement broadcasts, and skip sends with no relevant updates. No automatic announcement sending has been configured, and the signup form does not enforce a global sending cap.
+- Email frequency: at most one announcement per week. Combine new releases, alpha candidates, bug fixes and feature enhancements, leaving at least seven days between sends.
 
 ## Available source material
 
@@ -36,13 +36,14 @@ The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its ref
 
 - Photo areas follow each image's natural aspect ratio with no coloured letterboxing or forced 16:9 box. Quick Look photos fit within its available width and 340 px height while preserving their proportions. The third development preview blur is 1.75 px, one quarter of the original strength; no image zoom is applied.
 
-- The on-page Kit signup form background uses Screen_260924_194834.png. Override the embedded form's stock background through scoped CSS, add a translucent dark overlay and white heading/helper labels, and retain the yellow Subscribe button and actual preference/subscription fields. Original screenshot bytes are unchanged.
+- The signup background follows the image selected in Kit. Preserve it when editing signup copy; the website adds a dark overlay and white text without replacing the native image. Retain the yellow Subscribe button.
 
 - The main catalog uses up to 1,800 px on wide screens. The bottom signup box is centered and capped at 576 px (20% narrower than its previous 720 px), with reduced type and spacing. Remove the extra Email updates heading and weekly-frequency paragraph above the box.
-- On-page signup copy: Sign Up For Mod Announcements; Choose your desired level of engagement below; No sales, and never more than 1x per week at max engagement. A scoped module adjusts Kit's asynchronously embedded copy and option labels while preserving its real form action, field names, tag IDs, required selection and subscriber handling. Tier labels: Official releases only; Official releases + release candidates only; All releases, candidates, fixes and news. The direct Kit form and internal tag names remain Kit-managed.
+- Signup copy: Sign Up For Mod Announcements; New releases, alpha candidates, bug fixes and feature enhancements.; NO sales, once per week at maximum. The scoped module preserves native Kit subscription handling.
 
 - Catalog sections share the same responsive column widths: four on wide screens, then three, two and one as space narrows. A section with fewer items fills columns from the left; two Alpha cards must have the same width as Released cards, without stretching across the whole row. Images retain their natural proportions.
 
-- October 11: Justin approved Kit's native checkbox preference page for later level changes, while retaining the single dropdown for signup. Three topics map to the existing three tags and say "choose one level". The default Kit HTML template, TPG Mod Announcements — Engagement Preferences (5596707), displays the selected level and a personalized Change alert level link. Its instructions explicitly say to uncheck the old level, check the new one and save. Preserve this distinction; native topics do not enforce exactly one level. Resolve conflicting tags before sending, never infer broader consent. Template source is in email/kit-announcements.html; real subscriber delivery and preference-link testing are still pending.
+- October 11 signup simplification supersedes the earlier tier design. Remove the signup dropdown, native tier topics and engagement footer. Keep subscriber data and the Unsubscribe link.
 
 - October 11 site copy update: show the approved Released and Alpha bylines once below each catalog heading. Remove configured-versus-tested caveats, technical source-file dropdowns and visible gallery captions across the website. Retain image alt text, model credits, historical research links and practical operating instructions.
+- October 11 rocket photo replacement: use the supplied cursor-free M8 flight screenshot at /assets/images/calliope-m8.png in Quick Look and More Info. Preserve the signup image.

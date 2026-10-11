@@ -155,10 +155,11 @@
     },
     {
       "sitePath": "/assets/images/calliope-m8.png",
-      "bytes": 2769262,
-      "sha256": "f8721b0d85b1d859537ebfb65cca4b2fc520741627d535f056aafc920e5d3700",
+      "bytes": 2558976,
+      "sha256": "ff5409563d6965f006509b2455fc904880c8bdf54dd3742eaebd4c4680051ba8",
       "fileUnmodified": true,
-      "displaySaturation": 1
+      "displaySaturation": 1,
+      "sourceFilename": "codex-clipboard-98d13e16-7e8d-4ea4-b07e-5de27ce0ebe4.png"
     },
     {
       "sitePath": "/assets/images/calliope-armor.png",
