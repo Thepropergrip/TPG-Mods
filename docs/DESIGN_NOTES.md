@@ -33,3 +33,5 @@ The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its ref
 - SAHIN C-UAS uses the supplied front-view DCS screenshot on its card, Quick Look and More Info page; its Alpha status remains unchanged.
 
 - V2 uses the supplied launcher photo as its main image and the two flight screenshots in Quick Look and More Info. SAHIN C-UAS has a secondary combat-scene image. The fourth anonymous development card now has the supplied panel-detail preview at 50% saturation. All six available mods and four development cards have real supplied images; development names and actions stay hidden.
+
+- Photo areas follow each image's natural aspect ratio with no coloured letterboxing or forced 16:9 box. Quick Look photos fit within its available width and 340 px height while preserving their proportions. The third development preview blur is 3.5 px, half the original strength; no image zoom is applied.
