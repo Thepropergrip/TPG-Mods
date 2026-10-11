@@ -4,6 +4,18 @@ import { aggregate } from '../scripts/stats.mjs';
 import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 
+test('status bylines replace per-mod caveats and source dropdowns', () => {
+  const mods = ['released', 'alpha'].map(status => ({id: status, title: status, status, statusConfirmed: true}));
+  const details = {summary: 'Vehicle.', type: 'Vehicle', facts: [], notes: [], sources: ['entry.lua']};
+  const info = {released: details, alpha: details};
+  const catalog = renderCatalog(mods, info);
+  assert.match(catalog, /Perfection isn&#39;t claimed, but extensive testing and mission use has been completed\.  Future upgrades always an option\./);
+  assert.match(catalog, /We&#39;ve seen it working and it should be generally functional\.  Visual and performance bugs to be expected, please report if encountered\.  Thanks!/);
+  for (const html of [renderQuickLooks(mods, info), ...mods.map(mod => renderDetail(mod, details, false))]) {
+    assert.doesNotMatch(html, /source-note|source-files|Source files for these facts|Figures from the supplied|<figcaption/);
+  }
+});
+
 test('development names and actions cannot appear in the catalog or Quick Look templates', () => {
   const mod = { id: 'secret-project', title: 'Unannounced name', status: 'under-development', statusConfirmed: true, image: '/assets/images/secret-project.png' };
   const catalog = renderCatalog([mod], {});
@@ -49,7 +61,8 @@ test('additional supplied photos appear in Quick Look and More Info while cards 
   assert.doesNotMatch(renderCatalog([mod], { cannon: info }), /cannonball\.png/);
   for (const html of [renderQuickLooks([mod], { cannon: info }), renderDetail(mod, info, false)]) {
     assert.match(html, /cannonball\.png/);
-    assert.match(html, /<figcaption>Cannonball in flight<\/figcaption>/);
+    assert.match(html, /alt="Cannonball in flight"/);
+    assert.doesNotMatch(html, /<figcaption/);
   }
 });
 

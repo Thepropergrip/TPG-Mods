@@ -8,12 +8,12 @@
         "1.2–9 km"
       ],
       [
-        "DCS detection range limit",
-        "12 km (configured)"
+        "Detection range",
+        "12 km"
       ],
       [
         "Missile speed ceiling",
-        "Mach 1.4 (declared)"
+        "Mach 1.4"
       ],
       [
         "Target altitude limit",
@@ -31,15 +31,8 @@
     "notes": [
       "Close DCS and extract the TPG Containerized SHORAD folder into your active Saved Games/DCS/Mods/tech/ folder. The resulting mod folder must contain entry.lua. Restart DCS after installation.",
       "In Mission Editor, find TPG Containerized SHORAD in Air Defence. Place it on clear, level ground with an unobstructed view of the intended engagement area; choose the default, Woodland or Sand appearance using Paint Scheme.",
-      "The launcher carries eight missiles, has four configured missile channels, a ten-second shot interval and an 18-minute reload setting. Its weapon station is configured not to fire on the move.",
-      "The 12 km figure is the DCS detection and measuring limit. The sensor declaration separately sets a 4 km detection reference at RCS 0.01; actual detection depends on the target and visibility.",
-      "Engagement range, target altitude and Mach 1.4 are configured limits, not measured performance. Terrain, trees and buildings can obscure tracking or physically obstruct a missile flight."
-    ],
-    "sources": [
-      "entry.lua",
-      "Database/TPG_Containerized_SHORAD_Launcher.lua",
-      "Database/TPG_Containerized_SHORAD_Missile.lua",
-      "Database/Sensors/TPG_Containerized_SHORAD_Sensor.lua"
+      "The launcher carries eight missiles, has four missile channels, a ten-second shot interval and an 18-minute reload. Stop the launcher to fire.",
+      "Detection range is 12 km. Place the launcher with a clear view of approaching targets."
     ]
   },
   "v2": {
@@ -47,11 +40,11 @@
     "summary": "V-2 rocket with static launch tables and Sd.Kfz. 7 towed launchers in camouflaged and black/white variants.",
     "facts": [
       [
-        "Nominal firing range",
+        "Firing range",
         "50–300 km"
       ],
       [
-        "Documented impact speed",
+        "Impact speed",
         "Approximately Mach 3.5 on long-range shots"
       ],
       [
@@ -72,13 +65,7 @@
       ]
     ],
     "notes": [
-      "The 330 km internal eligibility margin is not the advertised firing range. Historical scatter is included; rockets can miss by several kilometres. Speed and altitude vary with trajectory."
-    ],
-    "sources": [
-      "README.md",
-      "Database/Weapons/TPG_V2.lua",
-      "Database/Weapons/FlightProfile.lua",
-      "Database/Vehicles/TPG_V2_Towed.lua"
+      "Historical scatter is included; rockets can miss by several kilometres. Speed and altitude vary with trajectory."
     ],
     "documentation": "# TPG V2\n\nV-2 rocket, custom launch table, Meillerwagen, and Sd.Kfz. 7 towing configuration for DCS World.\n\n## Installation\n\nClose DCS. Unzip Mod and copy the `TPG V2` folder into your active Saved Games DCS profile so the final path is:\n\n`Saved Games\\DCS\\Mods\\tech\\TPG V2`\n\nThen restart DCS.\n\n## Units\n\nThe mod includes four launcher variants:\n\n- **TPG V-2 - Camo Static** — stationary launcher with the 1944-style ragged camouflage V-2.\n- **TPG V-2 - Black/White Static** — stationary launcher with the black/white test-scheme V-2.\n- **TPG V-2 - Sd.Kfz. 7 Towed - Camo** — mobile Sd.Kfz. 7, Meillerwagen, and camouflaged V-2 as one launcher unit.\n- **TPG V-2 - Sd.Kfz. 7 Towed - Black/White** — mobile Sd.Kfz. 7, Meillerwagen, and black/white V-2 as one launcher unit.\n\n\n## Fire at Point\n\nThe two Static variants are stationary. The two Sd.Kfz. 7 Towed variants have a road speed limit of 22 mph (35.4 km/h). Set Alarm State Green and a nonzero speed at WP0 to begin travel. The custom launch table rides on its carrier, the outrigger arms fold alongside the trailer, and the support feet retract clear of the ground.\n\nAt the firing waypoint, stop on clear, level ground and use Alarm State Red with Fire at Point. The carrier lowers the pad, the supports deploy, and then the rocket rises. The supports retract before the truck pulls the trailer approximately two metres away from the launch table. The wheels and tracks animate during transport and pull-away. Green reverses the deployment sequence and recovers the table for travel. Alarm State controls deployment; ROE controls permission to fire.\n\nPlace one launcher per group. At the firing waypoint on clear, level ground, add **Advanced Waypoint Actions → Perform Task → Fire at Point**. Choose a target 50–300 km away and set expenditure to one round.\n\nThe launcher raises and fires after approximately three minutes from a stowed start. Historical scatter is built in: individual rockets can miss by several kilometres. Each launcher carries one missile and does not reload. Native AI stows it after the task ends. Alarm State Red raises the launcher; Green lowers it.\n\nLong-range shots reach approximately 88 km altitude and approach Mach 3.5 near impact. Shorter-range shots have lower flight profiles and speeds.\n"
   },
@@ -114,12 +101,6 @@
     "notes": [
       "The hook is required for automatic targeting and the Lavaball ground fire. Direct player control requires Combined Arms and mission or server permission."
     ],
-    "sources": [
-      "INSTALL.txt",
-      "Database/Cannon.lua",
-      "Database/Cannonball.lua",
-      "Database/Fireball.lua"
-    ],
     "documentation": "TPG 12 Pounder Cannon\r\n\r\nMANUAL INSTALLATION\r\n1. Close DCS and extract the archive.\r\n2. Copy Mods/tech/TPG_12_Pounder_Cannon into Saved Games/DCS/Mods/tech/.\r\n3. Copy Scripts/Hooks/TPG_12_Pounder_Cannon.lua into Saved Games/DCS/Scripts/Hooks/.\r\n4. Start DCS. In Mission Editor, select Artillery, then:\r\n   TPG 12 Pounder Cannon - Cannonball\r\n   TPG 12 Pounder Cannon - Lavaball\r\nCreate missing folders. Substitute your profile folder if it differs from DCS.\r\nEach unit carries up to 20 rounds of its own ammunition.\r\n\r\nOVGME\r\nUse Saved Games/DCS as the configuration's root/target folder.\r\nImport the ZIP or use the extracted package containing Mods and Scripts.\r\nEnable TPG 12 Pounder Cannon. OVGME installs both the mod and its hook.\r\n\r\n\r\nThe hook is required for automatic targeting and the lavaball ground fire.\r\nFor multiplayer, the host/server needs the hook and all clients need the mod.\r\nDirect player control requires Combined Arms and mission/server permission.\r\n"
   },
   "apkws-vshorad": {
@@ -136,7 +117,7 @@
       ],
       [
         "Rocket speed ceiling",
-        "Mach 3 (declared)"
+        "Mach 3"
       ],
       [
         "Target altitude limit",
@@ -153,18 +134,12 @@
     ],
     "notes": [
       "Install the TPG APKWS VSHORAD folder into the active Saved Games/DCS/Mods/tech/ profile and restart DCS. Keep one installed copy. Find TPG APKWS VSHORAD in the Air Defence category and choose a Paint Scheme.",
-      "The two launch banks have different launch bias angles and eight rounds each. Their configured engagement bands are 1,000–3,000 m and 3,001–4,500 m. The package notes explain that FAR rounds can intercept closer targets while NEAR rounds can wait for a distant target to approach.",
-      "The optical and infrared system guides 70 mm rockets with a laser. Place it on clear, level ground: a surviving target track does not prove an unobstructed laser path through trees or buildings.",
-      "Full azimuth rotation, elevation from −30° to +85°, traverse at 120°/second and elevation at 90°/second are configured settings. Shot delay is two seconds; the reload setting is five minutes.",
-      "Mach 3 is declared weapon metadata, not a measured flight speed. The package specifies an M151-type warhead with 1.04 kg of explosive per rocket. Config.lua is required; restart DCS after configuration changes."
+      "The two launch banks have different launch angles and eight rounds each. Their engagement bands are 1,000-3,000 m and 3,001-4,500 m. FAR rounds can intercept closer targets while NEAR rounds can wait for a distant target to approach.",
+      "The optical and infrared system guides 70 mm rockets with a laser. Place it on clear, level ground with an unobstructed view of the target.",
+      "Full azimuth rotation, elevation from -30 to +85 degrees, traverse at 120 degrees/second and elevation at 90 degrees/second. Shot delay is two seconds; reload takes five minutes.",
+      "The M151-type warhead carries 1.04 kg of explosive per rocket. Keep Config.lua installed and restart DCS after configuration changes."
     ],
-    "sources": [
-      "entry.lua",
-      "README.txt",
-      "Config.lua",
-      "Database/TPG_APKWS_Weapon.lua"
-    ],
-    "documentation": "TPG APKWS VSHORAD and EAGLS CAUS Systems.\n\nInspired by the real world VAMPIRE and EAGLS CAUS Systems.\n\nA stationary APKWS air-defense turret for DCS World with 16 loaded rockets,\nseparate NEAR and FAR ammunition banks, optical sensors, full azimuth rotation,\nand animated elevation. \n\nINSTALLATION\n1. Close DCS.\n2. Extract the \"TPG APKWS VSHORAD\" folder into:\n   Saved Games\\DCS\\Mods\\tech\\\n   Use the corresponding Saved Games profile if yours has a different name.\n3. When updating, replace the old mod folder with the folder from this ZIP.\n   Keep only one installed copy.\n\nThe resulting path must be:\nSaved Games\\DCS\\Mods\\tech\\TPG APKWS VSHORAD\\entry.lua\n\nMISSION EDITOR\nFind \"TPG APKWS VSHORAD\" in the Air Defence category. Place it on clear,\nlevel ground with an unobstructed view of the intended engagement area.\nChoose a livery using Paint Scheme.\n\nThe unit carries eight NEAR rounds and eight FAR rounds. The configured\nengagement bands are 1,000-3,000 metres and 3,001-4,500 metres respectively.\nEach bank has its own ammunition allocation. The mounted rocket visuals\nfollow the ammunition state. NOTE: FAR rounds can intercept closer targets and NEAR rounds can wait for distant targets to approach closer.  The only difference between the two is the launch bias angle.\n\nEngagement range: 1–4.5 km / 0.54–2.43 NM.\nDetection range set to 6 km / 3.24 NM.\nTarget altitude limit: 3,000 m / approximately 9,840 ft.\nOptical and infrared sensors with laser-guided 70 mm rockets.\nFull 360° rotation, with elevation from −30° to +85°.\nTraverse speed: 120°/second. Elevation speed: 90°/second.\nTwo-second shot delay and a five-minute reload setting.  M151-type warhead with 1.04 kg of explosive per rocket.\n\nCONFIGURATION\nConfig.lua is required by the mod. It supplies the unit and weapon settings;\ndo not delete it. The included settings are ready to use. Restart DCS after\nmaking any configuration changes.\n\nPAINT SCHEMES\nDesert Tan: tan mount and pod bodies.\nNaval Gray - White Pods: gray mount, white pod bodies, black front/rear bezels.\nOlive Drab: olive mount and pod bodies.\n"
+    "documentation": "TPG APKWS VSHORAD and EAGLS CAUS Systems.\n\nInspired by the real world VAMPIRE and EAGLS CAUS Systems.\n\nA stationary APKWS air-defense turret for DCS World with 16 loaded rockets,\nseparate NEAR and FAR ammunition banks, optical sensors, full azimuth rotation,\nand animated elevation. \n\nINSTALLATION\n1. Close DCS.\n2. Extract the \"TPG APKWS VSHORAD\" folder into:\n   Saved Games\\DCS\\Mods\\tech\\\n   Use the corresponding Saved Games profile if yours has a different name.\n3. When updating, replace the old mod folder with the folder from this ZIP.\n   Keep only one installed copy.\n\nThe resulting path must be:\nSaved Games\\DCS\\Mods\\tech\\TPG APKWS VSHORAD\\entry.lua\n\nMISSION EDITOR\nFind \"TPG APKWS VSHORAD\" in the Air Defence category. Place it on clear,\nlevel ground with an unobstructed view of the intended engagement area.\nChoose a livery using Paint Scheme.\n\nThe unit carries eight NEAR rounds and eight FAR rounds. The engagement bands are 1,000-3,000 metres and 3,001-4,500 metres respectively.\nEach bank has its own ammunition allocation. The mounted rocket visuals\nfollow the ammunition state. NOTE: FAR rounds can intercept closer targets and NEAR rounds can wait for distant targets to approach closer.  The only difference between the two is the launch bias angle.\n\nEngagement range: 1–4.5 km / 0.54–2.43 NM.\nDetection range: 6 km / 3.24 NM.\nTarget altitude limit: 3,000 m / approximately 9,840 ft.\nOptical and infrared sensors with laser-guided 70 mm rockets.\nFull 360° rotation, with elevation from −30° to +85°.\nTraverse speed: 120°/second. Elevation speed: 90°/second.\nTwo-second shot delay and a five-minute reload setting.  M151-type warhead with 1.04 kg of explosive per rocket.\n\nCONFIGURATION\nConfig.lua is required by the mod. It supplies the unit and weapon settings;\ndo not delete it. The included settings are ready to use. Restart DCS after\nmaking any configuration changes.\n\nPAINT SCHEMES\nDesert Tan: tan mount and pod bodies.\nNaval Gray - White Pods: gray mount, white pod bodies, black front/rear bezels.\nOlive Drab: olive mount and pod bodies.\n"
   },
   "sahin-cuas": {
     "type": "40 mm counter-drone gun",
@@ -191,39 +166,30 @@
         "192 rounds; 64-round portions"
       ],
       [
-        "Configured fire rate",
+        "Fire rate",
         "Approximately 261 rounds/min"
       ]
     ],
     "notes": [
-      "The supplied notes report use against slower drones and low, slow helicopters, with no successful jet-powered target engagements in the author’s testing. The DCS sensor proxy is distinct from the gun’s much shorter firing range."
+      "A close-range system for slower drones and low, slow helicopters."
     ],
-    "sources": [
-      "README.txt",
-      "Database/TPG_SAHIN_40.lua",
-      "Database/TPG_M430_Precision.lua"
-    ],
-    "documentation": "TPG SAHIN 40mm C-UAS - v1.0.34\r\n\r\n\r\n\r\n\r\nINSTALL\r\nSaved Games\\DCS\\Mods\\Tech\\\r\n\r\nClose range 40mm auto Grenade anti drone system.  Good for slower drones and low/slow helicopter harassment.  Will not take out anything using a jet engine, at least not in my testing.  \r\n\r\nSee CREDITS.txt for source-model attribution.\r\n"
+    "documentation": "TPG SAHIN 40mm C-UAS - v1.0.34\n\nINSTALL\nSaved Games\\DCS\\Mods\\Tech\\\n\nClose-range 40 mm automatic grenade launcher for slower drones and low, slow helicopters.\n\nSee CREDITS.txt for model attribution.\n"
   },
   "akinci": {
     "type": "AI unmanned aircraft",
-    "summary": "An AI Akıncı-C approximation with nine attachment stations, EO/IR sensors and a native multirole radar approximation.",
+    "summary": "An AI Akıncı-C with nine attachment stations, EO/IR sensors and multirole radar.",
     "facts": [
       [
-        "Declared maximum speed",
+        "Maximum speed",
         "240 kt / 444 km/h"
       ],
       [
-        "Cruise target",
+        "Cruise speed",
         "150 kt / 278 km/h"
       ],
       [
-        "Declared ceiling",
+        "Ceiling",
         "40,000 ft / 12,192 m"
-      ],
-      [
-        "Flight range",
-        "Not flight-tested"
       ],
       [
         "Attachment stations",
@@ -234,18 +200,11 @@
         "AI only; no player cockpit"
       ]
     ],
-    "notes": [
-      "Declared speed and ceiling are aircraft configuration targets, not a guarantee that the current flight model achieves every operating point. No tested flight-range claim is supplied."
-    ],
-    "sources": [
-      "Database/TPG_AKINCI.lua",
-      "Documentation/Flight-model.md",
-      "README.md"
-    ]
+    "notes": []
   },
   "fps-132": {
     "type": "Static radar facility",
-    "summary": "The supplied package represents the radar site as a fixed scenery and target structure.",
+    "summary": "A fixed radar facility for scenery and target infrastructure.",
     "facts": [
       [
         "Detection range",
@@ -273,11 +232,7 @@
       ]
     ],
     "notes": [
-      "The supplied README and database declare a non-functional static structure with DetectionRange = 0. Model LOD distances are visibility settings, not radar detection distances."
-    ],
-    "sources": [
-      "README.txt",
-      "Database/TPG_FP132_Radar.lua"
+      "An unarmed static structure with collision geometry for the housing, berm, buildings and plinth."
     ]
   },
   "anduril-rail": {
@@ -285,15 +240,15 @@
     "summary": "A stationary rail for GPS and anti-ship ALTIUS-700M variants, using native DCS weapon guidance.",
     "facts": [
       [
-        "Configured launch range",
+        "Launch range",
         "0.3–200 km"
       ],
       [
-        "Cruise setting",
+        "Cruise",
         "60 km/h"
       ],
       [
-        "Cruise height setting",
+        "Cruise height",
         "22 m GPS / 30 m anti-ship"
       ],
       [
@@ -310,13 +265,7 @@
       ]
     ],
     "notes": [
-      "Configured range is not a tested reachable range. Terrain, trees, buildings and trajectory can limit a flight; the package reports obstacle collisions."
-    ],
-    "sources": [
-      "README.txt",
-      "Database/Weapons/TPG_Altius700M.lua",
-      "Database/Weapons/TPG_Altius700M_AntiShip.lua",
-      "Database/Vehicles/TPG_Anduril_Rail.lua"
+      "Place the launcher with a clear flight path, allowing room for the drone to climb."
     ]
   },
   "fp1-drone": {
@@ -324,19 +273,19 @@
     "summary": "A native DCS guided weapon with a separate launch rail and a belly booster shown on the loaded drone.",
     "facts": [
       [
-        "Nominal range envelope",
+        "Range envelope",
         "3–3,400 km"
       ],
       [
-        "Cruise setting",
+        "Cruise",
         "170 km/h"
       ],
       [
-        "Cruise height setting",
+        "Cruise height",
         "Approximately 100 m AGL"
       ],
       [
-        "Nominal endurance envelope",
+        "Endurance envelope",
         "20 hours"
       ],
       [
@@ -349,12 +298,7 @@
       ]
     ],
     "notes": [
-      "The 3,400 km / 20-hour figures are configured envelopes, not a verified full-range flight. Reachable range depends on the DCS map, terrain and trajectory."
-    ],
-    "sources": [
-      "README.txt",
-      "Database/Weapons/TPG_FP1.lua",
-      "Database/Vehicles/TPG_FP1_Rail.lua"
+      "Allow a clear departure path and plan the route around terrain and obstacles."
     ]
   },
   "shahed-238": {
@@ -362,15 +306,15 @@
     "summary": "Ground-launched Shahed-238 drones with separate GPS and anti-ship launchers, each carrying up to five shots.",
     "facts": [
       [
-        "Configured launch range",
+        "Launch range",
         "20–1,000 km"
       ],
       [
-        "Cruise speed setting",
+        "Cruise speed",
         "500 km/h"
       ],
       [
-        "Cruise height setting",
+        "Cruise height",
         "300 m"
       ],
       [
@@ -379,7 +323,7 @@
       ],
       [
         "Shot / reload interval",
-        "10 minutes (configured)"
+        "10 minutes"
       ],
       [
         "Guidance variants",
@@ -389,26 +333,18 @@
     "notes": [
       "Close DCS and extract TPG_Shahed238_Rail into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. The installed folder must contain entry.lua.",
       "In Mission Editor, find TPG Shahed-238 GPS and TPG Shahed-238 ASM in Artillery. Choose the GPS variant for point-target missions or the ASM variant for anti-ship missions. Each launcher carries up to five shots; the plugin notes allow mission designers to reduce ammunition in Mission Editor.",
-      "Both launchers are stationary and show one loaded drone on the rail. Select Original Green or Sand Tan in Paint Scheme. The configured shot delay and reload time are both 600 seconds.",
-      "The 20–1,000 km launch envelope, 500 km/h cruise speed and 300 m cruise height are configuration values. They are not a verified full-range flight or a guarantee of terrain clearance; check the intended route for terrain, trees and buildings.",
-      "The weapon declaration sets a Mach 0.50 speed ceiling, 370 kg projectile mass and a 50 kg warhead with 25 kg explosive mass. These are DCS settings, not measurements of the real aircraft.",
-      "The published version follows entry.lua: 1.0.1. The included README still has a 1.0.0 heading and is preserved exactly as supplied."
+      "Both launchers are stationary and show one loaded drone on the rail. Select Original Green or Sand Tan in Paint Scheme. Shot delay and reload time are both 10 minutes.",
+      "Launch range is 20-1,000 km, cruise speed is 500 km/h and cruise height is 300 m. Plan the route around terrain, trees and buildings.",
+      "The drone has a Mach 0.50 speed limit, a 370 kg mass and a 50 kg warhead containing 25 kg of explosive."
     ],
-    "sources": [
-      "entry.lua",
-      "README.txt",
-      "Database/Vehicles/TPG_Rail238.lua",
-      "Database/Weapons/TPG_Shahed238.lua",
-      "Database/Weapons/TPG_Shahed238_AntiShip.lua"
-    ],
-    "documentation": "TPG Shahed-238 GPS / ASM v1.0.0\n================================\n\nINSTALL\nCopy the TPG_Shahed238_Rail folder into:\n  Saved Games\\DCS\\Mods\\tech\\\n(or Saved Games\\DCS.openbeta\\Mods\\tech\\ on legacy installs)\n\nUNITS\n- TPG Shahed-238 GPS\n- TPG Shahed-238 ASM\n\nEach launcher carries up to 5 shots. \n\nLIVERIES\n- Original Green\n- Sand Tan\n\n\n"
+    "documentation": "TPG Shahed-238 GPS / ASM v1.0.1\n================================\n\nINSTALL\nCopy the TPG_Shahed238_Rail folder into:\n  Saved Games\\DCS\\Mods\\tech\\\n(or Saved Games\\DCS.openbeta\\Mods\\tech\\ on legacy installs)\n\nUNITS\n- TPG Shahed-238 GPS\n- TPG Shahed-238 ASM\n\nEach launcher carries up to 5 shots. \n\nLIVERIES\n- Original Green\n- Sand Tan\n\n\n"
   },
   "t34-calliope": {
     "type": "WWII self-propelled rocket artillery",
     "summary": "A 60-tube Calliope with custom M8 rockets, Combined Arms control, moving-fire machine guns and detailed vehicle animation.",
     "facts": [
       [
-        "Configured rocket range",
+        "Rocket range",
         "100 m-3.66 km"
       ],
       [
@@ -435,7 +371,7 @@
     "notes": [
       "Install T34 Calliope in Saved Games/DCS/Mods/tech/ and restart DCS. Find TPG T34 Calliope (M4 Sherman) under Artillery; available to all countries and coalitions.",
       "Enable Combined Arms vehicle control in the mission. Default bindings: Q selects the main turret, E cycles its weapons, and Space fires. Stop for rocket fire; both M1919 machine guns support unstabilized fire on the move. The original launcher-fitted configuration keeps the cannon disabled.",
-      "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized flight disturbance replace a perfectly repeating salvo; dispersion remains part of alpha testing.",
+      "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized flight disturbance vary the salvo from shot to shot.",
       "The rocket sight uses the native MLRS range controller with this M8 ammunition. Coaxial and bow guns have separate ammunition stores, 250-round belts, firing loops and burst-tail audio.",
       "Custom work includes articulated launcher linkage, flexible wiring, circulating track shoes, rotating wheels, animated suspension and dim amber headlights. Fourteen 2K material sets add varied wear and suspension-matched hull dirt.",
       "Dedicated thermal maps distinguish engine, running gear, weapon and body response. Thirty-two armor zones include the visible applique plates. A separate wreck model adds broken tubes, a bent barrel, an open engine bay and displaced tracks. Tank, wreck and rocket each have four distance LODs.",
@@ -458,13 +394,6 @@
         "image": "/assets/images/calliope-os969-cover.png",
         "caption": "Research reference: OS 9-69, Rockets and Launchers, February 1944"
       }
-    ],
-    "sources": [
-      "entry.lua",
-      "Database/Calliope.lua",
-      "Database/M8.lua",
-      "Database/Shells.lua",
-      "README.md"
     ],
     "references": [
       {

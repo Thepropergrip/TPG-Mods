@@ -17,3 +17,5 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 @media(max-width:1008px){.catalog{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:692px){.catalog{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:560px){body{font-size:16px}.page-shell{width:100%;margin:24px auto;padding:20px}dialog{padding:24px 20px}.facts{gap:14px}.facts dd{font-size:15px}dialog .photo-placeholder{min-height:160px}.email-signup .formkit-form [data-style="minimal"]{padding:20px!important}.email-signup .formkit-form .formkit-header{font-size:21px!important}}
+
+.section-byline{font-size:16px;line-height:1.6;margin:-10px 0 28px;max-width:1050px}
