@@ -1,7 +1,7 @@
 export function customizeSignup(form) {
   const copy = [
     ['[data-element="header"] h2', 'Sign Up For Mod Announcements'],
-    ['[data-element="subheader"] p', 'Choose your level of desired engagement below'],
+    ['[data-element="subheader"] p', 'Choose your desired level of engagement below'],
     ['[data-element="guarantee"] p', 'No sales, and never more than 1x per week at max engagement'],
   ];
   for (const [selector, text] of copy) {
