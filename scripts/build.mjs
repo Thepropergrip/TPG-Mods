@@ -23,7 +23,7 @@ for (const mod of publicMods) {
   await writeFile(at('dist/mods', mod.id, 'index.html'), renderDetail(mod, info[mod.id], config.launchReady));
 }
 const index = await readFile(at('dist/index.html'), 'utf8');
-await writeFile(at('dist/index.html'), index.replace('<!-- MOD_CATALOG -->', renderCatalog(mods, info)).replace('<!-- QUICK_LOOK_TEMPLATES -->', renderQuickLooks(mods, info)));
+await writeFile(at('dist/index.html'), index.replace('<!-- MOD_CATALOG -->', renderCatalog(mods, info, config)).replace('<!-- QUICK_LOOK_TEMPLATES -->', renderQuickLooks(mods, info)));
 await writeJson(at('dist/data/mods.json'), publicMods.map(({ publicVersion, ...mod }) => ({ ...mod, version: publicVersion ?? mod.version })));
 await writeJson(at('dist/data/downloads.json'), await loadStats(config));
 console.log('Built dist/. Visitor design can replace site/ later.');

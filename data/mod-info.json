@@ -8,8 +8,8 @@
         "1.2–9 km"
       ],
       [
-        "Detection range",
-        "12 km"
+        "DCS detection range limit",
+        "12 km (configured)"
       ],
       [
         "Missile speed ceiling",
@@ -29,12 +29,17 @@
       ]
     ],
     "notes": [
-      "These are configured DCS envelopes; sensor visibility and terrain affect engagements."
+      "Close DCS and extract the TPG Containerized SHORAD folder into your active Saved Games/DCS/Mods/tech/ folder. The resulting mod folder must contain entry.lua. Restart DCS after installation.",
+      "In Mission Editor, find TPG Containerized SHORAD in Air Defence. Place it on clear, level ground with an unobstructed view of the intended engagement area; choose the default, Woodland or Sand appearance using Paint Scheme.",
+      "The launcher carries eight missiles, has four configured missile channels, a ten-second shot interval and an 18-minute reload setting. Its weapon station is configured not to fire on the move.",
+      "The 12 km figure is the DCS detection and measuring limit. The sensor declaration separately sets a 4 km detection reference at RCS 0.01; actual detection depends on the target and visibility.",
+      "Engagement range, target altitude and Mach 1.4 are configured limits, not measured performance. Terrain, trees and buildings can obscure tracking or physically obstruct a missile flight."
     ],
     "sources": [
       "entry.lua",
       "Database/TPG_Containerized_SHORAD_Launcher.lua",
-      "Database/TPG_Containerized_SHORAD_Missile.lua"
+      "Database/TPG_Containerized_SHORAD_Missile.lua",
+      "Database/Sensors/TPG_Containerized_SHORAD_Sensor.lua"
     ]
   },
   "v2": {
@@ -147,9 +152,14 @@
       ]
     ],
     "notes": [
-      "The two launch banks have different launch bias angles. The configured speed ceiling is weapon metadata, not a measured flight speed."
+      "Install the TPG APKWS VSHORAD folder into the active Saved Games/DCS/Mods/tech/ profile and restart DCS. Keep one installed copy. Find TPG APKWS VSHORAD in the Air Defence category and choose a Paint Scheme.",
+      "The two launch banks have different launch bias angles and eight rounds each. Their configured engagement bands are 1,000–3,000 m and 3,001–4,500 m. The package notes explain that FAR rounds can intercept closer targets while NEAR rounds can wait for a distant target to approach.",
+      "The optical and infrared system guides 70 mm rockets with a laser. Place it on clear, level ground: a surviving target track does not prove an unobstructed laser path through trees or buildings.",
+      "Full azimuth rotation, elevation from −30° to +85°, traverse at 120°/second and elevation at 90°/second are configured settings. Shot delay is two seconds; the reload setting is five minutes.",
+      "Mach 3 is declared weapon metadata, not a measured flight speed. The package specifies an M151-type warhead with 1.04 kg of explosive per rocket. Config.lua is required; restart DCS after configuration changes."
     ],
     "sources": [
+      "entry.lua",
       "README.txt",
       "Config.lua",
       "Database/TPG_APKWS_Weapon.lua"
@@ -346,5 +356,51 @@
       "Database/Weapons/TPG_FP1.lua",
       "Database/Vehicles/TPG_FP1_Rail.lua"
     ]
+  },
+  "shahed-238": {
+    "type": "Rail-launched jet-powered drone",
+    "summary": "Ground-launched Shahed-238 drones with separate GPS and anti-ship launchers, each carrying up to five shots.",
+    "facts": [
+      [
+        "Configured launch range",
+        "20–1,000 km"
+      ],
+      [
+        "Cruise speed setting",
+        "500 km/h"
+      ],
+      [
+        "Cruise height setting",
+        "300 m"
+      ],
+      [
+        "Ammunition",
+        "Up to 5 shots per launcher"
+      ],
+      [
+        "Shot / reload interval",
+        "10 minutes (configured)"
+      ],
+      [
+        "Guidance variants",
+        "GPS / anti-ship (ASM)"
+      ]
+    ],
+    "notes": [
+      "Close DCS and extract TPG_Shahed238_Rail into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. The installed folder must contain entry.lua.",
+      "In Mission Editor, find TPG Shahed-238 GPS and TPG Shahed-238 ASM in Artillery. Choose the GPS variant for point-target missions or the ASM variant for anti-ship missions. Each launcher carries up to five shots; the plugin notes allow mission designers to reduce ammunition in Mission Editor.",
+      "Both launchers are stationary and show one loaded drone on the rail. Select Original Green or Sand Tan in Paint Scheme. The configured shot delay and reload time are both 600 seconds.",
+      "The 20–1,000 km launch envelope, 500 km/h cruise speed and 300 m cruise height are configuration values. They are not a verified full-range flight or a guarantee of terrain clearance; check the intended route for terrain, trees and buildings.",
+      "The weapon declaration sets a Mach 0.50 speed ceiling, 370 kg projectile mass and a 50 kg warhead with 25 kg explosive mass. These are DCS settings, not measurements of the real aircraft.",
+      "The published version follows entry.lua: 1.0.1. The included README still has a 1.0.0 heading and is preserved exactly as supplied."
+    ],
+    "sources": [
+      "entry.lua",
+      "README.txt",
+      "Database/Vehicles/TPG_Rail238.lua",
+      "Database/Weapons/TPG_Shahed238.lua",
+      "Database/Weapons/TPG_Shahed238_AntiShip.lua"
+    ],
+    "documentation": "TPG Shahed-238 GPS / ASM v1.0.0\n================================\n\nINSTALL\nCopy the TPG_Shahed238_Rail folder into:\n  Saved Games\\DCS\\Mods\\tech\\\n(or Saved Games\\DCS.openbeta\\Mods\\tech\\ on legacy installs)\n\nUNITS\n- TPG Shahed-238 GPS\n- TPG Shahed-238 ASM\n\nEach launcher carries up to 5 shots. \n\nLIVERIES\n- Original Green\n- Sand Tan\n\n\n"
   }
 }

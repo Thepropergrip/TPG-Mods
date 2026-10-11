@@ -15,7 +15,7 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Only statuses explicitly confirmed by Justin are shown. Release versions come from the supplied ZIP entry.lua files, and download URLs come from GitHub.
 - No generated or derived object imagery. Use actual DCS screenshots or a verified free-use photograph of the actual object. If missing, ask for the required photo and leave a Photo Coming Soon placeholder card.
 - Under Development entries are website-only: no release upload, download link, or download-stat entry until Justin changes their status.
-- Under Development is a section heading above anonymous Photo Coming Soon cards. Do not show development mod names, descriptions, type labels, popup buttons or detail links. Exclude their identities from published JSON and generated routes; source records remain ready for later work.
+- Under Development is a section heading above anonymous cards. Supplied preview images can replace placeholders without revealing names; current previews use 50% saturation and the third uses a moderate blur. Do not show development mod names, descriptions, type labels, popup buttons or detail links. Exclude their identities from published JSON and generated routes; source records remain ready for later work.
 - Use the supplied package name TPG Containerized SHORAD in public titles. Grizzly is an internal historical identifier, retained only for existing release tags/routes. Show its public version 1.0.23 rather than internal build wording. Do not describe simulated sensors as onboard physical hardware.
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
 - Keep supplied ZIP names and original display labels. Do not append versions or replace the mod name in asset filenames. GitHub's own space-to-dot normalization is recorded from its returned asset metadata; internal ZIP folders remain unchanged.
@@ -26,3 +26,6 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 ## Available source material
 
 The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its referenced `current_mockup/` and `reference_assets/` directories and full `TPG_MODS_CODEX_HANDOFF.zip` were not found directly alongside it during prep. Import them when available before design work. No replacement imagery or new marketing copy has been generated.
+
+- October 10 photo update: use all ten supplied images across Containerized SHORAD, APKWS, Shahed-238, the cannon and three anonymous development previews. Cannon galleries show cannonball and lava ball; Shahed gallery shows the additional cargo-ship scene. Original files stay intact; preview effects are CSS only.
+- APKWS remains Alpha Release Test Candidates; the explicit correction overrides the earlier wording calling it released. Shahed-238 is confirmed Released, version 1.0.1 from entry.lua; its README heading still says 1.0.0 and is preserved in the ZIP.

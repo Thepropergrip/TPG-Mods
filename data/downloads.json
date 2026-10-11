@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T00:28:49.867Z",
+  "generatedAt": "2026-10-11T00:31:01.935Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -12,6 +12,19 @@
           "assetName": "TPG.Containerized.SHORAD.zip",
           "downloads": 5,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG.Containerized.SHORAD.zip",
+          "prerelease": false
+        }
+      ]
+    },
+    "shahed-238": {
+      "currentDownloads": 0,
+      "lifetimeDownloads": 0,
+      "versions": [
+        {
+          "tag": "shahed-238-v1.0.1",
+          "assetName": "TPG_Shahed238_Rail.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.1/TPG_Shahed238_Rail.zip",
           "prerelease": false
         }
       ]

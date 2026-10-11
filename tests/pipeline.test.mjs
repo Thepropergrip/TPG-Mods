@@ -5,12 +5,32 @@ import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 
 test('development names and actions cannot appear in the catalog or Quick Look templates', () => {
-  const mod = { id: 'secret-project', title: 'Unannounced name', status: 'under-development', statusConfirmed: true };
+  const mod = { id: 'secret-project', title: 'Unannounced name', status: 'under-development', statusConfirmed: true, image: '/assets/images/secret-project.png' };
   const catalog = renderCatalog([mod], {});
   assert.match(catalog, /Under Development/);
   assert.match(catalog, /Photo Coming Soon/);
   assert.doesNotMatch(catalog, /Unannounced name|secret-project|<a\b|<button\b|<h3\b/);
   assert.equal(renderQuickLooks([mod], {}), '');
+});
+
+test('supplied photos appear in released and alpha cards, Quick Look and detail pages with escaped alt text', () => {
+  const info = { summary: 'System.', type: 'System', facts: [], notes: [], sources: [] };
+  for (const status of ['released', 'alpha']) {
+    const mod = { id: 'system', title: 'System', status, statusConfirmed: true, image: '/assets/images/system.png', imageAlt: 'System "in DCS"' };
+    for (const html of [renderCatalog([mod], { system: info }), renderQuickLooks([mod], { system: info }), renderDetail(mod, info, false)]) {
+      assert.match(html, /src="\/assets\/images\/system\.png"/);
+      assert.match(html, /alt="System &quot;in DCS&quot;"/);
+      assert.doesNotMatch(html, /Photo Coming Soon/);
+    }
+  }
+});
+
+test('a single anonymous development preview cannot expose development names or actions', () => {
+  const mods = ['secret-one', 'secret-two'].map(id => ({ id, title: 'Unannounced name', status: 'under-development', statusConfirmed: true }));
+  const html = renderCatalog(mods, {}, { developmentPreviews: [{ image: '/assets/images/development-preview.png', imageAlt: 'Work in progress preview' }] });
+  assert.equal((html.match(/development-preview\.png/g) || []).length, 1);
+  assert.equal((html.match(/Photo Coming Soon/g) || []).length, 1);
+  assert.doesNotMatch(html, /secret-one|secret-two|Unannounced|<a\b|<button\b|<h3\b/);
 });
 
 test('public version labels are independent of the package version and existing download URL', () => {
@@ -20,6 +40,16 @@ test('public version labels are independent of the package version and existing 
     assert.match(html, /Version 1\.0\.23<\/p>/);
     assert.doesNotMatch(html, /ready-cell-state/);
     assert.match(html, /https:\/\/example\.test\/original\.zip/);
+  }
+});
+
+test('additional supplied photos appear in Quick Look and More Info while cards use the main photo', () => {
+  const mod = { id: 'cannon', title: 'Cannon', status: 'released', statusConfirmed: true, image: '/assets/images/cannon.png', imageGallery: [{ image: '/assets/images/cannonball.png', caption: 'Cannonball in flight' }] };
+  const info = { summary: 'Cannon.', type: 'Artillery', facts: [], notes: [], sources: [] };
+  assert.doesNotMatch(renderCatalog([mod], { cannon: info }), /cannonball\.png/);
+  for (const html of [renderQuickLooks([mod], { cannon: info }), renderDetail(mod, info, false)]) {
+    assert.match(html, /cannonball\.png/);
+    assert.match(html, /<figcaption>Cannonball in flight<\/figcaption>/);
   }
 });
 

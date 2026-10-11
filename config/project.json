@@ -1,5 +1,8 @@
 {
-  "github": { "owner": "Thepropergrip", "repo": "TPG-Mods" },
+  "github": {
+    "owner": "Thepropergrip",
+    "repo": "TPG-Mods"
+  },
   "cloudflare": {
     "projectName": "tpg-mods",
     "productionBranch": "main",
@@ -7,5 +10,20 @@
     "outputDirectory": "dist",
     "deploymentMode": "git-integration"
   },
-  "launchReady": false
+  "launchReady": false,
+  "developmentPreviews": [
+    {
+      "image": "/assets/images/development-preview.png",
+      "imageAlt": "Work in progress preview"
+    },
+    {
+      "image": "/assets/images/development-preview-2.png",
+      "imageAlt": "Work in progress preview"
+    },
+    {
+      "image": "/assets/images/development-preview-3.png",
+      "imageAlt": "Work in progress preview",
+      "blurred": true
+    }
+  ]
 }

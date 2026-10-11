@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-10T23:30:38.570Z",
+  "verifiedAt": "2026-10-11T00:29:50.432753+00:00",
   "results": [
     {
       "id": "grizzly",
@@ -55,6 +55,20 @@
       "publicDownloadVerified": true,
       "assetName": "TPG_SAHIN_CUAS.zip",
       "assetId": 629251371
+    },
+    {
+      "id": "shahed-238",
+      "version": "1.0.1",
+      "status": "released",
+      "bytes": 40520061,
+      "sha256": "8ff257aa8a8f64ebd6938a68498227cb70abfdec50cb494e227ed48c46fc737c",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.1/TPG_Shahed238_Rail.zip",
+      "publicDownloadVerified": true,
+      "assetName": "TPG_Shahed238_Rail.zip",
+      "assetId": 629350197,
+      "originalFolder": "TPG_Shahed238_Rail",
+      "originalFileCount": 58,
+      "allFolderFilesVerified": true
     }
   ]
 }

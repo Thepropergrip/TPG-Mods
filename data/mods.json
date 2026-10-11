@@ -13,9 +13,9 @@
       "label": "TPG Containerized SHORAD.zip"
     },
     "sourceFilename": "TPG Containerized SHORAD.zip",
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon",
-    "publicVersion": "1.0.23"
+    "image": "/assets/images/containerized-shorad.png",
+    "publicVersion": "1.0.23",
+    "imageAlt": "TPG Containerized SHORAD launchers firing in DCS World"
   },
   {
     "id": "akinci",
@@ -30,14 +30,27 @@
   },
   {
     "id": "shahed-238",
-    "title": "Shahed-238",
+    "title": "TPG Shahed-238 GPS / ASM",
     "status": "released",
-    "statusConfirmed": false,
+    "statusConfirmed": true,
     "featured": true,
-    "version": null,
-    "github": null,
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "version": "1.0.1",
+    "github": {
+      "tag": "shahed-238-v1.0.1",
+      "assetName": "TPG_Shahed238_Rail.zip",
+      "label": "TPG_Shahed238_Rail.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.1/TPG_Shahed238_Rail.zip"
+    },
+    "image": "/assets/images/shahed-238.png",
+    "imageAlt": "TPG Shahed-238 drone on its launch rail in DCS World",
+    "sourceFilename": "TPG_Shahed238_Rail.zip",
+    "imageGallery": [
+      {
+        "image": "/assets/images/shahed-238-at-sea.png",
+        "caption": "Shahed-238 in flight beside a cargo ship in DCS World"
+      }
+    ],
+    "publicVersion": "1.0.1"
   },
   {
     "id": "fps-132",
@@ -103,8 +116,18 @@
     "status": "released",
     "statusConfirmed": true,
     "sourceFilename": "TPG_12_Pounder_Cannon.zip",
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "image": "/assets/images/12-pounder-cannon.png",
+    "imageAlt": "TPG 12 Pounder Cannon in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/cannonball-in-flight.png",
+        "caption": "Cannonball in flight in DCS World"
+      },
+      {
+        "image": "/assets/images/lava-ball.png",
+        "caption": "Lava ball in DCS World"
+      }
+    ]
   },
   {
     "id": "apkws-vshorad",
@@ -121,8 +144,8 @@
     "statusConfirmed": true,
     "sourceFilename": "TPG APKWS VSHORAD.zip",
     "releaseLabel": "Alpha release test candidate",
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "image": "/assets/images/apkws-vshorad.png",
+    "imageAlt": "TPG APKWS VSHORAD turret with four rocket pods"
   },
   {
     "id": "sahin-cuas",

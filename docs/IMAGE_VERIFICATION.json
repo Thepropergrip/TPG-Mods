@@ -1,0 +1,86 @@
+{
+  "images": [
+    {
+      "sitePath": "/assets/images/containerized-shorad.png",
+      "sourceFilename": "Screen_261006_194241.png",
+      "bytes": 4047521,
+      "sha256": "7f92457a261d80954bc37d473c56f662c5020d46cbfd3b4f5101381cdef40fcb",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/apkws-vshorad.png",
+      "sourceFilename": "Screenshot 2026-10-04 092336.png",
+      "bytes": 598874,
+      "sha256": "f8b656906fa1d2e7952a5abe86203eaa3c7202f2383e24d38c3ef039b8172d3c",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/shahed-238.png",
+      "sourceFilename": "Screenshot 2026-09-17 152412.png",
+      "bytes": 2485174,
+      "sha256": "af925af7337a52c3f9b3b8c0e7622abdeb905b719f7cb2d760195f56e5de6873",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/12-pounder-cannon.png",
+      "sourceFilename": "Screen_260912_125133.png",
+      "bytes": 3773179,
+      "sha256": "c35c8759b7e77cb4be5dace923703981d22c12fd9c3ed18b231871d6ec86d4b5",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/cannonball-in-flight.png",
+      "sourceFilename": "Screen_260912_111647.png",
+      "bytes": 5716427,
+      "sha256": "d11794bcfba30bc3ed2e34eb9e24bf8a9c369257326e93413afbc1ed0bc3424b",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/development-preview.png",
+      "sourceFilename": "Screenshot 2026-09-28 092922.png",
+      "bytes": 752427,
+      "sha256": "4c16861a250653afa90c4a0b75856cab68e80a9f430ab8bde947036675007dc6",
+      "fileUnmodified": true,
+      "displaySaturation": 0.5
+    },
+    {
+      "sitePath": "/assets/images/lava-ball.png",
+      "sourceFilename": "Screenshot 2026-09-18 122542.png",
+      "bytes": 492122,
+      "sha256": "0fbe1c569590b39a2649356ceae9e62b60725b461470e86eca1f76d001ed3567",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/shahed-238-at-sea.png",
+      "sourceFilename": "Screenshot 2026-09-17 152456.png",
+      "bytes": 1709801,
+      "sha256": "6596637ac295b0b07050940772f16b2b507ee814722ff4d34084ba4af47d4a9d",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/development-preview-2.png",
+      "sourceFilename": "Screenshot 2026-08-23 113358.png",
+      "bytes": 627224,
+      "sha256": "2022de10f95d189202aa07c093220f75d2aa308300bbb3e13bb819c67dd32578",
+      "fileUnmodified": true,
+      "displaySaturation": 0.5
+    },
+    {
+      "sitePath": "/assets/images/development-preview-3.png",
+      "sourceFilename": "Screenshot 2026-10-10 191735.png",
+      "bytes": 705849,
+      "sha256": "a579ebfb8ba5a765d865f2d2c183b5a5509540d62d309750be26327c09f5f669",
+      "fileUnmodified": true,
+      "displaySaturation": 0.5,
+      "displayBlurPixels": 7,
+      "requestedBlurStrength": "35%; interpreted as moderate blur for discernible preview"
+    }
+  ]
+}
