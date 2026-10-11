@@ -24,6 +24,10 @@
       "image": "/assets/images/development-preview-3.png",
       "imageAlt": "Work in progress preview",
       "blurred": true
+    },
+    {
+      "image": "/assets/images/development-preview-4.png",
+      "imageAlt": "Work in progress preview"
     }
   ]
 }

@@ -31,3 +31,5 @@ The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its ref
 - APKWS remains Alpha Release Test Candidates; the explicit correction overrides the earlier wording calling it released. Shahed-238 is confirmed Released, version 1.0.1 from entry.lua; its README heading still says 1.0.0 and is preserved in the ZIP.
 
 - SAHIN C-UAS uses the supplied front-view DCS screenshot on its card, Quick Look and More Info page; its Alpha status remains unchanged.
+
+- V2 uses the supplied launcher photo as its main image and the two flight screenshots in Quick Look and More Info. SAHIN C-UAS has a secondary combat-scene image. The fourth anonymous development card now has the supplied panel-detail preview at 50% saturation. All six available mods and four development cards have real supplied images; development names and actions stay hidden.

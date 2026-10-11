@@ -99,8 +99,18 @@
     "status": "released",
     "statusConfirmed": true,
     "sourceFilename": "TPG V2.zip",
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "image": "/assets/images/v2.png",
+    "imageAlt": "TPG V2 rocket and towed launcher in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/v2-in-flight.png",
+        "caption": "V2 in flight in DCS World"
+      },
+      {
+        "image": "/assets/images/v2-flight-trail.png",
+        "caption": "V2 rocket exhaust trail in DCS World"
+      }
+    ]
   },
   {
     "id": "12-pounder-cannon",
@@ -163,7 +173,13 @@
     "sourceFilename": "TPG_SAHIN_CUAS.zip",
     "releaseLabel": "Alpha release test candidate",
     "image": "/assets/images/sahin-cuas.png",
-    "imageAlt": "TPG SAHIN 40mm C-UAS in DCS World"
+    "imageAlt": "TPG SAHIN 40mm C-UAS in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/sahin-cuas-secondary.png",
+        "caption": "TPG SAHIN C-UAS in a DCS combat scene"
+      }
+    ]
   },
   {
     "id": "anduril-rail",

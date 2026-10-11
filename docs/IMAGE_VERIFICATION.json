@@ -89,6 +89,46 @@
       "sha256": "8ffb634601023832c2a7093dace6c32019dab059f2e92f13ccff875483cd73ef",
       "fileUnmodified": true,
       "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/v2.png",
+      "sourceFilename": "codex-clipboard-3469879b-d153-4477-8f1d-af6781a43907.png",
+      "bytes": 1808882,
+      "sha256": "a7faf755443bf7c6b11d70bfeb4af1a4ff75f268276c624b2d05550fb318235b",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/v2-in-flight.png",
+      "sourceFilename": "codex-clipboard-116bcb1c-3cf8-4e73-8e7e-e5714bb50f89.png",
+      "bytes": 834081,
+      "sha256": "70cd121c553c13e6e5d67623b6944e589cc1df57d0e8b750c8987588822da93c",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/v2-flight-trail.png",
+      "sourceFilename": "codex-clipboard-bc226683-395a-488a-9dd9-aea07b958995.png",
+      "bytes": 720686,
+      "sha256": "978023ac304343d17728e02deb4218db82bcdcc12bec61c239444ed0d6e166a3",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/sahin-cuas-secondary.png",
+      "sourceFilename": "codex-clipboard-cb18bc6d-5b6d-45b2-bec4-67e4393e0d6a.png",
+      "bytes": 3656662,
+      "sha256": "b7d006d93a5408956c867ac56998e31cf7133ad2431618f81bb3242824a228ca",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/development-preview-4.png",
+      "sourceFilename": "codex-clipboard-908c4287-b3ee-4162-9b52-0fadd6a7ceb4.png",
+      "bytes": 2794459,
+      "sha256": "6235252a2215604cc7436a9889744da21adedc320844f77ba1cfd26eaef3d10a",
+      "fileUnmodified": true,
+      "displaySaturation": 0.5
     }
   ]
 }
