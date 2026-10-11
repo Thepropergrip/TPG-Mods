@@ -91,17 +91,19 @@ The homepage embeds Justin's Kit form (`10029231`, public UID `19030fcb90`). The
 
 | Public option | Kit tag | Tag ID |
 | --- | --- | --- |
-| Official Mod Release Announcements | Official Mod Release Announcements | 24506150 |
-| Official and Release Candidate Announcements | Official and Release Candidate Announcements | 24506152 |
-| All Releases, Candidates, Fixes and News | All Releases, Candidates and Fixes | 24506154 |
+| Official releases only | Official Mod Release Announcements | 24506150 |
+| Official releases + release candidates only | Official and Release Candidate Announcements | 24506152 |
+| All releases, candidates, fixes and news | All Releases, Candidates and Fixes | 24506154 |
 
 The third tag's scope includes news. The unused `TPG News` tag was created during setup; it is not part of the final signup form or recipient targeting.
 
 Manage people and tags in Kit's Subscribers area. For announcements, use one Broadcast with conditional content: official releases for all three levels, release candidates for the second and third, and alpha/test candidates, fixes and news for the third. Filter recipients to tags with relevant content, rather than sending empty emails. Each subscriber should have exactly one engagement-level tag. Resubmitting the signup form must not be offered as a reliable downgrade: adding a lower-level tag can leave the old higher-level tag attached. Resolve conflicting tags before sending; do not infer consent for the broadest level from conflicting tags.
 
-**Preference changes — pending setup:** the Kit account's Topics of Interest drawer was inspected on October 10, 2026 and contained no topics. The website dropdown does not currently provide a self-service preference editor. Kit's native preference page uses checkboxes; the user's choice between that page and a separate single-choice editor is pending. Keep the website signup dropdown.
+**Preference changes — configured October 11, 2026:** Justin approved Kit's native preference page with checkboxes while keeping the website signup dropdown. Three Topics of Interest are saved, each mapped to the matching existing tag in the table above. Their names match the public options with **(choose one level)** appended. The saved mappings were reopened and verified.
 
-For the native option, map three clearly named topics to the existing three tags. A subscriber changing levels must deselect the old topic and select the new one; native topics do not enforce mutual exclusivity. Before enabling sending, preview the chosen level in each email footer and include **Change alert level** with URL `{{ subscriber_preferences_url }}`. Kit generates that subscriber-specific URL when sending; it is not a generic homepage link and does not function in preview emails. Proposed footer copy: "Your current engagement level: [the subscriber's one selected level]. No sales, and never more than 1x per week at max engagement. Change alert level." This is prepared guidance, not a configured or tested email template. No emails were sent during this review.
+A subscriber changing levels must uncheck the old topic, check the new one and save; native topics do not enforce mutual exclusivity. The account's default HTML template is **TPG Mod Announcements — Engagement Preferences**, ID `5596707` ([Kit editor](https://app.kit.com/account/email_layout_templates/5596707/edit)). Its source is retained in `email/kit-announcements.html`. The footer uses Liquid to show the selected level, the weekly-frequency sentence, **Change alert level**, switching instructions and Unsubscribe. With conflicting tags it displays all selected levels rather than assuming broader consent; resolve conflicts before sending. With no engagement tag it says no level is selected.
+
+**Change alert level** uses `{{ subscriber_preferences_url }}`. Kit generates that subscriber-specific URL at send time; it is not a generic homepage link and does not function in preview emails. The saved HTML was reopened, Kit's layout preview inspected, and local Liquid rendering checked for all eight combinations of the three tags. The layout preview showed all three sample labels; a real subscriber delivery and personal-link round trip have not been tested. No subscriber tags were changed and no emails were sent during this configuration. For future broadcasts, verify this template is selected and preview as the intended subscriber before sending; existing drafts or another explicitly selected template can have a different footer.
 
 References: [Kit subscriber preferences](https://help.kit.com/en/articles/6082488-managing-subscriber-preferences-in-kit) and [personal preference links](https://help.kit.com/en/articles/4600311-subscriber-preferences-link).
 

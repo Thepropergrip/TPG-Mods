@@ -1,0 +1,35 @@
+<style>
+  .tpg-email { max-width: 600px; margin: 24px auto; padding: 16px; font-family: Arial, Helvetica, sans-serif; color: #242a21; line-height: 1.6; }
+  .tpg-email img { max-width: 100%; height: auto; }
+  .tpg-email a { color: #43523a; }
+  .tpg-email .button { display: inline-block; padding: 12px 20px; background: #f79e00; color: #1d1d1b; text-decoration: none; border-radius: 4px; }
+  .tpg-preferences { margin-top: 28px; padding-top: 20px; border-top: 1px solid #d8dcd3; font-size: 14px; }
+  .tpg-preferences p { margin: 8px 0; }
+</style>
+<div class="tpg-email">
+  {{ message_content }}
+  <div class="tpg-preferences">
+    <p><strong>Your current engagement level:</strong></p>
+    {% if subscriber.tags contains "Official Mod Release Announcements" %}
+    <p>Official releases only</p>
+    {% endif %}
+    {% if subscriber.tags contains "Official and Release Candidate Announcements" %}
+    <p>Official releases + release candidates only</p>
+    {% endif %}
+    {% if subscriber.tags contains "All Releases, Candidates and Fixes" %}
+    <p>All releases, candidates, fixes and news</p>
+    {% endif %}
+    {% unless subscriber.tags contains "Official Mod Release Announcements" %}
+      {% unless subscriber.tags contains "Official and Release Candidate Announcements" %}
+        {% unless subscriber.tags contains "All Releases, Candidates and Fixes" %}
+        <p>No mod announcement level selected.</p>
+        {% endunless %}
+      {% endunless %}
+    {% endunless %}
+    <p>No sales, and never more than 1x per week at max engagement.</p>
+    <p><a href="{{ subscriber_preferences_url }}">Change alert level</a></p>
+    <p>Choose one level. To switch, uncheck your old level, check your new level, then save your preferences.</p>
+    <p><a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+    <p>{{ address }}</p>
+  </div>
+</div>
