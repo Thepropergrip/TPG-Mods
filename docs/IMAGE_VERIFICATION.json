@@ -79,8 +79,8 @@
       "sha256": "a579ebfb8ba5a765d865f2d2c183b5a5509540d62d309750be26327c09f5f669",
       "fileUnmodified": true,
       "displaySaturation": 0.5,
-      "displayBlurPixels": 3.5,
-      "requestedBlurStrength": "Halved from 7 px to 3.5 px at user request"
+      "displayBlurPixels": 1.75,
+      "requestedBlurStrength": "Halved again from 3.5 px to 1.75 px at user request"
     },
     {
       "sitePath": "/assets/images/sahin-cuas.png",
