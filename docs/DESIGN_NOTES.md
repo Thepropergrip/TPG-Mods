@@ -19,6 +19,8 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - Use the supplied package name TPG Containerized SHORAD in public titles. Grizzly is an internal historical identifier, retained only for existing release tags/routes. Show its public version 1.0.23 rather than internal build wording. Do not describe simulated sensors as onboard physical hardware.
 - Do not overwrite old release ZIPs. Use exact mod-specific tags/URLs, not the repository-wide latest release.
 - Keep supplied ZIP names and original display labels. Do not append versions or replace the mod name in asset filenames. GitHub's own space-to-dot normalization is recorded from its returned asset metadata; internal ZIP folders remain unchanged.
+- Kit form 10029231 / UID 19030fcb90 collects email addresses and one required dropdown labeled "Choose your level of alerts". Three cumulative levels: official releases; official releases plus release candidates; all releases, candidates, fixes and news. No separate news checkbox.
+- Email frequency: at most one email per week at the highest alert level; lower levels may receive fewer. Combine relevant items into a single digest, leave at least seven days between announcement broadcasts, and skip sends with no relevant updates. No automatic announcement sending has been configured, and the signup form does not enforce a global sending cap.
 
 ## Available source material
 

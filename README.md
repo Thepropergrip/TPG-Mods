@@ -85,6 +85,24 @@ Continue from `docs/DESIGN_NOTES.md`. The catalog now has Quick Look modals, Dow
 
 Under-development records have no GitHub release link and are excluded from download statistics. Their website section contains anonymous Photo Coming Soon cards only, with no names, descriptions, actions, detail pages or published data records. The release commands refuse these records. Photo Coming Soon placeholders remain until Justin supplies an actual screenshot or a verified free-use image of the actual object; generated and derived imagery is excluded.
 
+## Kit email signup and sending
+
+The homepage embeds Justin's Kit form (`10029231`, public UID `19030fcb90`). The public form has one required dropdown, **Choose your level of alerts**, with three cumulative options and no checkbox. Kit receives submissions directly; account credentials and subscriber addresses are not stored in this repository. Form changes saved in Kit update the JavaScript embed automatically.
+
+| Public option | Kit tag | Tag ID |
+| --- | --- | --- |
+| Official Mod Release Announcements | Official Mod Release Announcements | 24506150 |
+| Official and Release Candidate Announcements | Official and Release Candidate Announcements | 24506152 |
+| All Releases, Candidates, Fixes and News | All Releases, Candidates and Fixes | 24506154 |
+
+The third tag's scope includes news. The unused `TPG News` tag was created during setup; it is not part of the final signup form or recipient targeting.
+
+Manage people and tags in Kit's Subscribers area. For announcements, use one Broadcast with conditional content: official releases for all three levels, release candidates for the second and third, and alpha/test candidates, fixes and news for the third. Filter recipients to tags with relevant content, rather than sending empty emails. Treat the broadest selected level as authoritative if a returning subscriber has accumulated multiple preference tags.
+
+**Weekly limit:** at most one announcement email per person in any seven-day period. Before manually scheduling a broadcast, check the previous sent broadcast and all queued sends; leave at least seven days between announcement broadcasts. Use one fixed send time when there are updates, skip empty weeks, and do not use resend-to-unopened or additional announcement sequences. Kit deduplicates overlapping recipients within one broadcast, but tags and this embed do not enforce an account-wide frequency cap across separate sends. No announcement broadcast, sequence or sending automation was created during this signup setup.
+
+If announcement sending is automated later, add a persisted last-send check and duplicate-run protection before enabling it. An API or workflow must not claim that this signup's frequency sentence enforces sending limits. The confirmation email is part of Kit's opt-in flow; announcement delivery has not been tested by sending subscriber emails.
+
 ## Official references
 
 - [GitHub CLI repository creation](https://cli.github.com/manual/gh_repo_create)

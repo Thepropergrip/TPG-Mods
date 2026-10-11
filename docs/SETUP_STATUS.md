@@ -20,6 +20,7 @@ Verified live:
 - Cloudflare Web Analytics enabled, with its injected beacon verified on the deployed site.
 - Download-count workflow successfully ran manually and on each of the five published releases.
 - Five real ZIPs uploaded and published; GitHub asset checksums verified. Every public download was fetched without authentication and its SHA-256 matched the supplied original ZIP.
+- Kit signup form configured with one required alert-level dropdown and three cumulative preferences. Its public endpoint confirms real tag IDs and no news checkbox. The homepage includes the supplied JavaScript embed and a direct form link when JavaScript is disabled. No announcement sending or automatic frequency enforcement has been configured; the weekly send procedure is in README.md.
 
 Current confirmed inventory:
 
