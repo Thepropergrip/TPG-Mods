@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T14:27:56.746Z",
+  "generatedAt": "2026-10-11T14:31:29.360Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -77,6 +77,19 @@
           "assetName": "TPG_SAHIN_CUAS.zip",
           "downloads": 4,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_SAHIN_CUAS.zip",
+          "prerelease": true
+        }
+      ]
+    },
+    "t34-calliope": {
+      "currentDownloads": 0,
+      "lifetimeDownloads": 0,
+      "versions": [
+        {
+          "tag": "t34-calliope-v1.1.5",
+          "assetName": "TPG.T34.Calliope.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip",
           "prerelease": true
         }
       ]
