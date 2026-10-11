@@ -20,7 +20,7 @@ Verified live:
 - Cloudflare Web Analytics enabled, with its injected beacon verified on the deployed site.
 - Download-count workflow successfully ran manually and on published releases.
 - Six real ZIPs uploaded and published; GitHub asset checksums verified. Every public download was fetched without authentication and its SHA-256 matched the supplied original ZIP or, for Shahed-238, the ZIP verified against all 58 supplied folder files.
-- Kit signup form configured with one required alert-level dropdown and three cumulative preferences. Its public endpoint confirms real tag IDs and no news checkbox. The homepage includes the supplied JavaScript embed and a direct form link when JavaScript is disabled. No announcement sending or automatic frequency enforcement has been configured; the weekly send procedure is in README.md.
+- Kit signup form configured with one required alert-level dropdown and three cumulative preferences. Its public endpoint confirms real tag IDs and no news checkbox. The homepage includes the supplied JavaScript embed and a direct form link when JavaScript is disabled. On-page wording is customized by site/assets/kit-signup.js; tier selection and serialized values were checked against the real embed, including early and late form insertion. The box is 576 px wide and centered, and the catalog expands to 1,800 px on wide screens. No announcement sending or automatic frequency enforcement has been configured; the weekly send procedure is in README.md.
 
 Current confirmed inventory:
 
