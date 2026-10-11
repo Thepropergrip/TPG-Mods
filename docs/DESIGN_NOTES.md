@@ -29,3 +29,5 @@ The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its ref
 
 - October 10 photo update: use all ten supplied images across Containerized SHORAD, APKWS, Shahed-238, the cannon and three anonymous development previews. Cannon galleries show cannonball and lava ball; Shahed gallery shows the additional cargo-ship scene. Original files stay intact; preview effects are CSS only.
 - APKWS remains Alpha Release Test Candidates; the explicit correction overrides the earlier wording calling it released. Shahed-238 is confirmed Released, version 1.0.1 from entry.lua; its README heading still says 1.0.0 and is preserved in the ZIP.
+
+- SAHIN C-UAS uses the supplied front-view DCS screenshot on its card, Quick Look and More Info page; its Alpha status remains unchanged.

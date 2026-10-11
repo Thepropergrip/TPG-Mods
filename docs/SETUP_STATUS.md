@@ -37,7 +37,7 @@ Current confirmed inventory:
 | Anduril Rail | Under Development | — | Excluded |
 | FP1 Drone | Under Development | — | Excluded |
 
-The inventory above is retained for maintenance. On the website, the Under Development heading appears once above four anonymous cards: three supplied preview images and one Photo Coming Soon placeholder, with no names, descriptions or actions. Development identities are excluded from published JSON and detail pages. The ten-card catalog uses the supplied screenshots for Containerized SHORAD, APKWS, Shahed-238 and the cannon. Cannon and Shahed galleries include the additional supplied screenshots. Development previews use 50% saturation; the third also uses a moderate 7 px CSS blur. Original image files are preserved byte-for-byte; no generated imagery is used. See IMAGE_VERIFICATION.json for source filenames and hashes. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
+The inventory above is retained for maintenance. On the website, the Under Development heading appears once above four anonymous cards: three supplied preview images and one Photo Coming Soon placeholder, with no names, descriptions or actions. Development identities are excluded from published JSON and detail pages. The ten-card catalog uses the supplied screenshots for Containerized SHORAD, APKWS, Shahed-238, the cannon and SAHIN C-UAS. Cannon and Shahed galleries include the additional supplied screenshots. Development previews use 50% saturation; the third also uses a moderate 7 px CSS blur. Original image files are preserved byte-for-byte; no generated imagery is used. See IMAGE_VERIFICATION.json for source filenames and hashes. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
 
 Quick Look opens an in-page modal with a dimmed, blurred base page and six type-specific facts for each of the six available mods. Available releases have Download Now and More Info actions on both cards and popups. Their six More Info routes are real `/mods/<id>/` pages with the same facts, usage notes and included documentation where supplied. Close-button and backdrop handling were checked with a DOM harness; native Escape and focus containment still need browser verification. Quick Look falls back to the detail page when JavaScript or native dialog support is unavailable.
 
@@ -46,7 +46,7 @@ The supplied FP-132 source is explicitly a non-functional static structure; no f
 Still to finish:
 
 - Original mockup and screenshot bundle import; visitor design intentionally deferred.
-- Photos remain needed for V2, SAHIN and the remaining anonymous development placeholder.
+- Photos remain needed for V2 and the remaining anonymous development placeholder.
 - Final visitor design, expanded documentation, and any future custom domain.
 
 When resuming, use this checkout and repository rather than creating another project. Keep the existing Git integration, exact release tags, and design decisions in DESIGN_NOTES.md.

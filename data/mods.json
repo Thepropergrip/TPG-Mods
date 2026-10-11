@@ -162,8 +162,8 @@
     "statusConfirmed": true,
     "sourceFilename": "TPG_SAHIN_CUAS.zip",
     "releaseLabel": "Alpha release test candidate",
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "image": "/assets/images/sahin-cuas.png",
+    "imageAlt": "TPG SAHIN 40mm C-UAS in DCS World"
   },
   {
     "id": "anduril-rail",

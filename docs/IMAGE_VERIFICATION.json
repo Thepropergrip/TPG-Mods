@@ -81,6 +81,14 @@
       "displaySaturation": 0.5,
       "displayBlurPixels": 7,
       "requestedBlurStrength": "35%; interpreted as moderate blur for discernible preview"
+    },
+    {
+      "sitePath": "/assets/images/sahin-cuas.png",
+      "sourceFilename": "codex-clipboard-e78dc167-6d74-484d-a2aa-c09644aa5746.png",
+      "bytes": 1173255,
+      "sha256": "8ffb634601023832c2a7093dace6c32019dab059f2e92f13ccff875483cd73ef",
+      "fileUnmodified": true,
+      "displaySaturation": 1
     }
   ]
 }
