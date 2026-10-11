@@ -10,6 +10,8 @@ const facts = info => `<dl class="facts">${(info.facts || []).map(([label, value
 const download = mod => mod.status !== 'under-development' && mod.github ? `<a class="button primary" href="${escapeHtml(mod.github.downloadUrl)}">Download Now</a>` : '';
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
 const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
+const detailGallery = info => info.detailGallery?.length
+  ? `<section class="detail-gallery"><h2>Model profiles and research</h2><div class="photo-gallery">${info.detailGallery.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"><figcaption>${escapeHtml(item.caption)}</figcaption></figure>`).join('')}</div></section>` : '';
 
 export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   const groups = [['released', 'Released'], ['alpha', 'Alpha Release Test Candidates'], ['under-development', 'Under Development']];
@@ -40,6 +42,8 @@ export function renderDetail(mod, info, launchReady) {
 <body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${version(mod)}${download(mod)}</header>
 ${photo(mod, true)}<section><h2>Quick facts</h2>${facts(info)}<p class="source-note">Figures from the supplied DCS mod settings and package notes. Declared limits and configured envelopes are distinct from tested performance.</p></section>
 <section><h2>Usage notes</h2>${info.notes.map(note => `<p>${escapeHtml(note)}</p>`).join('')}${mod.sourceFilename ? `<p>Package: ${escapeHtml(mod.sourceFilename)}</p>` : ''}</section>
+${detailGallery(info)}
+${info.references?.length ? `<section><h2>Credits and references</h2><ul>${info.references.map(item => `<li><a href="${escapeHtml(item.url)}">${escapeHtml(item.label)}</a></li>`).join('')}</ul></section>` : ''}
 ${info.documentation ? `<section><h2>Included installation and usage notes</h2><div class="documentation">${escapeHtml(info.documentation)}</div></section>` : ''}
 <details class="source-files"><summary>Source files for these facts</summary><ul>${info.sources.map(source => `<li>${escapeHtml(source)}</li>`).join('')}</ul></details>
 </main></body></html>`;

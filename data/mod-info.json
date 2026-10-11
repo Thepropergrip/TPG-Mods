@@ -402,5 +402,87 @@
       "Database/Weapons/TPG_Shahed238_AntiShip.lua"
     ],
     "documentation": "TPG Shahed-238 GPS / ASM v1.0.0\n================================\n\nINSTALL\nCopy the TPG_Shahed238_Rail folder into:\n  Saved Games\\DCS\\Mods\\tech\\\n(or Saved Games\\DCS.openbeta\\Mods\\tech\\ on legacy installs)\n\nUNITS\n- TPG Shahed-238 GPS\n- TPG Shahed-238 ASM\n\nEach launcher carries up to 5 shots. \n\nLIVERIES\n- Original Green\n- Sand Tan\n\n\n"
+  },
+  "t34-calliope": {
+    "type": "WWII self-propelled rocket artillery",
+    "summary": "A 60-tube Calliope with custom M8 rockets, Combined Arms control, moving-fire machine guns and detailed vehicle animation.",
+    "facts": [
+      [
+        "Configured rocket range",
+        "100 m-3.66 km"
+      ],
+      [
+        "Ready rockets",
+        "60 M8 4.5-inch HE"
+      ],
+      [
+        "Rocket firing interval",
+        "0.5 seconds"
+      ],
+      [
+        "Road speed",
+        "40.2 km/h"
+      ],
+      [
+        "Machine-gun ammunition",
+        "3,750 coaxial / 2,500 bow"
+      ],
+      [
+        "Player control",
+        "Combined Arms"
+      ]
+    ],
+    "notes": [
+      "Install T34 Calliope in Saved Games/DCS/Mods/tech/ and restart DCS. Find TPG T34 Calliope (M4 Sherman) under Artillery; available to all countries and coalitions.",
+      "Enable Combined Arms vehicle control in the mission. Default bindings: Q selects the main turret, E cycles its weapons, and Space fires. Stop for rocket fire; both M1919 machine guns support unstabilized fire on the move. The original launcher-fitted configuration keeps the cannon disabled.",
+      "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized flight disturbance replace a perfectly repeating salvo; dispersion remains part of alpha testing.",
+      "The rocket sight uses the native MLRS range controller with this M8 ammunition. Coaxial and bow guns have separate ammunition stores, 250-round belts, firing loops and burst-tail audio.",
+      "Custom work includes articulated launcher linkage, flexible wiring, circulating track shoes, rotating wheels, animated suspension and dim amber headlights. Fourteen 2K material sets add varied wear and suspension-matched hull dirt.",
+      "Dedicated thermal maps distinguish engine, running gear, weapon and body response. Thirty-two armor zones include the visible applique plates. A separate wreck model adds broken tubes, a bent barrel, an open engine bay and displaced tracks. Tank, wreck and rocket each have four distance LODs.",
+      "Original model by OK3D; DCS integration and custom material work by TPG. The download includes the full installation and feature guide."
+    ],
+    "detailGallery": [
+      {
+        "image": "/assets/images/calliope-armor.png",
+        "caption": "Armor thickness mapping"
+      },
+      {
+        "image": "/assets/images/calliope-ir.png",
+        "caption": "Custom infrared response mapping"
+      },
+      {
+        "image": "/assets/images/calliope-damage.png",
+        "caption": "Destroyed model profiles"
+      },
+      {
+        "image": "/assets/images/calliope-os969-cover.png",
+        "caption": "Research reference: OS 9-69, Rockets and Launchers, February 1944"
+      }
+    ],
+    "sources": [
+      "entry.lua",
+      "Database/Calliope.lua",
+      "Database/M8.lua",
+      "Database/Shells.lua",
+      "README.md"
+    ],
+    "references": [
+      {
+        "label": "Original model: OK3D - T34 Calliope",
+        "url": "https://www.cgtrader.com/free-3d-models/military/military-vehicle/t34-calliope"
+      },
+      {
+        "label": "TM 9-394 - 4.5-Inch Multiple Rocket Launcher T34",
+        "url": "https://www.ibiblio.org/hyperwar/USA/ref/TM/pdfs/TM9-394.pdf"
+      },
+      {
+        "label": "OS 9-69 - Rockets and Launchers, February 1944",
+        "url": "https://studylib.net/doc/25220464/os-9-69-rocket-launchers-feb-1944"
+      },
+      {
+        "label": "TM 9-1950 - Rockets, 1945",
+        "url": "https://www.bulletpicker.com/pdf/TM-9-1950-1945.pdf"
+      }
+    ]
   }
 }

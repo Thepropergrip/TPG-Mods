@@ -69,6 +69,17 @@
       "originalFolder": "TPG_Shahed238_Rail",
       "originalFileCount": 58,
       "allFolderFilesVerified": true
+    },
+    {
+      "id": "t34-calliope",
+      "version": "1.1.5",
+      "status": "alpha",
+      "bytes": 238114370,
+      "sha256": "af1ca912f8a9e0e4badb3a0e24e882c39143449369280944784b7017b6640fc5",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip",
+      "publicDownloadVerified": true,
+      "assetName": "TPG.T34.Calliope.zip",
+      "assetId": 630949536
     }
   ]
 }

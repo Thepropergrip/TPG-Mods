@@ -53,6 +53,25 @@ test('additional supplied photos appear in Quick Look and More Info while cards 
   }
 });
 
+test('mapping and research images are exclusive to More Info and follow gameplay screenshots', () => {
+  const mod = { id: 'calliope', title: 'Calliope', status: 'alpha', statusConfirmed: true, image: '/game-launch.png', imageGallery: [{ image: '/game-rocket.png', caption: 'Rocket in flight' }] };
+  const info = { summary: 'Rocket artillery.', type: 'Artillery', facts: [], notes: [], sources: [], detailGallery: [
+    { image: '/armor.png', caption: 'Armor mapping' }, { image: '/ir.png', caption: 'IR mapping' },
+    { image: '/wreck.png', caption: 'Destroyed model' }, { image: '/research.png', caption: 'Research "cover"' }
+  ] };
+  for (const html of [renderCatalog([mod], { calliope: info }), renderQuickLooks([mod], { calliope: info })]) {
+    assert.doesNotMatch(html, /armor\.png|ir\.png|wreck\.png|research\.png/);
+  }
+  const detail = renderDetail(mod, info, false);
+  let last = detail.indexOf('/game-rocket.png');
+  assert.ok(last > detail.indexOf('/game-launch.png'));
+  for (const item of info.detailGallery) {
+    assert.ok(detail.indexOf(item.image) > last);
+    last = detail.indexOf(item.image);
+  }
+  assert.match(detail, /Research &quot;cover&quot;/);
+});
+
 test('counts retain old versions, exclude drafts and unrelated releases, and select the actual current asset', () => {
   const release = (tag, count, extra = {}) => ({ tag_name: tag, assets: [{ name: 'mod.zip', download_count: count, browser_download_url: 'https://example.test/mod.zip' }, { name: 'SHA256SUMS.txt', download_count: 999 }], ...extra });
   const stats = aggregate([release('grizzly-v1.0.0', 100), release('grizzly-v1.1.0', 20), release('grizzly-v1.2.0', 50, { draft: true }), release('akinci-v1.0.0', 60)], [{ id: 'grizzly', github: { tag: 'grizzly-v1.1.0', assetName: 'mod.zip' } }], 'fixture');

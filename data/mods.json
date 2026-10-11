@@ -202,5 +202,34 @@
     "github": null,
     "image": null,
     "imagePlaceholder": "Photo Coming Soon"
+  },
+  {
+    "id": "t34-calliope",
+    "title": "TPG T34 Calliope",
+    "status": "alpha",
+    "statusConfirmed": true,
+    "featured": false,
+    "version": "1.1.5",
+    "publicVersion": "1.1.5",
+    "github": {
+      "tag": "t34-calliope-v1.1.5",
+      "assetName": "TPG.T34.Calliope.zip",
+      "label": "TPG T34 Calliope.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip"
+    },
+    "releaseLabel": "Alpha Candidate",
+    "sourceFilename": "TPG T34 Calliope.zip",
+    "image": "/assets/images/calliope-launch.png",
+    "imageAlt": "TPG T34 Calliope firing an M8 rocket in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/calliope-rear.png",
+        "caption": "Calliope rear view in DCS World"
+      },
+      {
+        "image": "/assets/images/calliope-m8.png",
+        "caption": "Custom M8 rocket in flight in DCS World"
+      }
+    ]
   }
 ]

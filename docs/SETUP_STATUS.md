@@ -52,3 +52,7 @@ Still to finish:
 - Final visitor design, expanded documentation, and any future custom domain.
 
 When resuming, use this checkout and repository rather than creating another project. Keep the existing Git integration, exact release tags, and design decisions in DESIGN_NOTES.md.
+
+## Calliope Alpha Candidate - October 11, 2026
+
+TPG T34 Calliope 1.1.5 is published as `t34-calliope-v1.1.5`. The release contains 91 runtime files and a player-facing README; its unauthenticated public ZIP download matches the packaged SHA-256. It is the third Alpha candidate, bringing the available-mod count to seven. The Calliope tile and Quick Look show gameplay screenshots only. More Info leads with the same screenshots, followed by custom features, the armor/IR/wreck profiles and the OS 9-69 research cover. The original seven supplied images are unchanged. Browser checks cover image order, successful loading, dialog dismissal and mobile width.

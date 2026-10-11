@@ -138,6 +138,55 @@
       "fileUnmodified": true,
       "displaySaturation": 1,
       "use": "Kit signup background with a translucent dark CSS overlay"
+    },
+    {
+      "sitePath": "/assets/images/calliope-launch.png",
+      "bytes": 1012129,
+      "sha256": "17b7b96dead03e58d39f0ab935d1f5d27a3cf63f650bc111d375e4cf11da3751",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/calliope-rear.png",
+      "bytes": 1888140,
+      "sha256": "2f7e82a5088c4b1014da7d233436efdbd6b313603ea10c97688e1158ebd295b9",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/calliope-m8.png",
+      "bytes": 2769262,
+      "sha256": "f8721b0d85b1d859537ebfb65cca4b2fc520741627d535f056aafc920e5d3700",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/calliope-armor.png",
+      "bytes": 422797,
+      "sha256": "753056c1c88061d622de7745222024d567dcf15f7ab1e5db16676f86207ec70e",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/calliope-ir.png",
+      "bytes": 317582,
+      "sha256": "b488bab96afc85fe9a2f4d3a1ced2a035c97d68f171c242c351677a1a60f286c",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/calliope-damage.png",
+      "bytes": 456013,
+      "sha256": "96a2d158fbbd888a5ee3d7658a53b6112538b72dcb95db8ec469975d36aac08a",
+      "fileUnmodified": true,
+      "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/calliope-os969-cover.png",
+      "bytes": 739470,
+      "sha256": "873f85d435d4575a778781897c58b8c16592be37fbf75f89801b9e2c5de0ee0f",
+      "fileUnmodified": true,
+      "displaySaturation": 1
     }
   ]
 }
