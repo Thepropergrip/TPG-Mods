@@ -129,6 +129,15 @@
       "sha256": "6235252a2215604cc7436a9889744da21adedc320844f77ba1cfd26eaef3d10a",
       "fileUnmodified": true,
       "displaySaturation": 0.5
+    },
+    {
+      "sitePath": "/assets/images/kit-signup-background.png",
+      "sourceFilename": "Screen_260924_194834.png",
+      "bytes": 1792386,
+      "sha256": "4801fa4f5a31ee07f351fb9f2b7357a794fac2bd662f401b9abb2b3f585f9414",
+      "fileUnmodified": true,
+      "displaySaturation": 1,
+      "use": "Kit signup background with a translucent dark CSS overlay"
     }
   ]
 }

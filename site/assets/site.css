@@ -8,6 +8,8 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 .photo-gallery{margin-top:16px}.photo-gallery figure{margin:0 0 16px}.photo-gallery figcaption{font-size:13px;color:#636d59;margin-top:6px}
 .development-preview .mod-photo{filter:saturate(.5)}
 .development-preview-blurred{overflow:hidden}.development-preview-blurred .mod-photo{filter:saturate(.5) blur(3.5px)}
-.email-signup{margin-top:56px;padding-top:8px;border-top:1px solid #d8dad2;max-width:720px}.email-signup>p{font-size:15px}.email-signup .formkit-form{max-width:100%}
+.email-signup{margin-top:56px;padding-top:8px;border-top:1px solid #d8dad2;max-width:720px}.email-signup>p{font-size:15px}.email-signup .formkit-form{max-width:100%;background-color:#23455a!important}
+.email-signup .formkit-form .formkit-background{background-image:linear-gradient(#15354b55,#15354b55),url('/assets/images/kit-signup-background.png')!important;background-size:cover!important;background-position:center!important;opacity:1!important}
+.email-signup .formkit-form :is(.formkit-header,.formkit-header h2,.formkit-subheader,.formkit-subheader p,.formkit-guarantee,.formkit-guarantee p,.formkit-label){color:#fff!important}
 .email-signup .formkit-form .formkit-submit{background:#f79e00!important;color:#1d1d1b!important}.email-signup .formkit-form .formkit-submit:hover{background:#e08e00!important}.email-signup .formkit-form .formkit-submit>span{background:transparent!important}
 @media(max-width:560px){body{font-size:16px}.page-shell{margin:24px auto;padding:20px}dialog{padding:24px 20px}.facts{gap:14px}.facts dd{font-size:15px}dialog .photo-placeholder{min-height:160px}}
