@@ -1,68 +1,68 @@
 {
-  "generatedAt": "2026-10-10T23:37:29.313Z",
+  "generatedAt": "2026-10-11T00:28:49.867Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
     "grizzly": {
-      "currentDownloads": 0,
-      "lifetimeDownloads": 0,
+      "currentDownloads": 5,
+      "lifetimeDownloads": 5,
       "versions": [
         {
           "tag": "grizzly-v1.0.23-ready-cell-state",
           "assetName": "TPG.Containerized.SHORAD.zip",
-          "downloads": 0,
+          "downloads": 5,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG.Containerized.SHORAD.zip",
           "prerelease": false
         }
       ]
     },
     "v2": {
-      "currentDownloads": 0,
-      "lifetimeDownloads": 0,
+      "currentDownloads": 2,
+      "lifetimeDownloads": 2,
       "versions": [
         {
           "tag": "v2-v1.0",
           "assetName": "TPG.V2.zip",
-          "downloads": 0,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/v2-v1.0/TPG.V2.zip",
           "prerelease": false
         }
       ]
     },
     "12-pounder-cannon": {
-      "currentDownloads": 0,
-      "lifetimeDownloads": 0,
+      "currentDownloads": 2,
+      "lifetimeDownloads": 2,
       "versions": [
         {
           "tag": "12-pounder-cannon-v1.2",
           "assetName": "TPG_12_Pounder_Cannon.zip",
-          "downloads": 0,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_Pounder_Cannon.zip",
           "prerelease": false
         }
       ]
     },
     "apkws-vshorad": {
-      "currentDownloads": 0,
-      "lifetimeDownloads": 0,
+      "currentDownloads": 2,
+      "lifetimeDownloads": 2,
       "versions": [
         {
           "tag": "apkws-vshorad-v0.1.4",
           "assetName": "TPG.APKWS.VSHORAD.zip",
-          "downloads": 0,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG.APKWS.VSHORAD.zip",
           "prerelease": true
         }
       ]
     },
     "sahin-cuas": {
-      "currentDownloads": 0,
-      "lifetimeDownloads": 0,
+      "currentDownloads": 3,
+      "lifetimeDownloads": 3,
       "versions": [
         {
           "tag": "sahin-cuas-v1.0.34",
           "assetName": "TPG_SAHIN_CUAS.zip",
-          "downloads": 0,
+          "downloads": 3,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_SAHIN_CUAS.zip",
           "prerelease": true
         }
