@@ -11,7 +11,14 @@ const download = mod => mod.status !== 'under-development' && mod.github ? `<a c
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
 const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
 const detailGallery = info => info.detailGallery?.length
-  ? `<section class="detail-gallery"><h2>Model profiles and research</h2><div class="photo-gallery">${info.detailGallery.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"></figure>`).join('')}</div></section>` : '';
+  ? `<section class="detail-gallery"><h2>${escapeHtml(info.detailGalleryHeading || 'Model profiles and research')}</h2><div class="photo-gallery">${info.detailGallery.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"></figure>`).join('')}</div></section>` : '';
+const links = items => `<ul>${items.map(item => `<li><a href="${escapeHtml(item.url)}">${escapeHtml(item.label)}</a></li>`).join('')}</ul>`;
+const history = info => info.history?.paragraphs?.length
+  ? `<section><h2>Brief history</h2>${info.history.paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${info.history.references?.length ? links(info.history.references) : ''}</section>` : '';
+const payload = info => info.payloadNotes?.length
+  ? `<section><h2>Warhead and ammunition</h2>${info.payloadNotes.map(text => `<p>${escapeHtml(text)}</p>`).join('')}</section>` : '';
+const changelog = info => info.changelog?.length
+  ? `<section class="changelog"><h2>Change Log</h2>${info.changelog.map(entry => `<h3><time datetime="${escapeHtml(entry.date)}">${escapeHtml(new Date(`${entry.date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }))}</time>${entry.version ? ` · Version ${escapeHtml(entry.version)}` : ''}</h3><ul>${entry.items.map(text => `<li>${escapeHtml(text)}</li>`).join('')}</ul>`).join('')}</section>` : '';
 
 const bylines = {
   released: "Perfection isn't claimed, but extensive testing and mission use has been completed.  Future upgrades always an option.",
@@ -47,8 +54,10 @@ export function renderDetail(mod, info, launchReady) {
 <body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${version(mod)}${download(mod)}</header>
 ${photo(mod, true)}<section><h2>Quick facts</h2>${facts(info)}</section>
 <section><h2>Usage notes</h2>${info.notes.map(note => `<p>${escapeHtml(note)}</p>`).join('')}${mod.sourceFilename ? `<p>Package: ${escapeHtml(mod.sourceFilename)}</p>` : ''}</section>
+${history(info)}
+${payload(info)}
 ${detailGallery(info)}
-${info.references?.length ? `<section><h2>Credits and references</h2><ul>${info.references.map(item => `<li><a href="${escapeHtml(item.url)}">${escapeHtml(item.label)}</a></li>`).join('')}</ul></section>` : ''}
-${info.documentation ? `<section><h2>Included installation and usage notes</h2><div class="documentation">${escapeHtml(info.documentation)}</div></section>` : ''}
+${info.references?.length ? `<section><h2>Credits and references</h2>${links(info.references)}</section>` : ''}
+${changelog(info)}
 </main></body></html>`;
 }

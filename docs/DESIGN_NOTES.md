@@ -9,7 +9,7 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 - AN/FPS-132 is a large fixed radar facility.
 - Prioritize Grizzly, Akıncı, Shahed-238.
 - Quick Look remains in the tab, with background dim/blur, a photo area, quick facts, Download Now and More Info actions, keyboard/backdrop close, and focus returned to its trigger. Photo Coming Soon remains until real images are supplied.
-- Each mod uses a repeating six-fact layout, adapted to its type (engagement range/projectile speed, aircraft flight limits, drone cruise/envelope, or static facility capabilities). Use supplied source files and manuals, distinguish declared/configured limits from measured performance, and leave unsupported facts unverified.
+- Each mod uses a repeating quick-fact layout adapted to its type, including best target types for available mods. Use supplied source files and manuals, distinguish declared/configured limits from measured performance, and leave unsupported facts unverified.
 - More Info navigates to a real URL such as `/mods/grizzly/`.
 - Site traffic comes from Cloudflare Web Analytics; download counts come from GitHub Release assets.
 - Only statuses explicitly confirmed by Justin are shown. Release versions come from the supplied ZIP entry.lua files, and download URLs come from GitHub.
@@ -28,7 +28,7 @@ Source: Justin's existing hosting conversation and `CODEX_START_HERE.md`. This p
 The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its referenced `current_mockup/` and `reference_assets/` directories and full `TPG_MODS_CODEX_HANDOFF.zip` were not found directly alongside it during prep. Import them when available before design work. No replacement imagery or new marketing copy has been generated.
 
 - October 10 photo update: use all ten supplied images across Containerized SHORAD, APKWS, Shahed-238, the cannon and three anonymous development previews. Cannon galleries show cannonball and lava ball; Shahed gallery shows the additional cargo-ship scene. Original files stay intact; preview effects are CSS only.
-- APKWS remains Alpha Release Test Candidates; the explicit correction overrides the earlier wording calling it released. Shahed-238 is confirmed Released, version 1.0.1 from entry.lua; its README heading still says 1.0.0 and is preserved in the ZIP.
+- APKWS remains Alpha Release Test Candidates; the explicit correction overrides the earlier wording calling it released. Shahed-238 is confirmed Released. The initial package was 1.0.1; the October 16 supplied folder updates it to 1.0.2.
 
 - SAHIN C-UAS uses the supplied front-view DCS screenshot on its card, Quick Look and More Info page; its Alpha status remains unchanged.
 
@@ -47,3 +47,5 @@ The handoff document was read at `D:/DCS Downloads/CODEX_START_HERE.md`. Its ref
 
 - October 11 site copy update: show the approved Released and Alpha bylines once below each catalog heading. Remove configured-versus-tested caveats, technical source-file dropdowns and visible gallery captions across the website. Retain image alt text, model credits, historical research links and practical operating instructions.
 - October 11 rocket photo replacement: use the supplied cursor-free M8 flight screenshot at /assets/images/calliope-m8.png in Quick Look and More Info. Preserve the signup image.
+
+- October 16: use a single consolidated Usage notes section, then brief factual history with source links and warhead/ammunition details. Keep Change Log as the last section of applicable More Info pages, dated with the user's local date. Never repeat the old cannon setup requirement outside its dated change entry. V-2 uses launch base, highlights its custom trajectory, and includes the supplied trajectory graph in More Info. Explain the SHORAD altitude gate without claiming it establishes a reachable ceiling.

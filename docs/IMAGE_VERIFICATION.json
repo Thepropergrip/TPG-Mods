@@ -188,6 +188,14 @@
       "sha256": "873f85d435d4575a778781897c58b8c16592be37fbf75f89801b9e2c5de0ee0f",
       "fileUnmodified": true,
       "displaySaturation": 1
+    },
+    {
+      "sitePath": "/assets/images/v2-ballistic-trajectories.png",
+      "sourceFilename": "Screenshot 2026-09-26 103255.png",
+      "bytes": 99067,
+      "sha256": "ab9549be7c70fa07277ded695e52a8ee00a0ad15d5a90510d06cc2e152cfc393",
+      "fileUnmodified": true,
+      "displaySaturation": 1
     }
   ]
 }

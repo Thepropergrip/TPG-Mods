@@ -85,6 +85,30 @@ test('mapping and research images are exclusive to More Info and follow gameplay
   assert.match(detail, /Research &quot;cover&quot;/);
 });
 
+test('detail pages keep one usage section, cite history and put dated changes last', () => {
+  const mod = { id: 'updated', title: 'Updated', status: 'released', statusConfirmed: true };
+  const info = {
+    type: 'System', summary: 'System.', facts: [], notes: ['Current instructions.'],
+    documentation: 'Obsolete duplicate usage notes.',
+    history: { paragraphs: ['History <text>.'], references: [{ label: 'Museum & archive', url: 'https://example.test/history?a=1&b=2' }] },
+    payloadNotes: ['Payload details.'],
+    references: [{ label: 'Credits', url: 'https://example.test/credits' }],
+    changelog: [{ date: '2026-10-16', version: '1.3', items: ['Fixed <collision>.'] }]
+  };
+  const detail = renderDetail(mod, info, false);
+  assert.equal((detail.match(/<h2>Usage notes<\/h2>/g) || []).length, 1);
+  assert.doesNotMatch(detail, /Obsolete duplicate|Included installation and usage notes/);
+  assert.ok(detail.indexOf('Brief history') > detail.indexOf('Current instructions.'));
+  assert.match(detail, /History &lt;text&gt;\./);
+  assert.match(detail, /https:\/\/example.test\/history\?a=1&amp;b=2/);
+  assert.match(detail, /datetime="2026-10-16">October 16, 2026/);
+  assert.match(detail, /Fixed &lt;collision&gt;\./);
+  assert.ok(detail.indexOf('Change Log') > detail.indexOf('Credits and references'));
+  assert.match(detail, /Fixed &lt;collision&gt;\.<\/li><\/ul><\/section>\s*<\/main>/);
+  const quick = renderQuickLooks([mod], { updated: info });
+  assert.doesNotMatch(quick, /Brief history|Change Log|Obsolete duplicate/);
+});
+
 test('counts retain old versions, exclude drafts and unrelated releases, and select the actual current asset', () => {
   const release = (tag, count, extra = {}) => ({ tag_name: tag, assets: [{ name: 'mod.zip', download_count: count, browser_download_url: 'https://example.test/mod.zip' }, { name: 'SHA256SUMS.txt', download_count: 999 }], ...extra });
   const stats = aggregate([release('grizzly-v1.0.0', 100), release('grizzly-v1.1.0', 20), release('grizzly-v1.2.0', 50, { draft: true }), release('akinci-v1.0.0', 60)], [{ id: 'grizzly', github: { tag: 'grizzly-v1.1.0', assetName: 'mod.zip' } }], 'fixture');

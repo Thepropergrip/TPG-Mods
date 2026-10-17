@@ -34,12 +34,12 @@
     "status": "released",
     "statusConfirmed": true,
     "featured": true,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "github": {
-      "tag": "shahed-238-v1.0.1",
+      "tag": "shahed-238-v1.0.2",
       "assetName": "TPG_Shahed238_Rail.zip",
       "label": "TPG_Shahed238_Rail.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.1/TPG_Shahed238_Rail.zip"
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.2/TPG_Shahed238_Rail.zip"
     },
     "image": "/assets/images/shahed-238.png",
     "imageAlt": "TPG Shahed-238 drone on its launch rail in DCS World",
@@ -50,7 +50,7 @@
         "caption": "Shahed-238 in flight beside a cargo ship in DCS World"
       }
     ],
-    "publicVersion": "1.0.1"
+    "publicVersion": "1.0.2"
   },
   {
     "id": "fps-132",
@@ -116,12 +116,12 @@
     "id": "12-pounder-cannon",
     "title": "TPG 12 Pounder Cannon",
     "featured": false,
-    "version": "1.2",
+    "version": "1.3",
     "github": {
-      "tag": "12-pounder-cannon-v1.2",
+      "tag": "12-pounder-cannon-v1.3",
       "assetName": "TPG_12_Pounder_Cannon.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_Pounder_Cannon.zip",
-      "label": "TPG_12_Pounder_Cannon.zip"
+      "label": "TPG_12_Pounder_Cannon.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.3/TPG_12_Pounder_Cannon.zip"
     },
     "status": "released",
     "statusConfirmed": true,
@@ -137,7 +137,8 @@
         "image": "/assets/images/lava-ball.png",
         "caption": "Lava ball in DCS World"
       }
-    ]
+    ],
+    "publicVersion": "1.3"
   },
   {
     "id": "apkws-vshorad",
@@ -209,13 +210,13 @@
     "status": "alpha",
     "statusConfirmed": true,
     "featured": false,
-    "version": "1.1.5",
-    "publicVersion": "1.1.5",
+    "version": "1.1.9",
+    "publicVersion": "1.1.9",
     "github": {
-      "tag": "t34-calliope-v1.1.5",
+      "tag": "t34-calliope-v1.1.9",
       "assetName": "TPG.T34.Calliope.zip",
       "label": "TPG T34 Calliope.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip"
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9/TPG.T34.Calliope.zip"
     },
     "releaseLabel": "Alpha Candidate",
     "sourceFilename": "TPG T34 Calliope.zip",

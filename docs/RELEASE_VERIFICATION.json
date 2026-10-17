@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-11T00:29:50.432753+00:00",
+  "verifiedAt": "2026-10-17T00:12:54.079824+00:00",
   "results": [
     {
       "id": "grizzly",
@@ -24,17 +24,6 @@
       "assetId": 629250572
     },
     {
-      "id": "12-pounder-cannon",
-      "version": "1.2",
-      "status": "released",
-      "bytes": 24396854,
-      "sha256": "94b34124a14cdc28760d7051fceb6c33cb0b289c28674619ee5c37981e591825",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_Pounder_Cannon.zip",
-      "publicDownloadVerified": true,
-      "assetName": "TPG_12_Pounder_Cannon.zip",
-      "assetId": 629250776
-    },
-    {
       "id": "apkws-vshorad",
       "version": "0.1.4",
       "status": "alpha",
@@ -55,6 +44,61 @@
       "publicDownloadVerified": true,
       "assetName": "TPG_SAHIN_CUAS.zip",
       "assetId": 629251371
+    },
+    {
+      "id": "shahed-238",
+      "version": "1.0.2",
+      "status": "released",
+      "bytes": 40518574,
+      "sha256": "b6370b0921bd3dbcbb3544542b4463c0371e2b4eabcff4cda64ea0c8c93d4992",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.2/TPG_Shahed238_Rail.zip",
+      "publicDownloadVerified": true,
+      "assetName": "TPG_Shahed238_Rail.zip",
+      "assetId": 649018587,
+      "originalFolder": "TPG_Shahed238_Rail",
+      "originalFileCount": 54,
+      "allFolderFilesVerified": true
+    },
+    {
+      "id": "12-pounder-cannon",
+      "version": "1.3",
+      "status": "released",
+      "bytes": 24390875,
+      "sha256": "3d789ac0dae102b8f60bd5207f1494e43733f8c18e289e893b5687d1b9d2229b",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.3/TPG_12_Pounder_Cannon.zip",
+      "publicDownloadVerified": true,
+      "assetName": "TPG_12_Pounder_Cannon.zip",
+      "assetId": 649019546,
+      "originalFolder": "TPG_12_Pounder_Cannon",
+      "originalFileCount": 29,
+      "allFolderFilesVerified": true
+    },
+    {
+      "id": "t34-calliope",
+      "version": "1.1.9",
+      "status": "alpha",
+      "bytes": 238144279,
+      "sha256": "f407f3ba37967949ecf64bd232983380da76453abb59f4fc6b7d40c9e4ab8c64",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9/TPG.T34.Calliope.zip",
+      "publicDownloadVerified": true,
+      "assetName": "TPG.T34.Calliope.zip",
+      "assetId": 649020500,
+      "originalFolder": "T34 Calliope",
+      "originalFileCount": 91,
+      "allFolderFilesVerified": true
+    }
+  ],
+  "previousResults": [
+    {
+      "id": "12-pounder-cannon",
+      "version": "1.2",
+      "status": "released",
+      "bytes": 24396854,
+      "sha256": "94b34124a14cdc28760d7051fceb6c33cb0b289c28674619ee5c37981e591825",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_Pounder_Cannon.zip",
+      "publicDownloadVerified": true,
+      "assetName": "TPG_12_Pounder_Cannon.zip",
+      "assetId": 629250776
     },
     {
       "id": "shahed-238",

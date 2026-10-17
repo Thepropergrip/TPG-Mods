@@ -81,7 +81,7 @@ The `Refresh download counts` GitHub workflow runs on a published release or whe
 
 ## Design work later
 
-Continue from `docs/DESIGN_NOTES.md`. The catalog now has Quick Look modals, Download Now actions and real `/mods/<id>/` detail pages. Popup and page facts come from `data/mod-info.json`, including per-mod source filenames; keep configured limits distinct from measured performance. Replace the plain presentation and add actual screenshots, then set `launchReady` to true and remove the page's HTML `noindex` meta tag. Versions and download links can remain in the existing data files.
+Continue from `docs/DESIGN_NOTES.md`. The catalog has Quick Look modals, Download Now actions and real `/mods/<id>/` detail pages. Facts come from `data/mod-info.json`. Available mods include best target types, one consolidated Usage notes section, sourced brief history and warhead/ammunition details. Add dated `changelog` records for release changes; they render at the bottom of More Info. Keep research images in `detailGallery` so they do not crowd Quick Look. Replace the plain presentation when ready, then set `launchReady` to true and remove the page's HTML `noindex` meta tag. Versions and download links remain in the existing data files.
 
 Under-development records have no GitHub release link and are excluded from download statistics. Their website section contains anonymous Photo Coming Soon cards only, with no names, descriptions, actions, detail pages or published data records. The release commands refuse these records. Photo Coming Soon placeholders remain until Justin supplies an actual screenshot or a verified free-use image of the actual object; generated and derived imagery is excluded.
 

@@ -29,11 +29,12 @@ Current confirmed inventory:
 | Mod | Status | Package version | Download |
 | --- | --- | --- | --- |
 | TPG Containerized SHORAD | Released | 1.0.23 | GitHub Release |
-| Shahed-238 GPS / ASM | Released | 1.0.1 | GitHub Release |
+| Shahed-238 GPS / ASM | Released | 1.0.2 | GitHub Release |
 | V2 | Released | 1.0 | GitHub Release |
-| 12 Pounder Cannon | Released | 1.2 | GitHub Release |
+| 12 Pounder Cannon | Released | 1.3 | GitHub Release |
 | APKWS VSHORAD | Alpha release test candidate | 0.1.4 | GitHub prerelease |
 | SAHIN 40mm C-UAS | Alpha release test candidate | 1.0.34 | GitHub prerelease |
+| T34 Calliope | Alpha release test candidate | 1.1.9 | GitHub prerelease |
 | Akıncı | Under Development | — | Excluded |
 | FP-132 Radar | Under Development | — | Excluded |
 | Anduril Rail | Under Development | — | Excluded |
@@ -41,7 +42,7 @@ Current confirmed inventory:
 
 The inventory above is retained for maintenance. On the website, the Under Development heading appears once above four anonymous cards: four supplied preview images, with no names, descriptions or actions. Development identities are excluded from published JSON and detail pages. The ten-card catalog uses the supplied screenshots for Containerized SHORAD, APKWS, Shahed-238, the cannon, SAHIN C-UAS and V2. V2, C-UAS, Cannon and Shahed galleries include the additional supplied screenshots. Development previews use 50% saturation; the third also uses a 1.75 px CSS blur (halved twice at user request). Original image files are preserved byte-for-byte; no generated imagery is used. See IMAGE_VERIFICATION.json for source filenames and hashes. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
 
-Quick Look opens an in-page modal with a dimmed, blurred base page and six type-specific facts for each of the six available mods. Available releases have Download Now and More Info actions on both cards and popups. Their six More Info routes are real `/mods/<id>/` pages with the same facts, usage notes and included documentation where supplied. Close-button and backdrop handling were checked with a DOM harness; native Escape and focus containment still need browser verification. Quick Look falls back to the detail page when JavaScript or native dialog support is unavailable.
+Quick Look opens an in-page modal with a dimmed, blurred base page and type-specific facts for all seven available mods, including best target types. Available releases have Download Now and More Info actions on cards and popups. All seven More Info routes contain one consolidated Usage notes section, followed by sourced brief history and warhead/ammunition details. Dated Change Logs, where present, appear last. Quick Look falls back to the detail page when JavaScript or native dialog support is unavailable.
 
 The supplied FP-132 source is explicitly a non-functional static structure; no functional detection range is claimed. Drone range/endurance envelopes and declared speed limits are not represented as measured in-game performance. Facts and source filenames are retained in `data/mod-info.json`.
 
@@ -58,3 +59,11 @@ When resuming, use this checkout and repository rather than creating another pro
 TPG T34 Calliope 1.1.5 is published as `t34-calliope-v1.1.5`. The release contains 91 runtime files and a player-facing README; its unauthenticated public ZIP download matches the packaged SHA-256. It is the third Alpha candidate, bringing the available-mod count to seven. The Calliope tile and Quick Look show gameplay screenshots only. More Info leads with the same screenshots, followed by custom features, the armor/IR/wreck profiles and the OS 9-69 research cover. The original seven supplied images are unchanged. Browser checks cover image order, successful loading, dialog dismissal and mobile width.
 
 October 11 image update: replaced the Calliope M8 flight photo with the supplied cursor-free screenshot. Source bytes and hash are recorded in IMAGE_VERIFICATION.json.
+
+## October 16, 2026 update
+
+- Published Shahed-238 1.0.2, cannon 1.3 and Calliope 1.1.9 from the supplied installed folders. Calliope remains Alpha; existing releases remain available. Each new ZIP was downloaded without authentication, SHA-256 matched, and every archive file compared with the staged folder. All 30 packaged Lua files passed Lua 5.1 syntax checks. Gameplay files were preserved; package edits were limited to guides and the cannon version label. No new DCS runtime test was performed here; the user previously confirmed cannon and Calliope automatic engagement in the separate artillery conversation.
+- Package text was scanned for assistant/prompt history and generation notes; none were found. Original folder names and established asset filenames were retained. RELEASE_VERIFICATION.json contains current verification and previousResults retains replaced records.
+- Explained the 10,000 m Containerized SHORAD targeting gate in usage rather than presenting it as a reachable engagement ceiling. No weapon parameters were retuned. Added best target types and warhead/ammunition details to all seven available mods.
+- Removed duplicate embedded manuals from the detail pages, consolidated installation/use instructions, explained the Shahed ASM Fire at Point workflow, and described the V-2 custom trajectory. The original supplied trajectory graph appears in V-2 More Info. Histories link to their supporting sources.
+- Cannon and Calliope describe automatic engagement subject to detection, ROE and Alarm State. The obsolete cannon setup requirement is mentioned only in its October 16 Change Log. All three updated pages end with the requested dated entries.
