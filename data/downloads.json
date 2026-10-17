@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T00:12:10.781Z",
+  "generatedAt": "2026-10-17T17:39:44.309Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -17,13 +17,13 @@
       ]
     },
     "shahed-238": {
-      "currentDownloads": 7,
-      "lifetimeDownloads": 7,
+      "currentDownloads": 1,
+      "lifetimeDownloads": 8,
       "versions": [
         {
           "tag": "shahed-238-v1.0.2",
           "assetName": "TPG_Shahed238_Rail.zip",
-          "downloads": 0,
+          "downloads": 1,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.2/TPG_Shahed238_Rail.zip",
           "prerelease": false
         },
@@ -50,13 +50,13 @@
       ]
     },
     "12-pounder-cannon": {
-      "currentDownloads": 4,
-      "lifetimeDownloads": 4,
+      "currentDownloads": 1,
+      "lifetimeDownloads": 5,
       "versions": [
         {
           "tag": "12-pounder-cannon-v1.3",
           "assetName": "TPG_12_Pounder_Cannon.zip",
-          "downloads": 0,
+          "downloads": 1,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.3/TPG_12_Pounder_Cannon.zip",
           "prerelease": false
         },
@@ -96,13 +96,20 @@
       ]
     },
     "t34-calliope": {
-      "currentDownloads": 2,
-      "lifetimeDownloads": 2,
+      "currentDownloads": 1,
+      "lifetimeDownloads": 3,
       "versions": [
+        {
+          "tag": "t34-calliope-v1.1.9-20261017",
+          "assetName": "TPG.T34.Calliope.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-20261017/TPG.T34.Calliope.zip",
+          "prerelease": true
+        },
         {
           "tag": "t34-calliope-v1.1.9",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 0,
+          "downloads": 1,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9/TPG.T34.Calliope.zip",
           "prerelease": true
         },
