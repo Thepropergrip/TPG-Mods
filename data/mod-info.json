@@ -524,7 +524,8 @@
       "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized flight disturbance vary the salvo from shot to shot.",
       "The rocket sight uses the native MLRS range controller with this M8 ammunition. Coaxial and bow guns have separate ammunition stores, 250-round belts, firing loops and burst-tail audio.",
       "Custom work includes articulated launcher linkage, flexible wiring, circulating track shoes, rotating wheels, animated suspension and dim amber headlights. Fourteen 2K material sets add varied wear and suspension-matched hull dirt.",
-      "Dedicated thermal maps distinguish engine, running gear, weapon and body response. Thirty-two armor zones include the visible applique plates. A separate wreck model adds broken tubes, a bent barrel, an open engine bay and displaced tracks. Tank, wreck and rocket each have four distance LODs.",
+      "Dedicated thermal maps distinguish engine, running gear, weapon and body response. Thirty-two armor zones include the visible applique plates. Tank, wreck and rocket each have four distance LODs.",
+      "Rebuilt destroyed model with a detailed exposed radial engine, a creased gun barrel, a broken track laid ahead of the hull, scattered damaged rocket tubes and torn steel fragments. Dedicated 2K/4K wreck textures add varied charring, ash, impact pitting and spall scars.",
       "Original model by OK3D; DCS integration and custom material work by TPG. The download includes the full installation and feature guide."
     ],
     "detailGallery": [
@@ -584,10 +585,12 @@
     },
     "changelog": [
       {
-        "date": "2026-10-16",
+        "date": "2026-10-17",
         "version": "1.1.9",
         "items": [
-          "Added the ability for the unit to self-engage enemies within its firing range and detection envelopes."
+          "Added the ability for the unit to self-engage enemies within its firing range and detection envelopes.",
+          "Rebuilt the destroyed model with an exposed radial engine, creased barrel, ground-laid broken track, scattered launcher tubes and detailed torn-metal fragments.",
+          "Added 2K/4K charred wreck textures, impact pitting and spall scars; replaced the destroyed-model profile series."
         ]
       }
     ]

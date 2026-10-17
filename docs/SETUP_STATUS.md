@@ -68,3 +68,10 @@ October 11 image update: replaced the Calliope M8 flight photo with the supplied
 - Removed duplicate embedded manuals from the detail pages, consolidated installation/use instructions, explained the Shahed ASM Fire at Point workflow, and described the V-2 custom trajectory. The original supplied trajectory graph appears in V-2 More Info. Histories link to their supporting sources.
 - Cannon and Calliope describe automatic engagement subject to detection, ROE and Alarm State. The obsolete cannon setup requirement is mentioned only in its October 16 Change Log. All three updated pages end with the requested dated entries.
 - Deployment verified live: all seven detail pages return 200 with the current versions, exact download URLs, one usage section, history, warhead details and best target types. The three dated entries are present, and the cannon page contains the sole obsolete-setup mention in its Change Log. The public mod inventory matches the release versions and the live V-2 graph matches the source SHA-256. Browser review confirmed the rendered content and cannon change entry. All 12 website tests and GitHub validation passed.
+
+
+## October 17, 2026 Calliope update
+
+Calliope remains Alpha Candidate 1.1.9. The October 17 download combines automatic enemy engagement with the rebuilt destroyed model, detailed fragments, 2K/4K burn and damage maps, creased barrel and ground-laid right track. The current release tag is t34-calliope-v1.1.9-20261017; older downloads remain available. The public ZIP was fetched without authentication and matched its SHA-256. Runtime packaging retains the installed gameplay files, with only the player guide updated.
+
+The destroyed-model six-view sheet is replaced in More Info, while gameplay images retain priority in the card and Quick Look. Calliope has one combined October 17 change entry covering the October 16 automatic-engagement addition and the October 17 wreck update. The displayed and package version numbers remain 1.1.9.

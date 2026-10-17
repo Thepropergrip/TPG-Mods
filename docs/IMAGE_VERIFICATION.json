@@ -177,10 +177,12 @@
     },
     {
       "sitePath": "/assets/images/calliope-damage.png",
-      "bytes": 456013,
-      "sha256": "96a2d158fbbd888a5ee3d7658a53b6112538b72dcb95db8ec469975d36aac08a",
+      "bytes": 1074476,
+      "sha256": "54441961b95eae27324e40ccf743406b6f98ccc44bd7daa86593ec64473858d8",
       "fileUnmodified": true,
-      "displaySaturation": 1
+      "displaySaturation": 1,
+      "sourceFilename": "calliope-damage.png",
+      "description": "Six profiles rendered from the installed October 17 destroyed model."
     },
     {
       "sitePath": "/assets/images/calliope-os969-cover.png",
