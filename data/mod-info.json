@@ -600,6 +600,12 @@
           "Added 2K/4K charred wreck textures, impact pitting and spall scars; replaced the destroyed-model profile series."
         ]
       }
+    ],
+    "payloadGallery": [
+      {
+        "image": "/assets/images/calliope-scatter.png",
+        "caption": "M8 rocket scatter at 3,000 m: one 30-rocket salvo and its aiming point"
+      }
     ]
   }
 }
