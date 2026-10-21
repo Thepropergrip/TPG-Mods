@@ -521,7 +521,7 @@
       "Install T34 Calliope in Saved Games/DCS/Mods/tech/ and restart DCS. Find TPG T34 Calliope (M4 Sherman) under Artillery; available to all countries and coalitions.",
       "The unit automatically engages enemies it detects inside its firing range and detection envelope when ROE and Alarm State permit. Keep its line of sight clear and stop before firing rockets; the machine guns can fire while moving.",
       "Enable Combined Arms vehicle control in the mission. Default bindings: Q selects the main turret, E cycles its weapons, and Space fires. Stop for rocket fire; both M1919 machine guns support unstabilized fire on the move. The original launcher-fitted configuration keeps the cannon disabled.",
-      "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized flight disturbance vary the salvo from shot to shot.",
+      "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized launch disturbance produce a wider area-fire pattern with more side-to-side variation.",
       "The rocket sight uses the native MLRS range controller with this M8 ammunition. Coaxial and bow guns have separate ammunition stores, 250-round belts, firing loops and burst-tail audio.",
       "Custom work includes articulated launcher linkage, flexible wiring, circulating track shoes, rotating wheels, animated suspension and dim amber headlights. Fourteen 2K material sets add varied wear and suspension-matched hull dirt.",
       "Dedicated thermal maps distinguish engine, running gear, weapon and body response. Thirty-two armor zones include the visible applique plates. Tank, wreck and rocket each have four distance LODs.",
@@ -584,6 +584,13 @@
       ]
     },
     "changelog": [
+      {
+        "date": "2026-10-21",
+        "version": "1.1.9",
+        "items": [
+          "Adjusted rocket scatter to better approximate historical lack of accuracy."
+        ]
+      },
       {
         "date": "2026-10-17",
         "version": "1.1.9",
