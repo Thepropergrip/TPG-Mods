@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T22:14:07.670Z",
+  "generatedAt": "2026-10-21T23:13:24.267Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -97,12 +97,19 @@
     },
     "t34-calliope": {
       "currentDownloads": 1,
-      "lifetimeDownloads": 4,
+      "lifetimeDownloads": 5,
       "versions": [
+        {
+          "tag": "t34-calliope-v1.1.9-released-20261021",
+          "assetName": "TPG.T34.Calliope.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-released-20261021/TPG.T34.Calliope.zip",
+          "prerelease": false
+        },
         {
           "tag": "t34-calliope-v1.1.9-20261021",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 0,
+          "downloads": 1,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-20261021/TPG.T34.Calliope.zip",
           "prerelease": true
         },
