@@ -31,21 +31,24 @@
     "notes": [
       "Close DCS and extract TPG Containerized SHORAD into Saved Games/DCS/Mods/tech/. Check that entry.lua is directly inside the mod folder, then restart DCS.",
       "Find TPG Containerized SHORAD under Air Defence in Mission Editor. Place it on level ground with a clear view of approaching targets. Paint Scheme offers the default, Woodland and Sand finishes.",
-      "The launcher must stop to fire. It carries eight missiles, can guide four at a time and fires at ten-second intervals. Reloading takes 18 minutes.",
-      "It can detect targets out to 12 km and fire at targets 1.2–9 km away. A target may be detected before it is close enough to engage. Altitude also matters: the 10,000 m targeting limit does not mean the missile can reach a target 10 km overhead."
+      "The launcher carries eight missiles, can guide four at a time and fires at ten-second intervals. Reloading takes 18 minutes."
     ],
     "payloadNotes": [
-      "Each missile has an anti-aircraft warhead with 15 kg of explosive in DCS and detonates within 15 m of its target. The launcher carries eight ready missiles."
+      "Each missile has an anti-aircraft warhead with 15 kg of explosive in DCS and a 15 m proximity fuze."
     ],
     "history": {
       "paragraphs": [
-        "Short-range air-defense systems protect troops and fixed sites from nearby aircraft and drones. Many combine radar and cameras with missiles, guns or electronic countermeasures.",
-        "MBDA introduced Sky Warden in 2021 for this role, with equipment that can be carried on a vehicle or set up on the ground. TPG Containerized SHORAD is a custom design with a similar role."
+        "Lockheed Martin’s GRIZZLY houses an eight-round missile launcher in a 10-foot shipping container. In March 2026, the company announced successful Hellfire live-fire and vertical-launch tests.",
+        "In June 2026, Lockheed Martin announced that a JAGM fired from GRIZZLY had intercepted a one-way attack drone. The demonstration used Fortem radars and the Sanctum control system to detect, track and engage the target."
       ],
       "references": [
         {
-          "label": "MBDA: Sky Warden introduction, 2021",
-          "url": "https://www.mbda-systems.com/mbda-launches-sky-warden-c-uas-system"
+          "label": "Lockheed Martin: GRIZZLY Hellfire launch tests, March 2026",
+          "url": "https://news.lockheedmartin.com/grizzly-containerized-launcher-completes-multiple-live-fire-launch-tests"
+        },
+        {
+          "label": "Lockheed Martin: GRIZZLY drone interception, June 2026",
+          "url": "https://news.lockheedmartin.com/2026-06-03-Lockheed-Martin-Demonstrates-First-Ever-Sanctum-TM-C-UAS-Launch-from-GRIZZLY-TM-Containerized-Launcher"
         }
       ]
     }
@@ -79,19 +82,19 @@
         "35.4 km/h"
       ],
       [
-        "Launch preparation",
+        "Towed launcher preparation",
         "Approximately 3 minutes from stowed"
       ]
     ],
     "notes": [
       "Close DCS and copy TPG V2 into Saved Games/DCS/Mods/tech/, then restart DCS. Choose a static or Sd.Kfz. 7 towed launcher in either camouflage or black-and-white markings.",
-      "Place one launcher per group. At the firing waypoint, stop on clear, level ground and select Advanced Waypoint Actions → Perform Task → Fire at Point. Choose a target 50–300 km away and set expenditure to one round. Each launcher carries one rocket and cannot reload.",
+      "Place one launcher per group on clear, level ground. At the firing waypoint, select Advanced Waypoint Actions → Perform Task → Fire at Point. Choose a target 50–300 km away and set expenditure to one round. Each launcher carries one rocket and cannot reload.",
       "For a towed launcher, use Alarm State Green and a waypoint speed above zero to travel. Stop at the firing waypoint and set Alarm State Red to deploy. The supports lower, the rocket rises and the truck pulls the trailer clear. Allow about three minutes for setup, and make sure ROE permits firing.",
       "The rocket follows a custom ballistic trajectory that changes with target distance. The graph below shows flights of about 33, 103 and 162 nautical miles, reaching roughly 85,000, 198,000 and 288,000 ft. On long-range shots it climbs to about 88 km and reaches roughly Mach 3.5 near impact.",
-      "Expect individual rockets to miss by several kilometres. This is an area-bombardment weapon. After firing, the AI stows the launcher; use Alarm State Green to pack up for travel."
+      "Expect individual rockets to miss by several kilometres. For towed launchers, the AI stows the launcher after firing; use Alarm State Green to pack up for travel."
     ],
     "payloadNotes": [
-      "In DCS, the V-2 carries a 1,000 kg warhead with 910 kg of explosive and a 90 kg armor-piercing component. It is suited to large area targets."
+      "In DCS, the V-2 carries a 1,000 kg warhead with 910 kg of explosive and a 90 kg armor-piercing component."
     ],
     "history": {
       "paragraphs": [
@@ -148,7 +151,7 @@
     ],
     "notes": [
       "Close DCS and copy TPG_12_Pounder_Cannon into Saved Games/DCS/Mods/tech/, then restart DCS. Under Artillery in Mission Editor, choose TPG 12 Pounder Cannon – Cannonball or TPG 12 Pounder Cannon – Lavaball.",
-      "The cannon fires automatically at enemies it can detect and reach when ROE and Alarm State allow it. Give it a clear line of sight and keep it stopped while firing.",
+      "The cannon fires automatically at enemies within range when ROE and Alarm State allow it. Give it a clear line of sight.",
       "Each unit carries 20 rounds of its selected ammunition. Firing range is 30 m–2.4 km, with 30 seconds between shots and a ten-minute reload time.",
       "To control the cannon yourself, you need Combined Arms and vehicle-control permission in the mission or server. In multiplayer, both the server and players need the mod."
     ],
@@ -212,14 +215,14 @@
       ]
     ],
     "notes": [
-      "Copy TPG APKWS VSHORAD into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. Keep only one installed copy. Find the unit under Air Defence in Mission Editor and choose its finish with Paint Scheme.",
-      "The turret has two banks of eight rockets, set at different launch angles. The NEAR bank covers 1–3 km and the FAR bank covers 3.001–4.5 km. These distances guide ammunition selection: a FAR rocket may intercept a target that has moved closer, while the NEAR bank may wait for an approaching target to enter range.",
+      "Copy TPG APKWS VSHORAD into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. Find the unit under Air Defence in Mission Editor and choose its finish with Paint Scheme.",
+      "The turret has two banks of eight rockets, set at different launch angles. It uses the NEAR bank at 1–3 km and the FAR bank beyond 3 km, out to 4.5 km.",
       "The turret tracks targets with optical and infrared sensors and guides its rockets by laser. Place it on level ground with a clear line of sight. Terrain, trees and buildings can block the laser or the rocket even when the unit is still tracking the target.",
       "It can turn through 360 degrees and elevate from -30 to +85 degrees. It turns at up to 120 degrees per second and raises or lowers the launcher at up to 90 degrees per second. There is a two-second delay between shots; reloading takes five minutes.",
-      "Keep Config.lua in the mod folder and restart DCS after changing its settings."
+      "Restart DCS after changing settings in Config.lua."
     ],
     "payloadNotes": [
-      "Each rocket has an M151-type high-explosive fragmentation warhead with 1.04 kg of explosive in DCS. A laser guides it toward the target. The two launch banks hold eight rockets each."
+      "Each rocket has an M151-type high-explosive fragmentation warhead with 1.04 kg of explosive in DCS."
     ],
     "history": {
       "paragraphs": [
@@ -273,7 +276,7 @@
     ],
     "notes": [
       "Close DCS and copy TPG_SAHIN_CUAS into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS.",
-      "Use it against slow drones and low, slow helicopters nearby. Give the gun a clear line of sight. It can detect targets out to 10 km, but can only fire at targets within 600 m.",
+      "Place the gun with a clear line of sight to approaching targets.",
       "The gun carries 192 rounds in groups of 64 and fires at about 261 rounds per minute. This alpha uses a modified M430 round with a tighter shot pattern."
     ],
     "payloadNotes": [
@@ -452,7 +455,7 @@
     ],
     "notes": [
       "Close DCS and extract TPG_Shahed238_Rail into Saved Games/DCS/Mods/tech/. Check that entry.lua is directly inside the mod folder, then restart DCS.",
-      "Find TPG Shahed-238 GPS and TPG Shahed-238 ASM under Artillery in Mission Editor. Both launchers stay in place, display one drone on the rail and carry up to five shots. You can reduce ammunition in Mission Editor and choose Original Green or Sand Tan with Paint Scheme.",
+      "Find TPG Shahed-238 GPS and TPG Shahed-238 ASM under Artillery in Mission Editor. Each launcher carries up to five shots, with one drone visible on the rail. You can reduce ammunition in Mission Editor and choose Original Green or Sand Tan with Paint Scheme.",
       "For the GPS version, select Advanced Waypoint Actions → Perform Task → Fire at Point and choose a ground target. The drone flies to that point.",
       "The ASM version is for attacking ships. Use Fire at Point to send it toward a point at sea. If an enemy ship comes within 8 km and is visible to the seeker ahead of the drone, it turns to attack. If it finds no ship, it continues to the assigned point.",
       "Launch range is 20–1,000 km. The drone cruises at 500 km/h at a height of 300 m. Plan a clear flight path around terrain, trees and buildings. Allow ten minutes between launches and for reloading."
@@ -523,7 +526,7 @@
       "The 60 launch tubes fire in sequence, using custom M8 rockets. Rockets roll slowly in flight and spread across the target area, with more scatter from side to side. The rocket sight uses DCS’s MLRS range controls.",
       "The coaxial and bow M1919 machine guns have separate ammunition supplies and 250-round belts, with custom firing sounds.",
       "The launcher linkage, wiring, tracks, wheels and suspension are animated. The model has dim amber headlights, worn paint and dirt around the running gear.",
-      "The engine, running gear, weapons and hull have separate thermal maps for infrared views. Armor is modeled in 32 zones, including the extra plates visible on the hull. Lower-detail models are used at a distance for the tank, wreck and rockets.",
+      "The engine, running gear, weapons and hull have separate thermal maps for infrared views. Armor is modeled in 32 zones, including the extra plates visible on the hull.",
       "The destroyed tank has an exposed radial engine, bent gun barrel, broken track, scattered rocket tubes and torn steel, with scorched surfaces and impact damage.",
       "Original model by OK3D; DCS integration and custom materials by TPG. The download includes an installation and feature guide."
     ],
