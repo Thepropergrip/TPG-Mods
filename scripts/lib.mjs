@@ -38,7 +38,7 @@ export function validateMods(mods) {
   for (const mod of mods) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(mod.id) || ids.has(mod.id)) throw new Error('Invalid or duplicate mod ID.');
     ids.add(mod.id);
-    if (!['released', 'alpha', 'coming-soon', 'under-development'].includes(mod.status)) throw new Error(`Invalid status: ${mod.id}`);
+    if (!['released', 'release-candidate', 'alpha', 'coming-soon', 'under-development'].includes(mod.status)) throw new Error(`Invalid status: ${mod.id}`);
     if (mod.status === 'under-development' && mod.github) throw new Error(`Under-development mods cannot have a download: ${mod.id}`);
     if (mod.github && (!mod.version || !mod.github.tag || !mod.github.assetName || !mod.github.downloadUrl)) throw new Error(`Incomplete release: ${mod.id}`);
   }

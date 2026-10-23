@@ -17,7 +17,8 @@ export const contactOptions = [
       {name: 'Mod version', label: 'Mod version (if known)', required: false, placeholder: 'For example, 1.1.9'},
       {name: 'Game mode', label: 'Where does it happen?', options: ['Single-player', 'Multiplayer', 'Both', 'Not sure']}
     ],
-    messageLabel: 'What happened? What did you expect, and how can we reproduce it?', messageRequired: true
+    messageLabel: 'What happened? What did you expect, and how can we reproduce it?', messageRequired: true,
+    attachmentHelp: 'Tacview .acmi files, DCS logs, screenshots and missions are useful for bug reports. Up to 10 MB. For larger files, add a download link above.'
   },
   {
     id: 'new-mod', title: 'New Mod Request', shortTitle: 'New Mod Request', submitLabel: 'Send Mod Request',
@@ -40,11 +41,11 @@ export const contactOptions = [
 ];
 
 export const attachmentLimit = 10_000_000;
-export const attachmentExtensions = ['png', 'jpg', 'jpeg', 'webp', 'pdf', 'txt', 'log', 'zip', 'miz', 'trk'];
+export const attachmentExtensions = ['png', 'jpg', 'jpeg', 'webp', 'pdf', 'txt', 'log', 'zip', 'miz', 'trk', 'acmi'];
 
 export function attachmentError(file) {
   if (!file || !file.size) return '';
   if (file.size > attachmentLimit) return 'Please choose a file under 10 MB, or put a download link in your message.';
   const extension = file.name.split('.').pop().toLowerCase();
-  return attachmentExtensions.includes(extension) ? '' : 'Please attach a screenshot, PDF, text file, DCS log, mission, track or ZIP.';
+  return attachmentExtensions.includes(extension) ? '' : 'Please attach a screenshot, PDF, text file, DCS log, mission, track, Tacview .acmi file or ZIP.';
 }

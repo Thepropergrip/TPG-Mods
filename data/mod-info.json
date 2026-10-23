@@ -610,5 +610,93 @@
       }
     ],
     "detailGalleryHeading": "Armor, infrared views and wreck"
+  },
+  "shahed-238-truck": {
+    "type": "Truck-mounted one-way attack drone",
+    "summary": "A JAC-based Shahed-238 launcher with GPS and anti-ship versions, a rotating rail and three drones per truck. Works on its own or alongside the rail mod.",
+    "facts": [
+      [
+        "Best target types",
+        "Fixed ground targets (GPS); enemy ships (ASM)"
+      ],
+      [
+        "Launch range",
+        "20–1,000 km"
+      ],
+      [
+        "Cruise speed",
+        "500 km/h"
+      ],
+      [
+        "Cruise height",
+        "425 m above terrain (GPS); 300 m (ASM)"
+      ],
+      [
+        "Ammunition",
+        "3 drones; 1 on the rail and 2 spares"
+      ],
+      [
+        "Reload / launch interval",
+        "2 minutes / at least 2 minutes 20 seconds"
+      ],
+      [
+        "Road speed",
+        "50 mph / 80.5 km/h"
+      ],
+      [
+        "Launcher rotation",
+        "360°"
+      ]
+    ],
+    "notes": [
+      "Close DCS and extract TPG_Shahed238_Truck into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. The download includes everything needed to use the truck, with or without TPG_Shahed238_Rail installed.",
+      "Under Artillery in Mission Editor, choose TPG Mobile Shahed 238 for GPS attacks or TPG Mobile Shahed 238 ASM for ships. Available to Iran, Russia, USA and both Combined Joint Task Forces.",
+      "For GPS attacks, select Advanced Waypoint Actions → Perform Task → Fire at Point and choose a ground target 20–1,000 km away.",
+      "For ASM attacks, use Fire at Point to send the drone toward a point at sea. If an enemy ship comes within 8 km and is visible to the seeker ahead of the drone, it turns to attack. Otherwise it continues to the assigned point.",
+      "Stop the truck to fire. The rail turns through 360 degrees, including over the cab. Give it a clear launch path and plan the drone’s route around terrain, trees and buildings.",
+      "Each truck carries one drone on the rail and two in transport racks. After a launch, reloading takes two minutes; a spare disappears from its rack as the next drone appears on the rail. Allow at least two minutes and twenty seconds between launches.",
+      "Both versions have a visible underbody launch booster and exhaust plume. The booster disappears after burnout. The truck has animated wheels, steering and suspension, a seated driver, working headlights and infrared maps.",
+      "The weathered launcher includes fitted mounting feet, welded supports, cradles and straps. The burned wreck rests on bare wheel rims, with damaged launcher sections and metal fragments scattered around it."
+    ],
+    "history": {
+      "paragraphs": [
+        "Iran unveiled the Shahed-238 in 2023 as a jet-powered development of the Shahed-136. It keeps the delta-wing layout and uses a turbojet for greater speed.",
+        "The Shahed-238 can launch from a truck-mounted rail using a solid-fuel booster. Several guidance versions have been shown, and Russia’s related jet-powered version is called Geran-3."
+      ],
+      "references": [
+        {
+          "label": "CSIS Missile Threat: Shahed-238",
+          "url": "https://missilethreat.csis.org/missile/shahed-238/"
+        }
+      ]
+    },
+    "payloadNotes": [
+      "Both DCS versions carry a 50 kg warhead with 25 kg of explosive and a 25 kg piercing component. Each drone weighs 370 kg."
+    ],
+    "references": [
+      {
+        "label": "JAC 1045 truck model: CGTrader",
+        "url": "https://www.cgtrader.com/free-3d-models/vehicle/truck/jac-1045-truck"
+      },
+      {
+        "label": "Material sources: FreePBR",
+        "url": "https://freepbr.com/"
+      },
+      {
+        "label": "Driver model creator: m.asharwaseem",
+        "url": "https://sketchfab.com/m.asharwaseem"
+      }
+    ],
+    "changelog": [
+      {
+        "date": "2026-10-23",
+        "version": "1.1.6",
+        "items": [
+          "First public release candidate of the standalone truck-mounted GPS and ASM launchers.",
+          "Includes three-round reloading, the detailed truck and launcher, working lights, infrared maps and burned wreck.",
+          "Includes the launch booster and the fix for it reappearing after burnout. GPS cruise clearance is 425 m above terrain."
+        ]
+      }
+    ]
   }
 }

@@ -4,6 +4,26 @@ import { aggregate } from '../scripts/stats.mjs';
 import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 
+test('release candidates have their own section, clear version labels and independent download counts', () => {
+  const candidate = {id:'shahed-238-truck',title:'Truck',status:'release-candidate',statusConfirmed:true,version:'1.1.6',github:{tag:'shahed-238-truck-v1.1.6',assetName:'truck.zip',downloadUrl:'https://example.test/truck.zip'}};
+  const details = {type:'Truck launcher',summary:'Truck.',facts:[['Ammunition','3']],notes:['Use Fire at Point.']};
+  validateMods([candidate]);
+  const catalog = renderCatalog([candidate], {[candidate.id]:details});
+  assert.match(catalog, /<h2>Release Candidates<\/h2>/);
+  assert.doesNotMatch(catalog, /<h2>Released<\/h2>|<h2>Alpha Release Test Candidates<\/h2>/);
+  for (const html of [catalog, renderQuickLooks([candidate],{[candidate.id]:details}), renderDetail(candidate,details,false)]) {
+    assert.match(html, /Version 1\.1\.6 · Release Candidate/);
+    assert.match(html, /https:\/\/example.test\/truck.zip/);
+  }
+  const releases = [
+    {tag_name:'shahed-238-truck-v1.1.6',prerelease:true,assets:[{name:'truck.zip',download_count:4}]},
+    {tag_name:'shahed-238-v1.0.2',assets:[{name:'rail.zip',download_count:20}]}
+  ];
+  const stats = aggregate(releases,[candidate,{id:'shahed-238',github:{tag:'shahed-238-v1.0.2',assetName:'rail.zip'}}]);
+  assert.equal(stats.mods['shahed-238-truck'].currentDownloads,4);
+  assert.equal(stats.mods['shahed-238'].lifetimeDownloads,20);
+});
+
 test('status bylines replace per-mod caveats and source dropdowns', () => {
   const mods = ['released', 'alpha'].map(status => ({id: status, title: status, status, statusConfirmed: true}));
   const details = {summary: 'Vehicle.', type: 'Vehicle', facts: [], notes: [], sources: ['entry.lua']};

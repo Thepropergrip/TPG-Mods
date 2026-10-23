@@ -36,7 +36,7 @@ async function main() {
     if (!mod) throw new Error('Choose a mod ID from data/mods.json.');
     if (mod.status === 'under-development') throw new Error('This mod is excluded from downloads while under development. Change its confirmed status before preparing a release.');
     validateVersion(options.version || '');
-    if (!['released', 'alpha'].includes(options.status)) throw new Error('Provide --status released or --status alpha.');
+    if (!['released', 'release-candidate', 'alpha'].includes(options.status)) throw new Error('Provide --status released, --status release-candidate or --status alpha.');
     if (!options.zip || !options.notes) throw new Error('Provide --zip path and --notes path.');
     const zipPath = resolve(options.zip);
     const notesPath = resolve(options.notes);
@@ -64,8 +64,8 @@ async function main() {
     await mkdir(at('.local/assets'), { recursive: true });
     const stagedAsset = at('.local/assets', plan.assetName);
     await copyFile(plan.zipPath, stagedAsset);
-    const args = ['release', 'create', plan.tag, `${stagedAsset}#${plan.assetName}`, '--repo', repo, '--target', commit, '--draft', '--title', `${plan.title} ${plan.publicVersion ?? plan.version}`, '--notes-file', plan.notesPath];
-    if (plan.status === 'alpha') args.push('--prerelease');
+    const args = ['release', 'create', plan.tag, `${stagedAsset}#${plan.assetName}`, '--repo', repo, '--target', commit, '--draft', '--title', `${plan.title} ${plan.publicVersion ?? plan.version}${plan.status === 'release-candidate' ? ' · Release Candidate' : ''}`, '--notes-file', plan.notesPath];
+    if (['alpha', 'release-candidate'].includes(plan.status)) args.push('--prerelease');
     gh(args, { inherit: true });
     console.log('Draft uploaded. Review in GitHub before npm run release:publish.');
     return;
@@ -73,7 +73,7 @@ async function main() {
   if (action !== 'publish') throw new Error('Use prepare, upload, or publish.');
   const release = findRelease(repo, plan.tag);
   if (!release) throw new Error('Prepared release was not found. Upload the draft first.');
-  if (release.prerelease !== (plan.status === 'alpha')) throw new Error('Draft prerelease status differs from the prepared plan.');
+  if (release.prerelease !== (['alpha', 'release-candidate'].includes(plan.status))) throw new Error('Draft prerelease status differs from the prepared plan.');
   const asset = release.assets.find(a => a.name === plan.assetName || a.label === plan.assetName);
   if (!asset || asset.size !== plan.size) throw new Error('Uploaded ZIP is missing or its size differs.');
   if (asset.digest && asset.digest !== `sha256:${plan.sha256}`) throw new Error('Uploaded checksum does not match.');

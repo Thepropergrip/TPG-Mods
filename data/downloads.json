@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T23:47:59.745Z",
+  "generatedAt": "2026-10-23T23:49:53.295Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -132,6 +132,19 @@
           "assetName": "TPG.T34.Calliope.zip",
           "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip",
+          "prerelease": true
+        }
+      ]
+    },
+    "shahed-238-truck": {
+      "currentDownloads": 0,
+      "lifetimeDownloads": 0,
+      "versions": [
+        {
+          "tag": "shahed-238-truck-v1.1.6",
+          "assetName": "TPG_Shahed238_Truck.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip",
           "prerelease": true
         }
       ]

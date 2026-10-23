@@ -9,7 +9,7 @@ const photo = (mod, includeGallery = false) => {
 const facts = info => `<dl class="facts">${(info.facts || []).map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>`;
 const download = mod => mod.status !== 'under-development' && mod.github ? `<a class="button primary" href="${escapeHtml(mod.github.downloadUrl)}">Download Now</a>` : '';
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
-const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
+const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}${mod.status === 'release-candidate' ? ' · Release Candidate' : ''}</p>` : '';
 const detailImages = items => items?.length
   ? `<div class="photo-gallery">${items.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"></figure>`).join('')}</div>` : '';
 const detailGallery = info => info.detailGallery?.length
@@ -23,12 +23,13 @@ const changelog = info => info.changelog?.length
   ? `<section class="changelog"><h2>Change Log</h2>${info.changelog.map(entry => `<h3><time datetime="${escapeHtml(entry.date)}">${escapeHtml(new Date(`${entry.date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }))}</time>${entry.version ? ` · Version ${escapeHtml(entry.version)}` : ''}</h3><ul>${entry.items.map(text => `<li>${escapeHtml(text)}</li>`).join('')}</ul>`).join('')}</section>` : '';
 
 const bylines = {
+  'release-candidate': 'Try it in your missions and report any issues.',
   released: "Perfection isn't claimed, but extensive testing and mission use has been completed.  Future upgrades always an option.",
   alpha: "We've seen it working and it should be generally functional.  Visual and performance bugs to be expected, please report if encountered.  Thanks!"
 };
 
 export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
-  const groups = [['released', 'Released'], ['alpha', 'Alpha Release Test Candidates'], ['under-development', 'Under Development']];
+  const groups = [['released', 'Released'], ['release-candidate', 'Release Candidates'], ['alpha', 'Alpha Release Test Candidates'], ['under-development', 'Under Development']];
   return groups.map(([status, heading]) => {
     const entries = mods.filter(m => m.statusConfirmed && m.status === status);
     if (!entries.length) return '';
