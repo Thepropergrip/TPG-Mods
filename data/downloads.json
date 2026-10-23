@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-21T23:13:24.267Z",
+  "generatedAt": "2026-10-23T23:47:59.745Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
     "grizzly": {
-      "currentDownloads": 8,
-      "lifetimeDownloads": 8,
+      "currentDownloads": 9,
+      "lifetimeDownloads": 9,
       "versions": [
         {
           "tag": "grizzly-v1.0.23-ready-cell-state",
           "assetName": "TPG.Containerized.SHORAD.zip",
-          "downloads": 8,
+          "downloads": 9,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG.Containerized.SHORAD.zip",
           "prerelease": false
         }
@@ -97,12 +97,12 @@
     },
     "t34-calliope": {
       "currentDownloads": 1,
-      "lifetimeDownloads": 5,
+      "lifetimeDownloads": 6,
       "versions": [
         {
           "tag": "t34-calliope-v1.1.9-released-20261021",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 0,
+          "downloads": 1,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-released-20261021/TPG.T34.Calliope.zip",
           "prerelease": false
         },
