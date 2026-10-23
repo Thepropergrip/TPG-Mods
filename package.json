@@ -6,7 +6,7 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "check": "node scripts/check.mjs",
-    "test": "node --test tests/pipeline.test.mjs",
+    "test": "node --test tests/*.test.mjs",
     "build": "node scripts/build.mjs",
     "github:setup": "node scripts/setup-github.mjs",
     "release:prepare": "node scripts/release.mjs prepare",
