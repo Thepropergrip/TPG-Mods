@@ -1,11 +1,11 @@
 {
   "grizzly": {
     "type": "Containerized surface-to-air missile system",
-    "summary": "A containerized air-defense launcher for DCS World.",
+    "summary": "An eight-missile air-defense launcher housed in a shipping container, for use against drones, helicopters and low-flying aircraft.",
     "facts": [
       [
         "Best target types",
-        "Medium/large drones, helicopters and low, slow aircraft"
+        "Medium and large drones, helicopters and low, slow aircraft"
       ],
       [
         "Engagement range",
@@ -16,7 +16,7 @@
         "12 km"
       ],
       [
-        "Missile speed ceiling",
+        "Maximum missile speed",
         "Mach 1.4"
       ],
       [
@@ -29,19 +29,18 @@
       ]
     ],
     "notes": [
-      "Close DCS and extract the TPG Containerized SHORAD folder into your active Saved Games/DCS/Mods/tech/ folder. The resulting mod folder must contain entry.lua. Restart DCS after installation.",
-      "In Mission Editor, find TPG Containerized SHORAD in Air Defence. Place it on clear, level ground with an unobstructed view of the intended engagement area; choose the default, Woodland or Sand appearance using Paint Scheme.",
-      "The launcher carries eight missiles, has four missile channels, a ten-second shot interval and an 18-minute reload. Stop the launcher to fire.",
-      "Detection range is 12 km. Place the launcher with a clear view of approaching targets.",
-      "The 1.2–9 km firing band and 12 km detection range are separate limits. The files also contain a 10,000 m target-altitude gate; that is a targeting filter, not a demonstrated 10 km engagement ceiling. Both range and altitude restrictions apply to a shot. High or distant targets may be detected without being reachable."
+      "Close DCS and extract TPG Containerized SHORAD into Saved Games/DCS/Mods/tech/. Check that entry.lua is directly inside the mod folder, then restart DCS.",
+      "Find TPG Containerized SHORAD under Air Defence in Mission Editor. Place it on level ground with a clear view of approaching targets. Paint Scheme offers the default, Woodland and Sand finishes.",
+      "The launcher must stop to fire. It carries eight missiles, can guide four at a time and fires at ten-second intervals. Reloading takes 18 minutes.",
+      "It can detect targets out to 12 km and fire at targets 1.2–9 km away. A target may be detected before it is close enough to engage. Altitude also matters: the 10,000 m targeting limit does not mean the missile can reach a target 10 km overhead."
     ],
     "payloadNotes": [
-      "The custom interceptor uses an explosive anti-aircraft warhead with a 15 kg explosive setting and a 15 m detonation distance. The eight ready missiles are for local air defence."
+      "Each missile has an anti-aircraft warhead with 15 kg of explosive in DCS and detonates within 15 m of its target. The launcher carries eight ready missiles."
     ],
     "history": {
       "paragraphs": [
-        "TPG Containerized SHORAD is a custom launcher. Comparable real systems protect troops and fixed sites by combining sensors with short-range weapons.",
-        "MBDA introduced Sky Warden in 2021. It brings radar, cameras and other sensors together with electronic countermeasures and weapons, and can be mounted on a vehicle or deployed on the ground. It is a useful real-world comparison for the role of this mod."
+        "Short-range air-defense systems protect troops and fixed sites from nearby aircraft and drones. Many combine radar and cameras with missiles, guns or electronic countermeasures.",
+        "MBDA introduced Sky Warden in 2021 for this role, with equipment that can be carried on a vehicle or set up on the ground. TPG Containerized SHORAD is a custom design with a similar role."
       ],
       "references": [
         {
@@ -53,7 +52,7 @@
   },
   "v2": {
     "type": "Ballistic rocket and launcher",
-    "summary": "V-2 rocket with static launch bases, Sd.Kfz. 7 towed launchers and a custom ballistic flight profile, in camouflaged and black/white variants.",
+    "summary": "A V-2 with static launch bases and Sd.Kfz. 7 towed launchers, custom ballistic trajectories, and camouflaged or black-and-white finishes.",
     "facts": [
       [
         "Best target types",
@@ -85,19 +84,19 @@
       ]
     ],
     "notes": [
-      "Close DCS and copy TPG V2 into Saved Games/DCS/Mods/tech/, then restart DCS. The mod includes Camo Static, Black/White Static, Sd.Kfz. 7 Towed – Camo and Sd.Kfz. 7 Towed – Black/White units.",
-      "Place one launcher per group. At the firing waypoint, stop on clear, level ground and add Advanced Waypoint Actions → Perform Task → Fire at Point. Choose a target 50–300 km away and set expenditure to one round. Each launcher carries one rocket and does not reload.",
-      "For towed units, use Alarm State Green and a nonzero speed at the first waypoint to travel. At the firing waypoint, stop and set Alarm State Red. The supports deploy, the rocket rises and the truck pulls the trailer clear of the launch base. Preparation from stowed takes about three minutes. Alarm State controls deployment; ROE controls permission to fire.",
-      "The custom trajectory and aiming data give short, medium and long shots different arcs rather than reusing one fixed flight path. The supplied plot shows three examples: about 33, 103 and 162 nautical miles, with apogees of roughly 85,000, 198,000 and 288,000 ft. Long shots rise to about 88 km and approach Mach 3.5 near impact.",
-      "Historical scatter is built in: individual rockets can miss by several kilometres. Use it for area bombardment. Native AI stows the launcher after the task; Green reverses deployment for travel."
+      "Close DCS and copy TPG V2 into Saved Games/DCS/Mods/tech/, then restart DCS. Choose a static or Sd.Kfz. 7 towed launcher in either camouflage or black-and-white markings.",
+      "Place one launcher per group. At the firing waypoint, stop on clear, level ground and select Advanced Waypoint Actions → Perform Task → Fire at Point. Choose a target 50–300 km away and set expenditure to one round. Each launcher carries one rocket and cannot reload.",
+      "For a towed launcher, use Alarm State Green and a waypoint speed above zero to travel. Stop at the firing waypoint and set Alarm State Red to deploy. The supports lower, the rocket rises and the truck pulls the trailer clear. Allow about three minutes for setup, and make sure ROE permits firing.",
+      "The rocket follows a custom ballistic trajectory that changes with target distance. The graph below shows flights of about 33, 103 and 162 nautical miles, reaching roughly 85,000, 198,000 and 288,000 ft. On long-range shots it climbs to about 88 km and reaches roughly Mach 3.5 near impact.",
+      "Expect individual rockets to miss by several kilometres. This is an area-bombardment weapon. After firing, the AI stows the launcher; use Alarm State Green to pack up for travel."
     ],
     "payloadNotes": [
-      "The DCS rocket has a 1,000 kg warhead assembly, including 910 kg of explosive and a 90 kg piercing component. It is a conventional high-explosive weapon with substantial area effects."
+      "In DCS, the V-2 carries a 1,000 kg warhead with 910 kg of explosive and a 90 kg armor-piercing component. It is suited to large area targets."
     ],
     "history": {
       "paragraphs": [
-        "Developed in Germany as the A4, the V-2 entered combat in September 1944. It used a liquid-fuel rocket engine and gyroscopic guidance, climbing high before falling onto its target at supersonic speed. London and Antwerp were major targets.",
-        "Its poor accuracy made it an area weapon. Production relied on concentration-camp forced labour at Mittelbau-Dora. After the war, captured rockets and German engineers contributed to American and Soviet missile and space programs."
+        "Germany developed the V-2 as the A4 and first used it in combat in September 1944. A liquid-fuel engine sent it high above the battlefield before it fell toward its target at supersonic speed. London and Antwerp were among its main targets.",
+        "The rocket was too inaccurate for precision attacks. It was produced using concentration-camp forced labor at Mittelbau-Dora. After the war, captured V-2s and German engineers helped shape American and Soviet missile and space programs."
       ],
       "references": [
         {
@@ -116,7 +115,7 @@
   },
   "12-pounder-cannon": {
     "type": "Artillery cannon",
-    "summary": "Separate Cannonball and Lavaball units with automatic enemy engagement and optional Combined Arms control.",
+    "summary": "A 12-pounder cannon with iron cannonball and fictional Lavaball versions. Both can engage enemies automatically or be controlled through Combined Arms.",
     "facts": [
       [
         "Best target types",
@@ -127,7 +126,7 @@
         "30 m–2.4 km"
       ],
       [
-        "Launch velocity",
+        "Muzzle velocity",
         "300 m/s"
       ],
       [
@@ -144,23 +143,23 @@
       ],
       [
         "Control",
-        "Native AI / Combined Arms"
+        "AI / Combined Arms"
       ]
     ],
     "notes": [
-      "Close DCS and copy TPG_12_Pounder_Cannon into Saved Games/DCS/Mods/tech/, then restart DCS. In Mission Editor, select Artillery and choose TPG 12 Pounder Cannon – Cannonball or TPG 12 Pounder Cannon – Lavaball.",
-      "The unit automatically engages enemies it detects inside its firing range and detection envelope, when ROE and Alarm State permit. Use an unobstructed line of sight and stop the unit to fire.",
-      "Engagement range is 30 m–2.4 km. Each unit carries 20 rounds of its selected ammunition, fires at 30-second intervals and has a ten-minute reload setting.",
-      "Direct control requires Combined Arms and mission or server permission. For multiplayer, the server and clients need the mod."
+      "Close DCS and copy TPG_12_Pounder_Cannon into Saved Games/DCS/Mods/tech/, then restart DCS. Under Artillery in Mission Editor, choose TPG 12 Pounder Cannon – Cannonball or TPG 12 Pounder Cannon – Lavaball.",
+      "The cannon fires automatically at enemies it can detect and reach when ROE and Alarm State allow it. Give it a clear line of sight and keep it stopped while firing.",
+      "Each unit carries 20 rounds of its selected ammunition. Firing range is 30 m–2.4 km, with 30 seconds between shots and a ten-minute reload time.",
+      "To control the cannon yourself, you need Combined Arms and vehicle-control permission in the mission or server. In multiplayer, both the server and players need the mod."
     ],
     "payloadNotes": [
-      "Cannonball is solid iron round shot with no explosive filling. The projectile’s damage comes from impact. Its round-shot mass is about 5.44 kg (12 lb), and launch velocity is 300 m/s.",
-      "Lavaball is a fictional ammunition option with a glowing model and a 0.8 kg explosive setting. It shares the cannonball’s basic flight setup."
+      "The iron cannonball weighs about 5.44 kg (12 lb) and leaves the muzzle at 300 m/s. It has no explosive filling and deals damage through impact.",
+      "Lavaball is a fictional glowing round with 0.8 kg of explosive in DCS. It follows the same basic flight path as the cannonball."
     ],
     "history": {
       "paragraphs": [
-        "Smoothbore guns were commonly named for the weight of the solid iron ball they fired. A 12-pounder fired a ball of about twelve pounds; the name covered many gun designs rather than one particular model.",
-        "Solid shot battered structures and struck targets by impact. Historical guns also used other ammunition, including explosive shell and canister. The Lavaball is a fictional addition for DCS."
+        "A 12-pounder takes its name from the weight of the iron ball it fires. The term was used for many smoothbore gun designs rather than one particular cannon.",
+        "Solid iron shot damaged structures and struck troops or vehicles by impact. Historical guns also fired explosive shells and canister. The Lavaball is a fictional addition for DCS."
       ],
       "references": [
         {
@@ -174,14 +173,14 @@
         "date": "2026-10-16",
         "version": "1.3",
         "items": [
-          "Added the ability for the unit to self-engage enemies within its firing range and detection envelopes. Script hook no longer required."
+          "The cannon now fires automatically at enemies it can detect within range. A script hook is no longer required."
         ]
       }
     ]
   },
   "apkws-vshorad": {
     "type": "Laser-guided rocket air defence",
-    "summary": "A stationary 16-round APKWS turret with separate near and far ammunition banks and optical sensors.",
+    "summary": "A stationary air-defense turret with 16 laser-guided 70 mm rockets, split between launchers for closer and more distant targets.",
     "facts": [
       [
         "Best target types",
@@ -196,7 +195,7 @@
         "6 km"
       ],
       [
-        "Rocket speed ceiling",
+        "Maximum rocket speed",
         "Mach 3"
       ],
       [
@@ -205,7 +204,7 @@
       ],
       [
         "Ready rockets",
-        "16 (8 near / 8 far)"
+        "16; 8 in each launch bank"
       ],
       [
         "Shot interval",
@@ -213,19 +212,19 @@
       ]
     ],
     "notes": [
-      "Install the TPG APKWS VSHORAD folder into the active Saved Games/DCS/Mods/tech/ profile and restart DCS. Keep one installed copy. Find TPG APKWS VSHORAD in the Air Defence category and choose a Paint Scheme.",
-      "The two launch banks have different launch angles and eight rounds each. Their engagement bands are 1,000-3,000 m and 3,001-4,500 m. FAR rounds can intercept closer targets while NEAR rounds can wait for a distant target to approach.",
-      "The optical and infrared system guides 70 mm rockets with a laser. Place it on clear, level ground with an unobstructed view of the target.",
-      "Full azimuth rotation, elevation from -30 to +85 degrees, traverse at 120 degrees/second and elevation at 90 degrees/second. Shot delay is two seconds; reload takes five minutes.",
-      "The M151-type warhead carries 1.04 kg of explosive per rocket. Keep Config.lua installed and restart DCS after configuration changes."
+      "Copy TPG APKWS VSHORAD into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. Keep only one installed copy. Find the unit under Air Defence in Mission Editor and choose its finish with Paint Scheme.",
+      "The turret has two banks of eight rockets, set at different launch angles. The NEAR bank covers 1–3 km and the FAR bank covers 3.001–4.5 km. These distances guide ammunition selection: a FAR rocket may intercept a target that has moved closer, while the NEAR bank may wait for an approaching target to enter range.",
+      "The turret tracks targets with optical and infrared sensors and guides its rockets by laser. Place it on level ground with a clear line of sight. Terrain, trees and buildings can block the laser or the rocket even when the unit is still tracking the target.",
+      "It can turn through 360 degrees and elevate from -30 to +85 degrees. It turns at up to 120 degrees per second and raises or lowers the launcher at up to 90 degrees per second. There is a two-second delay between shots; reloading takes five minutes.",
+      "Keep Config.lua in the mod folder and restart DCS after changing its settings."
     ],
     "payloadNotes": [
-      "Each 70 mm rocket uses an M151-type high-explosive fragmentation warhead with 1.04 kg of explosive in the mod. Laser guidance steers the rocket onto the target; each of the two launch banks holds eight rounds."
+      "Each rocket has an M151-type high-explosive fragmentation warhead with 1.04 kg of explosive in DCS. A laser guides it toward the target. The two launch banks hold eight rockets each."
     ],
     "history": {
       "paragraphs": [
-        "APKWS adds a laser-guidance section to a standard 70 mm rocket. It was developed for precision attacks from aircraft and has since been adapted to ground and maritime launchers.",
-        "L3Harris began field-testing VAMPIRE in 2021 and received a contract in January 2023 to supply systems for Ukraine. VAMPIRE combines a camera and laser designator with guided rockets for counter-drone and ground-target missions. The TPG turret uses its own stationary 16-round layout."
+        "APKWS turns a standard 70 mm rocket into a guided weapon by adding a laser-guidance section. Originally developed for aircraft, it has since been used on ground and maritime launchers.",
+        "L3Harris began testing its VAMPIRE system in 2021 and received a contract in January 2023 to supply it to Ukraine. VAMPIRE pairs a camera and laser designator with guided rockets for use against drones and ground targets. The TPG mod has its own stationary, 16-round turret design."
       ],
       "references": [
         {
@@ -241,7 +240,7 @@
   },
   "sahin-cuas": {
     "type": "40 mm counter-drone gun",
-    "summary": "A stationary Mk19-based counter-drone system using a dedicated reduced-dispersion M430 test round.",
+    "summary": "A stationary 40 mm counter-drone gun based on the Mk19, for engaging slow drones and helicopters at close range.",
     "facts": [
       [
         "Best target types",
@@ -265,7 +264,7 @@
       ],
       [
         "Ammunition",
-        "192 rounds; 64-round portions"
+        "192 rounds; groups of 64"
       ],
       [
         "Fire rate",
@@ -273,16 +272,16 @@
       ]
     ],
     "notes": [
-      "Close DCS and copy TPG_SAHIN_CUAS into Saved Games/DCS/Mods/tech/, then restart DCS. Use the corresponding Saved Games profile if yours has a different name.",
-      "Use it against slower drones and low, slow helicopters at close range. Keep a clear view between the gun and the target. The 10 km detection range is separate from its 600 m firing range.",
-      "The gun carries 192 rounds in 64-round portions and fires at about 261 rounds per minute. This alpha uses a reduced-dispersion M430 test round."
+      "Close DCS and copy TPG_SAHIN_CUAS into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS.",
+      "Use it against slow drones and low, slow helicopters nearby. Give the gun a clear line of sight. It can detect targets out to 10 km, but can only fire at targets within 600 m.",
+      "The gun carries 192 rounds in groups of 64 and fires at about 261 rounds per minute. This alpha uses a modified M430 round with a tighter shot pattern."
     ],
     "payloadNotes": [
-      "The mod uses a 40 mm M430 HEDP-based test round weighing 0.248 kg, with a 0.1 kg explosive setting and a shaped-charge damage component. Its direct-hit/timed-expiry setup differs from the programmable ATOM airburst ammunition used by the real ŞAHİN."
+      "The mod uses a modified 40 mm M430 dual-purpose grenade weighing 0.248 kg, with 0.1 kg of explosive and shaped-charge damage in DCS. This alpha relies on direct hits. The real ŞAHİN fires programmable ATOM grenades that burst in the air near the target."
     ],
     "history": {
       "paragraphs": [
-        "ASELSAN developed ŞAHİN as a close-range counter-drone gun system. It uses automatic target detection and tracking with 40 mm programmable ATOM airburst grenades to engage small drones."
+        "ASELSAN developed ŞAHİN to defend against small drones at close range. It automatically detects and tracks targets, then fires 40 mm programmable ATOM grenades that burst in the air near them."
       ],
       "references": [
         {
@@ -294,7 +293,7 @@
   },
   "akinci": {
     "type": "AI unmanned aircraft",
-    "summary": "An AI Akıncı-C with nine attachment stations, EO/IR sensors and multirole radar.",
+    "summary": "An AI-controlled Akıncı-C with nine weapon stations, optical and infrared sensors, and multirole radar.",
     "facts": [
       [
         "Maximum speed",
@@ -321,7 +320,7 @@
   },
   "fps-132": {
     "type": "Static radar facility",
-    "summary": "A fixed radar facility for scenery and target infrastructure.",
+    "summary": "An unarmed radar-site model for mission scenery or use as a ground target.",
     "facts": [
       [
         "Detection range",
@@ -354,7 +353,7 @@
   },
   "anduril-rail": {
     "type": "Rail-launched drone system",
-    "summary": "A stationary rail for GPS and anti-ship ALTIUS-700M variants, using native DCS weapon guidance.",
+    "summary": "A stationary launcher for GPS-guided and anti-ship ALTIUS-700M drones.",
     "facts": [
       [
         "Launch range",
@@ -387,7 +386,7 @@
   },
   "fp1-drone": {
     "type": "Rail-launched one-way drone",
-    "summary": "A native DCS guided weapon with a separate launch rail and a belly booster shown on the loaded drone.",
+    "summary": "A rail-launched FP1 drone with a booster mounted beneath it.",
     "facts": [
       [
         "Range envelope",
@@ -420,7 +419,7 @@
   },
   "shahed-238": {
     "type": "Rail-launched jet-powered drone",
-    "summary": "Ground-launched Shahed-238 drones with separate GPS and anti-ship launchers, each carrying up to five shots.",
+    "summary": "Rail-launched, jet-powered Shahed-238 drones in GPS and anti-ship versions, with up to five launches per unit.",
     "facts": [
       [
         "Best target types",
@@ -452,19 +451,19 @@
       ]
     ],
     "notes": [
-      "Close DCS and extract TPG_Shahed238_Rail into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS. The installed folder must contain entry.lua.",
-      "In Mission Editor, find TPG Shahed-238 GPS and TPG Shahed-238 ASM under Artillery. Both launchers are stationary, show one drone on the rail and carry up to five shots. Reduce ammunition in Mission Editor if desired. Choose Original Green or Sand Tan in Paint Scheme.",
-      "GPS: add Advanced Waypoint Actions → Perform Task → Fire at Point and select the ground target. The drone follows the assigned point-target mission.",
-      "ASM means anti-ship missile. Use Fire at Point to send the ASM drone toward a chosen point at sea. If it passes within 8 km of an enemy ship and its seeker detects the ship, it turns to attack. If it finds no ship, it continues toward the assigned point. The 8 km figure is the search limit, so a ship also has to be visible to the seeker and inside its forward search area.",
-      "Launch range is 20–1,000 km, cruise speed is 500 km/h and cruise height is 300 m. Plan the flight path around terrain, trees and buildings. Shot delay and reload time are both ten minutes."
+      "Close DCS and extract TPG_Shahed238_Rail into Saved Games/DCS/Mods/tech/. Check that entry.lua is directly inside the mod folder, then restart DCS.",
+      "Find TPG Shahed-238 GPS and TPG Shahed-238 ASM under Artillery in Mission Editor. Both launchers stay in place, display one drone on the rail and carry up to five shots. You can reduce ammunition in Mission Editor and choose Original Green or Sand Tan with Paint Scheme.",
+      "For the GPS version, select Advanced Waypoint Actions → Perform Task → Fire at Point and choose a ground target. The drone flies to that point.",
+      "The ASM version is for attacking ships. Use Fire at Point to send it toward a point at sea. If an enemy ship comes within 8 km and is visible to the seeker ahead of the drone, it turns to attack. If it finds no ship, it continues to the assigned point.",
+      "Launch range is 20–1,000 km. The drone cruises at 500 km/h at a height of 300 m. Plan a clear flight path around terrain, trees and buildings. Allow ten minutes between launches and for reloading."
     ],
     "payloadNotes": [
-      "Both DCS variants carry a 50 kg warhead with 25 kg of explosive and a 25 kg piercing component. The drone weighs 370 kg and has a Mach 0.50 speed limit."
+      "Both DCS versions have a 50 kg warhead containing 25 kg of explosive and a 25 kg armor-piercing component. The complete drone weighs 370 kg and has a maximum speed of Mach 0.50."
     ],
     "history": {
       "paragraphs": [
-        "Iran unveiled the Shahed-238 in 2023 as a jet-powered development of the propeller-driven Shahed-136. It keeps the delta-wing layout but uses a small turbojet for faster flight.",
-        "The family includes versions with different guidance systems. The related Russian jet-powered version is known as Geran-3."
+        "Iran unveiled the Shahed-238 in 2023. It developed from the propeller-driven Shahed-136, keeping its delta-wing shape but replacing the propeller engine with a small turbojet for greater speed.",
+        "Several guidance versions have been shown. A related jet-powered version used by Russia is called Geran-3."
       ],
       "references": [
         {
@@ -478,15 +477,15 @@
         "date": "2026-10-16",
         "version": "1.0.2",
         "items": [
-          "Fixed: the drone could not be tracked by IR-seeking air-to-air missiles.",
-          "Fixed: cannon and gun projectiles passed through the drone body."
+          "Fixed IR-seeking air-to-air missiles being unable to track the drone.",
+          "Fixed cannon and gun rounds passing through the drone."
         ]
       }
     ]
   },
   "t34-calliope": {
     "type": "WWII self-propelled rocket artillery",
-    "summary": "A 60-tube Calliope with automatic enemy engagement, custom M8 rockets, Combined Arms control and detailed vehicle animation.",
+    "summary": "A Sherman-mounted, 60-tube rocket launcher with custom M8 rockets, working machine guns and Combined Arms control.",
     "facts": [
       [
         "Best target types",
@@ -494,7 +493,7 @@
       ],
       [
         "Rocket range",
-        "100 m-3.66 km"
+        "100 m–3.66 km"
       ],
       [
         "Ready rockets",
@@ -518,15 +517,15 @@
       ]
     ],
     "notes": [
-      "Install T34 Calliope in Saved Games/DCS/Mods/tech/ and restart DCS. Find TPG T34 Calliope (M4 Sherman) under Artillery; available to all countries and coalitions.",
-      "The unit automatically engages enemies it detects inside its firing range and detection envelope when ROE and Alarm State permit. Keep its line of sight clear and stop before firing rockets; the machine guns can fire while moving.",
-      "Enable Combined Arms vehicle control in the mission. Default bindings: Q selects the main turret, E cycles its weapons, and Space fires. Stop for rocket fire; both M1919 machine guns support unstabilized fire on the move. The original launcher-fitted configuration keeps the cannon disabled.",
-      "The M8 uses its own model, ammunition and conventional 4.3 lb TNT warhead. All 60 tube launch points fire sequentially. Slow visual roll and randomized launch disturbance produce a wider area-fire pattern with more side-to-side variation.",
-      "The rocket sight uses the native MLRS range controller with this M8 ammunition. Coaxial and bow guns have separate ammunition stores, 250-round belts, firing loops and burst-tail audio.",
-      "Custom work includes articulated launcher linkage, flexible wiring, circulating track shoes, rotating wheels, animated suspension and dim amber headlights. Fourteen 2K material sets add varied wear and suspension-matched hull dirt.",
-      "Dedicated thermal maps distinguish engine, running gear, weapon and body response. Thirty-two armor zones include the visible applique plates. Tank, wreck and rocket each have four distance LODs.",
-      "Rebuilt destroyed model with a detailed exposed radial engine, a creased gun barrel, a broken track laid ahead of the hull, scattered damaged rocket tubes and torn steel fragments. Dedicated 2K/4K wreck textures add varied charring, ash, impact pitting and spall scars.",
-      "Original model by OK3D; DCS integration and custom material work by TPG. The download includes the full installation and feature guide."
+      "Copy T34 Calliope into Saved Games/DCS/Mods/tech/ and restart DCS. Find TPG T34 Calliope (M4 Sherman) under Artillery. It is available to all countries and coalitions.",
+      "The Calliope fires automatically at enemies it can detect within range when ROE and Alarm State allow it. Keep its line of sight clear. Stop to fire rockets; the machine guns can fire while moving.",
+      "To drive and fire it yourself, enable Combined Arms vehicle control in the mission. With the default bindings, Q selects the main turret, E cycles its weapons and Space fires. The main cannon is disabled in this launcher-fitted version.",
+      "The 60 launch tubes fire in sequence, using custom M8 rockets. Rockets roll slowly in flight and spread across the target area, with more scatter from side to side. The rocket sight uses DCS’s MLRS range controls.",
+      "The coaxial and bow M1919 machine guns have separate ammunition supplies and 250-round belts, with custom firing sounds.",
+      "The launcher linkage, wiring, tracks, wheels and suspension are animated. The model has dim amber headlights, worn paint and dirt around the running gear.",
+      "The engine, running gear, weapons and hull have separate thermal maps for infrared views. Armor is modeled in 32 zones, including the extra plates visible on the hull. Lower-detail models are used at a distance for the tank, wreck and rockets.",
+      "The destroyed tank has an exposed radial engine, bent gun barrel, broken track, scattered rocket tubes and torn steel, with scorched surfaces and impact damage.",
+      "Original model by OK3D; DCS integration and custom materials by TPG. The download includes an installation and feature guide."
     ],
     "detailGallery": [
       {
@@ -565,12 +564,12 @@
       }
     ],
     "payloadNotes": [
-      "Each 4.5-inch M8 rocket weighs about 17.28 kg and carries 4.3 lb (1.95 kg) of TNT in a conventional high-explosive/fragmentation warhead. The full 60-rocket salvo is suited to area targets. The coaxial and bow M1919 machine guns use separate .30-06 ball and tracer ammunition."
+      "Each 4.5-inch M8 rocket weighs about 17.28 kg and carries 4.3 lb (1.95 kg) of TNT in a high-explosive fragmentation warhead. A full salvo fires 60 rockets across an area. The coaxial and bow M1919 machine guns use separate supplies of .30-06 ball and tracer rounds."
     ],
     "history": {
       "paragraphs": [
-        "The U.S. Army mounted the T34 rocket launcher on the M4 Sherman during the Second World War. Its sixty tubes fired 4.5-inch M8 rockets in a rapid salvo, adding area firepower to an armored unit.",
-        "Tank-mounted rocket launchers were being produced in greater numbers by 1944. The original Calliope used a linkage to the Sherman’s gun barrel to elevate the rocket rack, as represented in this mod."
+        "The U.S. Army fitted the T34 Calliope launcher to M4 Sherman tanks during the Second World War. Its 60 tubes fired 4.5-inch M8 rockets in quick succession to bombard an area.",
+        "Tank-mounted rocket launchers were entering wider production by 1944. On the original Calliope, a linkage to the Sherman’s gun barrel raised and lowered the rocket rack. That linkage is animated in this mod."
       ],
       "references": [
         {
@@ -588,16 +587,16 @@
         "date": "2026-10-21",
         "version": "1.1.9",
         "items": [
-          "Adjusted rocket scatter to better approximate historical lack of accuracy."
+          "Adjusted rocket spread to better reflect the M8’s historical inaccuracy."
         ]
       },
       {
         "date": "2026-10-17",
         "version": "1.1.9",
         "items": [
-          "Added the ability for the unit to self-engage enemies within its firing range and detection envelopes.",
-          "Rebuilt the destroyed model with an exposed radial engine, creased barrel, ground-laid broken track, scattered launcher tubes and detailed torn-metal fragments.",
-          "Added 2K/4K charred wreck textures, impact pitting and spall scars; replaced the destroyed-model profile series."
+          "The Calliope now fires automatically at enemies it can detect within range.",
+          "Rebuilt the wreck with an exposed radial engine, bent barrel, broken track, scattered launcher tubes and torn metal.",
+          "Added scorched wreck textures and impact damage, and updated the destroyed-model images."
         ]
       }
     ],
@@ -606,6 +605,7 @@
         "image": "/assets/images/calliope-scatter.png",
         "caption": "M8 rocket scatter at 3,000 m: one 30-rocket salvo and its aiming point"
       }
-    ]
+    ],
+    "detailGalleryHeading": "Armor, infrared views and wreck"
   }
 }
