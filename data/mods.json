@@ -151,10 +151,10 @@
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG.APKWS.VSHORAD.zip",
       "label": "TPG APKWS VSHORAD.zip"
     },
-    "status": "alpha",
+    "status": "release-candidate",
     "statusConfirmed": true,
     "sourceFilename": "TPG APKWS VSHORAD.zip",
-    "releaseLabel": "Alpha release test candidate",
+    "releaseLabel": "Release Candidate",
     "image": "/assets/images/apkws-vshorad.png",
     "imageAlt": "TPG APKWS VSHORAD turret with four rocket pods"
   },
@@ -169,10 +169,10 @@
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_SAHIN_CUAS.zip",
       "label": "TPG_SAHIN_CUAS.zip"
     },
-    "status": "alpha",
+    "status": "release-candidate",
     "statusConfirmed": true,
     "sourceFilename": "TPG_SAHIN_CUAS.zip",
-    "releaseLabel": "Alpha release test candidate",
+    "releaseLabel": "Release Candidate",
     "image": "/assets/images/sahin-cuas.png",
     "imageAlt": "TPG SAHIN 40mm C-UAS in DCS World",
     "imageGallery": [

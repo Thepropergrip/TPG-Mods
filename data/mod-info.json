@@ -277,10 +277,10 @@
     "notes": [
       "Close DCS and copy TPG_SAHIN_CUAS into your active Saved Games/DCS/Mods/tech/ folder, then restart DCS.",
       "Place the gun with a clear line of sight to approaching targets.",
-      "The gun carries 192 rounds in groups of 64 and fires at about 261 rounds per minute. This alpha uses a modified M430 round with a tighter shot pattern."
+      "The gun carries 192 rounds in groups of 64 and fires at about 261 rounds per minute. This version uses a modified M430 round with a tighter shot pattern."
     ],
     "payloadNotes": [
-      "The mod uses a modified 40 mm M430 dual-purpose grenade weighing 0.248 kg, with 0.1 kg of explosive and shaped-charge damage in DCS. This alpha relies on direct hits. The real ŞAHİN fires programmable ATOM grenades that burst in the air near the target."
+      "The mod uses a modified 40 mm M430 dual-purpose grenade weighing 0.248 kg, with 0.1 kg of explosive and shaped-charge damage in DCS. This version relies on direct hits. The real ŞAHİN fires programmable ATOM grenades that burst in the air near the target."
     ],
     "history": {
       "paragraphs": [
