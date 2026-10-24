@@ -438,7 +438,7 @@
       ],
       [
         "Cruise height",
-        "300 m"
+        "GPS: 425 m AGL; ASM: 300 m"
       ],
       [
         "Ammunition",
@@ -458,7 +458,8 @@
       "Find TPG Shahed-238 GPS and TPG Shahed-238 ASM under Artillery in Mission Editor. Each launcher carries up to five shots, with one drone visible on the rail. You can reduce ammunition in Mission Editor and choose Original Green or Sand Tan with Paint Scheme.",
       "For the GPS version, select Advanced Waypoint Actions → Perform Task → Fire at Point and choose a ground target. The drone flies to that point.",
       "The ASM version is for attacking ships. Use Fire at Point to send it toward a point at sea. If an enemy ship comes within 8 km and is visible to the seeker ahead of the drone, it turns to attack. If it finds no ship, it continues to the assigned point.",
-      "Launch range is 20–1,000 km. The drone cruises at 500 km/h at a height of 300 m. Plan a clear flight path around terrain, trees and buildings. Allow ten minutes between launches and for reloading."
+      "Launch range is 20–1,000 km. The drone cruises at 500 km/h. GPS cruise height is 425 m AGL; ASM remains at 300 m. Allow ten minutes between launches and for reloading.",
+      "Both variants use an underbody launch booster, with a takeoff-assist plume and booster separation after burnout."
     ],
     "payloadNotes": [
       "Both DCS versions have a 50 kg warhead containing 25 kg of explosive and a 25 kg armor-piercing component. The complete drone weighs 370 kg and has a maximum speed of Mach 0.50."
@@ -476,6 +477,14 @@
       ]
     },
     "changelog": [
+      {
+        "date": "2026-10-23",
+        "version": "1.0.3",
+        "items": [
+          "Added booster and takeoff assist animation",
+          "Increased GPS cruise height to 425m agl so it is able to clear tall mountains. ASM variant remains at 300m."
+        ]
+      },
       {
         "date": "2026-10-16",
         "version": "1.0.2",
@@ -653,7 +662,7 @@
       "Under Artillery in Mission Editor, choose TPG Mobile Shahed 238 for GPS attacks or TPG Mobile Shahed 238 ASM for ships. Available to Iran, Russia, USA and both Combined Joint Task Forces.",
       "For GPS attacks, select Advanced Waypoint Actions → Perform Task → Fire at Point and choose a ground target 20–1,000 km away.",
       "For ASM attacks, use Fire at Point to send the drone toward a point at sea. If an enemy ship comes within 8 km and is visible to the seeker ahead of the drone, it turns to attack. Otherwise it continues to the assigned point.",
-      "Stop the truck to fire. The rail turns through 360 degrees, including over the cab. Give it a clear launch path and plan the drone’s route around terrain, trees and buildings.",
+      "Stop the truck to fire. The rail turns through 360 degrees, including over the cab.",
       "Each truck carries one drone on the rail and two in transport racks. After a launch, reloading takes two minutes; a spare disappears from its rack as the next drone appears on the rail. Allow at least two minutes and twenty seconds between launches.",
       "Both versions have a visible underbody launch booster and exhaust plume. The booster disappears after burnout. The truck has animated wheels, steering and suspension, a seated driver, working headlights and infrared maps.",
       "The weathered launcher includes fitted mounting feet, welded supports, cradles and straps. The burned wreck rests on bare wheel rims, with damaged launcher sections and metal fragments scattered around it."
@@ -692,9 +701,7 @@
         "date": "2026-10-23",
         "version": "1.1.6",
         "items": [
-          "First public release candidate of the standalone truck-mounted GPS and ASM launchers.",
-          "Includes three-round reloading, the detailed truck and launcher, working lights, infrared maps and burned wreck.",
-          "Includes the launch booster and the fix for it reappearing after burnout. GPS cruise clearance is 425 m above terrain."
+          "First public release candidate of the standalone truck-mounted GPS and ASM launchers."
         ]
       }
     ]

@@ -3,13 +3,31 @@ import assert from 'node:assert/strict';
 import { aggregate } from '../scripts/stats.mjs';
 import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
+import { readFileSync } from 'node:fs';
 
-test('release candidates have their own section, clear version labels and independent download counts', () => {
+test('Alpha Releases contains APKWS, SAHIN and the Shahed truck together', () => {
+  const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
+  const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
+  const html = renderCatalog(mods, info);
+  const section = html.match(/<section><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
+  assert.ok(section);
+  for (const id of ['apkws-vshorad', 'sahin-cuas', 'shahed-238-truck']) {
+    assert.ok(section.includes(`/mods/${id}/`));
+  }
+  assert.doesNotMatch(html, /<h2>Release Candidates<\/h2>|<h2>Alpha Release Test Candidates<\/h2>/);
+  const truck = renderDetail(mods.find(m => m.id === 'shahed-238-truck'), info['shahed-238-truck'], false);
+  assert.doesNotMatch(truck, /Give it a clear launch path|Includes three-round reloading|fix for it reappearing after burnout/);
+  const rail = renderDetail(mods.find(m => m.id === 'shahed-238'), info['shahed-238'], false);
+  assert.match(rail, /Version 1\.0\.3/);
+  assert.match(rail, /shahed-238-v1\.0\.3\/TPG_Shahed238_Rail.zip/);
+});
+
+test('release candidates share Alpha Releases with clear version labels and independent download counts', () => {
   const candidate = {id:'shahed-238-truck',title:'Truck',status:'release-candidate',statusConfirmed:true,version:'1.1.6',github:{tag:'shahed-238-truck-v1.1.6',assetName:'truck.zip',downloadUrl:'https://example.test/truck.zip'}};
   const details = {type:'Truck launcher',summary:'Truck.',facts:[['Ammunition','3']],notes:['Use Fire at Point.']};
   validateMods([candidate]);
   const catalog = renderCatalog([candidate], {[candidate.id]:details});
-  assert.match(catalog, /<h2>Release Candidates<\/h2>/);
+  assert.match(catalog, /<h2>Alpha Releases<\/h2>/);
   assert.doesNotMatch(catalog, /<h2>Released<\/h2>|<h2>Alpha Release Test Candidates<\/h2>/);
   for (const html of [catalog, renderQuickLooks([candidate],{[candidate.id]:details}), renderDetail(candidate,details,false)]) {
     assert.match(html, /Version 1\.1\.6 · Release Candidate/);

@@ -29,9 +29,9 @@ const bylines = {
 };
 
 export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
-  const groups = [['released', 'Released'], ['release-candidate', 'Release Candidates'], ['alpha', 'Alpha Release Test Candidates'], ['under-development', 'Under Development']];
+  const groups = [['released', 'Released'], ['alpha', 'Alpha Releases'], ['under-development', 'Under Development']];
   return groups.map(([status, heading]) => {
-    const entries = mods.filter(m => m.statusConfirmed && m.status === status);
+    const entries = mods.filter(m => m.statusConfirmed && (status === 'alpha' ? ['alpha', 'release-candidate'].includes(m.status) : m.status === status));
     if (!entries.length) return '';
     return `<section><h2>${heading}</h2>${bylines[status] ? `<p class="section-byline">${escapeHtml(bylines[status])}</p>` : ''}<div class="catalog">${entries.map((mod, index) => {
       if (status === 'under-development') return developmentPreviews[index]

@@ -34,12 +34,12 @@
     "status": "released",
     "statusConfirmed": true,
     "featured": true,
-    "version": "1.0.2",
+    "version": "1.0.3",
     "github": {
-      "tag": "shahed-238-v1.0.2",
+      "tag": "shahed-238-v1.0.3",
       "assetName": "TPG_Shahed238_Rail.zip",
       "label": "TPG_Shahed238_Rail.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.2/TPG_Shahed238_Rail.zip"
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.3/TPG_Shahed238_Rail.zip"
     },
     "image": "/assets/images/shahed-238.png",
     "imageAlt": "TPG Shahed-238 drone on its launch rail in DCS World",
@@ -50,7 +50,7 @@
         "caption": "Shahed-238 in flight beside a cargo ship in DCS World"
       }
     ],
-    "publicVersion": "1.0.2"
+    "publicVersion": "1.0.3"
   },
   {
     "id": "fps-132",
