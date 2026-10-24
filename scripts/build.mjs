@@ -14,6 +14,7 @@ await check();
 await rm(at('dist'), { recursive: true, force: true });
 await mkdir(at('dist'), { recursive: true });
 await cp(at('site'), at('dist'), { recursive: true });
+await writeFile(at('dist/404.html'), withFooter(await readFile(at('dist/404.html'), 'utf8')));
 const config = await project();
 if (!config.launchReady) {
   await writeFile(at('dist/robots.txt'), 'User-agent: *\nDisallow: /\n');
