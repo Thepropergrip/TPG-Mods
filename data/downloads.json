@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T23:49:53.295Z",
+  "generatedAt": "2026-10-24T00:08:26.851Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -20,6 +20,13 @@
       "currentDownloads": 1,
       "lifetimeDownloads": 8,
       "versions": [
+        {
+          "tag": "shahed-238-v1.0.3",
+          "assetName": "TPG_Shahed238_Rail.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.3/TPG_Shahed238_Rail.zip",
+          "prerelease": false
+        },
         {
           "tag": "shahed-238-v1.0.2",
           "assetName": "TPG_Shahed238_Rail.zip",
@@ -137,13 +144,13 @@
       ]
     },
     "shahed-238-truck": {
-      "currentDownloads": 0,
-      "lifetimeDownloads": 0,
+      "currentDownloads": 1,
+      "lifetimeDownloads": 1,
       "versions": [
         {
           "tag": "shahed-238-truck-v1.1.6",
           "assetName": "TPG_Shahed238_Truck.zip",
-          "downloads": 0,
+          "downloads": 1,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip",
           "prerelease": true
         }
