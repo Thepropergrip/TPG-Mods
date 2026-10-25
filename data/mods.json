@@ -1,5 +1,75 @@
 [
   {
+    "id": "zolfaghar",
+    "title": "TPG Zolfaghar",
+    "status": "release-candidate",
+    "statusConfirmed": true,
+    "featured": false,
+    "version": "1.02",
+    "publicVersion": "1.02",
+    "releaseLabel": "Release Candidate",
+    "github": {
+      "tag": "zolfaghar-v1.02",
+      "assetName": "TPG.Zolfaghar.zip",
+      "label": "TPG Zolfaghar.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.02/TPG.Zolfaghar.zip"
+    },
+    "sourceFilename": "TPG Zolfaghar.zip",
+    "image": "/assets/images/zolfaghar-ignition.jpg",
+    "imageAlt": "TPG Zolfaghar launching a ballistic missile in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/zolfaghar-launcher-ready.jpg",
+        "caption": "Zolfaghar twin launcher deployed in DCS World"
+      },
+      {
+        "image": "/assets/images/zolfaghar-cloud-layer.jpg",
+        "caption": "Zolfaghar climbing above the cloud layer in DCS World"
+      },
+      {
+        "image": "/assets/images/zolfaghar-atmospheric-flight.jpg",
+        "caption": "Separated Zolfaghar warhead and missile body in DCS World"
+      },
+      {
+        "image": "/assets/images/zolfaghar-warhead-backlit.jpg",
+        "caption": "Backlit Zolfaghar warhead and recessed rear nozzle in DCS World"
+      }
+    ]
+  },
+  {
+    "id": "shahed-238-truck",
+    "title": "TPG Shahed-238 Truck GPS / ASM",
+    "status": "release-candidate",
+    "statusConfirmed": true,
+    "featured": false,
+    "version": "1.1.6",
+    "publicVersion": "1.1.6",
+    "releaseLabel": "Release Candidate",
+    "github": {
+      "tag": "shahed-238-truck-v1.1.6",
+      "assetName": "TPG_Shahed238_Truck.zip",
+      "label": "TPG_Shahed238_Truck.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip"
+    },
+    "sourceFilename": "TPG_Shahed238_Truck.zip",
+    "image": "/assets/images/shahed-238-truck.png",
+    "imageAlt": "TPG Shahed-238 truck with a loaded launch rail and two spare drones in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/shahed-238-truck-launch.png",
+        "caption": "Shahed-238 launching from the truck in DCS World"
+      },
+      {
+        "image": "/assets/images/shahed-238-truck-booster.png",
+        "caption": "Shahed-238 underbody booster firing after launch in DCS World"
+      },
+      {
+        "image": "/assets/images/shahed-238-truck-flight.png",
+        "caption": "Truck-launched Shahed-238 in flight in DCS World"
+      }
+    ]
+  },
+  {
     "id": "grizzly",
     "title": "TPG Containerized SHORAD",
     "status": "released",
@@ -230,39 +300,6 @@
       {
         "image": "/assets/images/calliope-m8.png",
         "caption": "Custom M8 rocket in flight in DCS World"
-      }
-    ]
-  },
-  {
-    "id": "shahed-238-truck",
-    "title": "TPG Shahed-238 Truck GPS / ASM",
-    "status": "release-candidate",
-    "statusConfirmed": true,
-    "featured": false,
-    "version": "1.1.6",
-    "publicVersion": "1.1.6",
-    "releaseLabel": "Release Candidate",
-    "github": {
-      "tag": "shahed-238-truck-v1.1.6",
-      "assetName": "TPG_Shahed238_Truck.zip",
-      "label": "TPG_Shahed238_Truck.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip"
-    },
-    "sourceFilename": "TPG_Shahed238_Truck.zip",
-    "image": "/assets/images/shahed-238-truck.png",
-    "imageAlt": "TPG Shahed-238 truck with a loaded launch rail and two spare drones in DCS World",
-    "imageGallery": [
-      {
-        "image": "/assets/images/shahed-238-truck-launch.png",
-        "caption": "Shahed-238 launching from the truck in DCS World"
-      },
-      {
-        "image": "/assets/images/shahed-238-truck-booster.png",
-        "caption": "Shahed-238 underbody booster firing after launch in DCS World"
-      },
-      {
-        "image": "/assets/images/shahed-238-truck-flight.png",
-        "caption": "Truck-launched Shahed-238 in flight in DCS World"
       }
     ]
   }

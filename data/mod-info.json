@@ -712,5 +712,97 @@
         ]
       }
     ]
+  },
+  "zolfaghar": {
+    "type": "Mobile short-range ballistic missile launcher",
+    "summary": "A twin-missile launcher with HE and CM versions, inclined launches, separating warheads and animated stabilizers.",
+    "facts": [
+      [
+        "Best target types",
+        "Fixed ground targets and infrastructure (HE); dispersed soft targets (CM)"
+      ],
+      [
+        "Firing range",
+        "75–700 km"
+      ],
+      [
+        "Ammunition",
+        "2 missiles per launcher"
+      ],
+      [
+        "Launch angle",
+        "67.5°"
+      ],
+      [
+        "Terminal speed",
+        "Around 1.6 km/s; varies with range"
+      ],
+      [
+        "Road speed",
+        "60 km/h"
+      ],
+      [
+        "Player control",
+        "AI controlled"
+      ]
+    ],
+    "notes": [
+      "Close DCS and extract the download into your active Saved Games/DCS/ folder, merging both Mods and Scripts. Keep TPG_Zolfaghar in Mods/tech/ and TPG_Zolfaghar.lua in Scripts/Hooks/, then restart DCS. Both folders are required.",
+      "If upgrading from TPG_Khorramshahr4, keep only one installed copy. In Mission Editor, choose TPG Zolfaghar HE or TPG Zolfaghar CM. Place one launcher per group on level ground with room for its stabilizers and a clear launch path.",
+      "At the firing waypoint, stop the truck, set Alarm State Red and ensure ROE permits firing. Select Advanced Waypoint Actions → Perform Task → Fire at Point, choose a target 75–700 km away and set ammunition expenditure. Allow roughly 45–60 seconds from stowed for the first launch.",
+      "Each truck carries two missiles. Use Alarm State Green for travel; the launcher must stop to fire. The vehicle is AI controlled and has no Combined Arms driving mode.",
+      "The retaining bands open, the rails rise to 67.5 degrees and the stabilizers deploy with the suspension. Wheels and steering are animated for travel.",
+      "Both missile versions show warhead separation and a detached missile body. Heat glow appears during the hot part of flight. The trajectory chart below follows three recorded HE launches from a common launch point.",
+      "The engine area, body and running gear have custom infrared materials. The launcher and missiles include collision shells. The destroyed vehicle has a burned cab, bare wheel rims, shrapnel cavities and scattered metal debris."
+    ],
+    "history": {
+      "paragraphs": [
+        "Iran unveiled the Zolfaghar in 2016 as a solid-fuel short-range ballistic missile in the Fateh family, with a reported range of 700 km. It was used in strikes in Syria in 2017.",
+        "The DCS mod includes a unitary HE version and a CM version with a submunition payload. Both use the same twin-missile vehicle model."
+      ],
+      "references": [
+        {
+          "label": "CSIS Missile Threat: Zolfaghar",
+          "url": "https://missilethreat.csis.org/missile/zolfaghar/"
+        }
+      ]
+    },
+    "payloadNotes": [
+      "In DCS, the HE warhead has a 579 kg TNT-equivalent explosive yield. The CM version releases 14 fragmentation submunitions, each with 100 lb (45.36 kg) TNT-equivalent yield."
+    ],
+    "payloadGallery": [
+      {
+        "image": "/assets/images/zolfaghar-three-launch-trajectories.png",
+        "caption": "Three recorded HE launches on 25 October 2026: 65.4, 212.8 and 366.1 nautical miles from a common launch point; height in feet"
+      }
+    ],
+    "detailGalleryHeading": "Infrared view and damage model",
+    "detailGallery": [
+      {
+        "image": "/assets/images/zolfaghar-thermal-signature-black-hot.jpg",
+        "caption": "Custom infrared response in a cropped black-hot sensor view"
+      },
+      {
+        "image": "/assets/images/zolfaghar-wreck-pitting-detail.jpg",
+        "caption": "Burned wheel rims and clustered shrapnel pitting on the destroyed launcher"
+      }
+    ],
+    "references": [
+      {
+        "label": "Original model: Iranian Zolfaghar TELAR by 42manako",
+        "url": "https://sketchfab.com/3d-models/iranian-zolfaghar-telar-8c147470b49b44edb48623d2268843e1"
+      }
+    ],
+    "changelog": [
+      {
+        "date": "2026-10-25",
+        "version": "1.02",
+        "items": [
+          "First public release candidate of the HE and CM launchers.",
+          "Includes inclined launches, animated warhead separation, heat glow, custom infrared materials and a separate damaged vehicle model.",
+          "Includes the repaired retaining-band hinges, pinned hydraulic mounts, animated stabilizers, suspension and wheels."
+        ]
+      }
+    ]
   }
 }
