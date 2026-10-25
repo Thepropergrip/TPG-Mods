@@ -748,7 +748,7 @@
     ],
     "notes": [
       "Close DCS and extract the download into your active Saved Games/DCS/ folder, merging both Mods and Scripts. Keep TPG_Zolfaghar in Mods/tech/ and TPG_Zolfaghar.lua in Scripts/Hooks/, then restart DCS. Both folders are required.",
-      "If upgrading from TPG_Khorramshahr4, keep only one installed copy. In Mission Editor, choose TPG Zolfaghar HE or TPG Zolfaghar CM. Place one launcher per group on level ground with room for its stabilizers and a clear launch path.",
+      "In Mission Editor, choose TPG Zolfaghar HE or TPG Zolfaghar CM. Place one launcher per group on level ground with room for its stabilizers and a clear launch path.",
       "At the firing waypoint, stop the truck, set Alarm State Red and ensure ROE permits firing. Select Advanced Waypoint Actions → Perform Task → Fire at Point, choose a target 75–700 km away and set ammunition expenditure. Allow roughly 45–60 seconds from stowed for the first launch.",
       "Each truck carries two missiles. Use Alarm State Green for travel; the launcher must stop to fire. The vehicle is AI controlled and has no Combined Arms driving mode.",
       "The retaining bands open, the rails rise to 67.5 degrees and the stabilizers deploy with the suspension. Wheels and steering are animated for travel.",
