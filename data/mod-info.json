@@ -734,8 +734,12 @@
         "67.5°"
       ],
       [
-        "Terminal speed",
-        "Around 1.6 km/s; varies with range"
+        "Peak flight speed (HE)",
+        "Approx. 2.1–2.5 km/s (4,800–5,600 mph)"
+      ],
+      [
+        "Impact speed (HE)",
+        "Approx. 1.2–1.4 km/s (2,600–3,200 mph) in the recorded launches"
       ],
       [
         "Road speed",
@@ -768,7 +772,8 @@
       ]
     },
     "payloadNotes": [
-      "In DCS, the HE warhead has a 579 kg TNT-equivalent explosive yield. The CM version releases 14 fragmentation submunitions, each with 100 lb (45.36 kg) TNT-equivalent yield."
+      "In DCS, the HE warhead has a 579 kg TNT-equivalent explosive yield. The CM version releases 14 fragmentation submunitions, each with 100 lb (45.36 kg) TNT-equivalent yield.",
+      "In the three HE launches plotted below, peak flight speeds were about 2,150–2,520 m/s. Approximate impact speeds were 1,160 m/s at 65.4 NM, 1,430 m/s at 212.8 NM and 1,380 m/s at 366.1 NM, measured from the final near-ground positions."
     ],
     "payloadGallery": [
       {
