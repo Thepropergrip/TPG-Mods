@@ -1,29 +1,55 @@
 {
-  "generatedAt": "2026-10-25T23:10:34.774Z",
+  "generatedAt": "2026-10-26T15:27:51.167Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
+    "zolfaghar": {
+      "currentDownloads": 0,
+      "lifetimeDownloads": 0,
+      "versions": [
+        {
+          "tag": "zolfaghar-v1.02",
+          "assetName": "TPG.Zolfaghar.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.02/TPG.Zolfaghar.zip",
+          "prerelease": true
+        }
+      ]
+    },
+    "shahed-238-truck": {
+      "currentDownloads": 14,
+      "lifetimeDownloads": 14,
+      "versions": [
+        {
+          "tag": "shahed-238-truck-v1.1.6",
+          "assetName": "TPG_Shahed238_Truck.zip",
+          "downloads": 14,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip",
+          "prerelease": true
+        }
+      ]
+    },
     "grizzly": {
-      "currentDownloads": 16,
-      "lifetimeDownloads": 16,
+      "currentDownloads": 23,
+      "lifetimeDownloads": 23,
       "versions": [
         {
           "tag": "grizzly-v1.0.23-ready-cell-state",
           "assetName": "TPG.Containerized.SHORAD.zip",
-          "downloads": 16,
+          "downloads": 23,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG.Containerized.SHORAD.zip",
           "prerelease": false
         }
       ]
     },
     "shahed-238": {
-      "currentDownloads": 10,
-      "lifetimeDownloads": 18,
+      "currentDownloads": 19,
+      "lifetimeDownloads": 27,
       "versions": [
         {
           "tag": "shahed-238-v1.0.3",
           "assetName": "TPG_Shahed238_Rail.zip",
-          "downloads": 10,
+          "downloads": 19,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.3/TPG_Shahed238_Rail.zip",
           "prerelease": false
         },
@@ -44,26 +70,26 @@
       ]
     },
     "v2": {
-      "currentDownloads": 9,
-      "lifetimeDownloads": 9,
+      "currentDownloads": 17,
+      "lifetimeDownloads": 17,
       "versions": [
         {
           "tag": "v2-v1.0",
           "assetName": "TPG.V2.zip",
-          "downloads": 9,
+          "downloads": 17,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/v2-v1.0/TPG.V2.zip",
           "prerelease": false
         }
       ]
     },
     "12-pounder-cannon": {
-      "currentDownloads": 3,
-      "lifetimeDownloads": 7,
+      "currentDownloads": 4,
+      "lifetimeDownloads": 8,
       "versions": [
         {
           "tag": "12-pounder-cannon-v1.3",
           "assetName": "TPG_12_Pounder_Cannon.zip",
-          "downloads": 3,
+          "downloads": 4,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.3/TPG_12_Pounder_Cannon.zip",
           "prerelease": false
         },
@@ -77,39 +103,39 @@
       ]
     },
     "apkws-vshorad": {
-      "currentDownloads": 7,
-      "lifetimeDownloads": 7,
+      "currentDownloads": 13,
+      "lifetimeDownloads": 13,
       "versions": [
         {
           "tag": "apkws-vshorad-v0.1.4",
           "assetName": "TPG.APKWS.VSHORAD.zip",
-          "downloads": 7,
+          "downloads": 13,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG.APKWS.VSHORAD.zip",
           "prerelease": true
         }
       ]
     },
     "sahin-cuas": {
-      "currentDownloads": 7,
-      "lifetimeDownloads": 7,
+      "currentDownloads": 12,
+      "lifetimeDownloads": 12,
       "versions": [
         {
           "tag": "sahin-cuas-v1.0.34",
           "assetName": "TPG_SAHIN_CUAS.zip",
-          "downloads": 7,
+          "downloads": 12,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_SAHIN_CUAS.zip",
           "prerelease": true
         }
       ]
     },
     "t34-calliope": {
-      "currentDownloads": 2,
-      "lifetimeDownloads": 9,
+      "currentDownloads": 5,
+      "lifetimeDownloads": 12,
       "versions": [
         {
           "tag": "t34-calliope-v1.1.9-released-20261025",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 2,
+          "downloads": 5,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-released-20261025/TPG.T34.Calliope.zip",
           "prerelease": false
         },
@@ -146,19 +172,6 @@
           "assetName": "TPG.T34.Calliope.zip",
           "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip",
-          "prerelease": true
-        }
-      ]
-    },
-    "shahed-238-truck": {
-      "currentDownloads": 5,
-      "lifetimeDownloads": 5,
-      "versions": [
-        {
-          "tag": "shahed-238-truck-v1.1.6",
-          "assetName": "TPG_Shahed238_Truck.zip",
-          "downloads": 5,
-          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip",
           "prerelease": true
         }
       ]
