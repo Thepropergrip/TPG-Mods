@@ -28,7 +28,13 @@
         "image": "/assets/images/zolfaghar-warhead-backlit.jpg",
         "caption": "Backlit Zolfaghar warhead and recessed rear nozzle in DCS World"
       }
-    ]
+    ],
+    "github": {
+      "tag": "zolfaghar-v1.02",
+      "assetName": "TPG.Zolfaghar.zip",
+      "label": "TPG Zolfaghar.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.02/TPG.Zolfaghar.zip"
+    }
   },
   {
     "id": "shahed-238-truck",
