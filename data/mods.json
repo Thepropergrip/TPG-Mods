@@ -8,12 +8,6 @@
     "version": "1.02",
     "publicVersion": "1.02",
     "releaseLabel": "Release Candidate",
-    "github": {
-      "tag": "zolfaghar-v1.02",
-      "assetName": "TPG.Zolfaghar.zip",
-      "label": "TPG Zolfaghar.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.02/TPG.Zolfaghar.zip"
-    },
     "sourceFilename": "TPG Zolfaghar.zip",
     "image": "/assets/images/zolfaghar-ignition.jpg",
     "imageAlt": "TPG Zolfaghar launching a ballistic missile in DCS World",
