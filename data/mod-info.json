@@ -800,6 +800,13 @@
     ],
     "changelog": [
       {
+        "date": "2026-10-27",
+        "version": "1.03",
+        "items": [
+          "Fixed issue with crashes when run on some Intel CPU's"
+        ]
+      },
+      {
         "date": "2026-10-25",
         "version": "1.02",
         "items": [

@@ -5,8 +5,8 @@
     "status": "release-candidate",
     "statusConfirmed": true,
     "featured": false,
-    "version": "1.02",
-    "publicVersion": "1.02",
+    "version": "1.03",
+    "publicVersion": "1.03",
     "releaseLabel": "Release Candidate",
     "sourceFilename": "TPG Zolfaghar.zip",
     "image": "/assets/images/zolfaghar-ignition.jpg",
@@ -30,10 +30,10 @@
       }
     ],
     "github": {
-      "tag": "zolfaghar-v1.02",
+      "tag": "zolfaghar-v1.03",
       "assetName": "TPG.Zolfaghar.zip",
       "label": "TPG Zolfaghar.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.02/TPG.Zolfaghar.zip"
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.03/TPG.Zolfaghar.zip"
     }
   },
   {
