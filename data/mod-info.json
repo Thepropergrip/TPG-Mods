@@ -752,6 +752,7 @@
     ],
     "notes": [
       "Close DCS. Extract the ZIP and copy the TPG Zolfaghar folder into your OVGME mods folder. In OVGME, use a configuration rooted at your active Saved Games/DCS folder and enable TPG Zolfaghar. Keep Mods and Scripts together; the included visual controller is required. Start DCS after enabling the mod.",
+      "If not using OVGME, copy TPG_Zolfaghar from the extracted Mods\\tech folder into C:\\Users\\<your username>\\Saved Games\\DCS\\Mods\\tech\\. Copy TPG_Zolfaghar.lua from the extracted Scripts\\Hooks folder into C:\\Users\\<your username>\\Saved Games\\DCS\\Scripts\\Hooks\\. Create Scripts and Hooks if needed, then restart DCS.",
       "In Mission Editor, choose TPG Zolfaghar HE or TPG Zolfaghar CM. Place one launcher per group on level ground with room for its stabilizers and a clear launch path.",
       "At the firing waypoint, stop the truck, set Alarm State Red and ensure ROE permits firing. Select Advanced Waypoint Actions → Perform Task → Fire at Point, choose a target 75–700 km away and set ammunition expenditure. Allow roughly 45–60 seconds from stowed for the first launch.",
       "Each truck carries two missiles. Use Alarm State Green for travel; the launcher must stop to fire. The vehicle is AI controlled and has no Combined Arms driving mode.",
