@@ -1,3 +1,5 @@
+> **Updated review:** [Revision 02 — corrected nose, restored mount and fairing seating](revision-02/README.md). The images below preserve the first review for comparison.
+
 # AKINCI model review — 30 October 2026
 
 An isolated visual candidate. The installed mod remains unchanged.
@@ -50,3 +52,4 @@ This candidate uses an explicit, editable forebody loft rather than another radi
 **This is a visual review, not a release-ready mod.** In-game lighting and animation validation, LOD/destroyed-variant propagation, collision-shell fitting and damage appearance checks remain integration work. Do not install the main-model candidate alone over the mod.
 
 Shape references include the user's supplied Blender model and [Baykar's official AKINCI material](https://baykartech.com/en/uav/bayraktar-akinci/). [Baykar's ASELFLIR test imagery](https://www.baykartech.com/en/press/turkiyes-new-advanced-drone-camera-undergoes-1st-test/) supports retaining the documented aft EO layout rather than mixing configurations from different aircraft.
+
