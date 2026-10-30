@@ -1,3 +1,5 @@
+> **Latest correction: revision 04.** [Exhaust bore clearance and damage ownership, with matched PNGs](revision-04/README.md). The revision 03 nose and door work is retained.
+
 > **Latest review: revision 03.** [Measured nose sections, rebuilt door perimeter, reference comparisons and whole-aircraft profiles](revision-03/README.md). Revisions 01 and 02 below are superseded review history, not accepted final models.
 
 > **Updated review:** [Revision 02 — corrected nose, restored mount and fairing seating](revision-02/README.md). The images below preserve the first review for comparison.
