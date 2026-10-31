@@ -2,7 +2,10 @@ export const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({ '&'
 export const modPath = mod => `/mods/${mod.id}/`;
 const photo = (mod, includeGallery = false) => {
   if (!mod?.image) return '<div class="photo-placeholder">Photo Coming Soon</div>';
-  const img = (src, alt) => `<img class="mod-photo" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">`;
+  const img = (src, alt) => {
+    const image = `<img class="mod-photo" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">`;
+    return mod.photoTreatment === 'dcs-crop' ? `<div class="dcs-photo-frame">${image}</div>` : image;
+  };
   return img(mod.image, mod.imageAlt || mod.title) + (includeGallery && mod.imageGallery?.length
     ? `<div class="photo-gallery">${mod.imageGallery.map(item => `<figure>${img(item.image, item.caption)}</figure>`).join('')}</div>` : '');
 };
@@ -13,7 +16,7 @@ const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mo
 const detailImages = items => items?.length
   ? `<div class="photo-gallery">${items.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"></figure>`).join('')}</div>` : '';
 const detailGallery = info => info.detailGallery?.length
-  ? `<section class="detail-gallery"><h2>${escapeHtml(info.detailGalleryHeading || 'Model profiles and research')}</h2>${detailImages(info.detailGallery)}</section>` : '';
+  ? `<section class="detail-gallery"><h2>${escapeHtml(info.detailGalleryHeading || 'Model profiles and research')}</h2>${info.detailGalleryIntro ? `<p>${escapeHtml(info.detailGalleryIntro)}</p>` : ''}${detailImages(info.detailGallery)}</section>` : '';
 const links = items => `<ul>${items.map(item => `<li><a href="${escapeHtml(item.url)}">${escapeHtml(item.label)}</a></li>`).join('')}</ul>`;
 const history = info => info.history?.paragraphs?.length
   ? `<section><h2>Brief history</h2>${info.history.paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${info.history.references?.length ? links(info.history.references) : ''}</section>` : '';

@@ -256,12 +256,35 @@
     "id": "anduril-rail",
     "title": "TPG Anduril Rail",
     "featured": false,
-    "status": "under-development",
+    "status": "released",
     "statusConfirmed": true,
-    "version": null,
-    "github": null,
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "version": "1.0",
+    "github": {
+      "tag": "anduril-rail-v1.0",
+      "assetName": "TPG_Anduril_Rail.zip",
+      "label": "TPG_Anduril_Rail.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/anduril-rail-v1.0/TPG_Anduril_Rail.zip"
+    },
+    "image": "/assets/images/anduril-flight.png",
+    "imagePlaceholder": "Photo Coming Soon",
+    "publicVersion": "1.0",
+    "sourceFilename": "TPG_Anduril_Rail.zip",
+    "imageAlt": "ALTIUS-700M flying low over the Caucasus in DCS World",
+    "photoTreatment": "dcs-crop",
+    "imageGallery": [
+      {
+        "image": "/assets/images/anduril-rail.png",
+        "caption": "ALTIUS-700M on the elastic launch rail"
+      },
+      {
+        "image": "/assets/images/anduril-launch.png",
+        "caption": "ALTIUS-700M leaving the rail"
+      },
+      {
+        "image": "/assets/images/anduril-approach.png",
+        "caption": "ALTIUS-700M approaching a parked MiG-29"
+      }
+    ]
   },
   {
     "id": "fp1-drone",

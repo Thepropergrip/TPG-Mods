@@ -355,36 +355,90 @@
     ]
   },
   "anduril-rail": {
-    "type": "Rail-launched drone system",
-    "summary": "A stationary launcher for GPS-guided and anti-ship ALTIUS-700M drones.",
+    "type": "Rail-launched strike drone",
+    "summary": "An ALTIUS-700M on a compact elastic launch rail. Sends GPS-guided drones against fixed targets, with low-level flight and a positional propeller sound.",
     "facts": [
       [
-        "Launch range",
-        "0.3–200 km"
+        "Best target types",
+        "Fixed positions, parked vehicles and light structures"
       ],
       [
-        "Cruise",
+        "Configured firing range",
+        "300 m–200 km"
+      ],
+      [
+        "Cruise speed",
         "60 km/h"
       ],
       [
-        "Cruise height",
-        "22 m GPS / 30 m anti-ship"
+        "Nominal cruise height",
+        "50 m above terrain"
       ],
       [
         "Ammunition",
-        "5 rounds; 1 loaded position"
+        "5 drones per launcher"
       ],
       [
-        "Reload / shot interval",
+        "Launch spacing",
         "90 seconds"
       ],
       [
-        "Variants",
-        "GPS / anti-ship"
+        "Paint schemes",
+        "Original Green, Sand Tan and Combat Black"
       ]
     ],
     "notes": [
-      "Place the launcher with a clear flight path, allowing room for the drone to climb."
+      "For OVGME, close DCS and extract the ZIP into your OVGME mods folder. Enable TPG Anduril Rail using a configuration rooted at your Saved Games/DCS folder. Keep the included Mods and Scripts folders together.",
+      "For a manual install, open the extracted TPG Anduril Rail folder and copy Mods and Scripts into Saved Games/DCS. The launcher belongs in Mods/tech/TPG_Anduril_Rail, and the propeller script belongs in Scripts/Hooks. The DLL stays in the mod’s bin folder. Restart DCS after copying both folders.",
+      "In Mission Editor, select TPG Anduril Rail under Ground vehicles → Missiles. Place it on level ground with a clear launch corridor. Use Advanced Waypoint Actions → Perform Task → Fire at Point to assign a target. Set the expenditure to the number of drones you want to launch.",
+      "The launcher carries five drones and launches them at 90-second intervals. Select Original Green, Sand Tan or Combat Black from Paint Scheme.",
+      "The drone cruises at a nominal 50 m above terrain, then descends onto the target. It follows ground elevation, but does not steer around individual trees or buildings. Keep the launch and final approach clear, and allow extra room for tall structures and rising ground.",
+      "The 200 km figure is the configured range limit."
+    ],
+    "payloadNotes": [
+      "Each drone uses a 5 kg warhead in DCS, with 1.5 kg of explosive and a shaped-charge effect."
+    ],
+    "detailGalleryHeading": "Custom elastic launcher",
+    "detailGalleryIntro": "TPG’s launcher uses an elastic carriage to send the drone off the rail. The carriage moves forward on release, then returns for the next launch. Combat Black joins Original Green and Sand Tan in the Paint Scheme menu.",
+    "detailGallery": [
+      {
+        "image": "/assets/images/anduril-custom-launcher.png",
+        "caption": "TPG custom elastic launcher in Combat Black"
+      }
+    ],
+    "history": {
+      "paragraphs": [
+        "ALTIUS-700M is the strike version of Anduril’s ALTIUS family. It uses a pusher propeller and a nose-mounted sensor, and is designed to attack armored targets and infrastructure.",
+        "Anduril presented the 700M in March 2024 with footage of live-fire testing. This mod pairs the aircraft with TPG’s compact elastic launcher; its flight and damage settings are tuned for DCS."
+      ],
+      "references": [
+        {
+          "label": "Anduril: ALTIUS family",
+          "url": "https://www.anduril.com/altius"
+        },
+        {
+          "label": "Anduril: ALTIUS-700M live-fire footage, March 2024",
+          "url": "https://www.youtube.com/watch?v=4RL_sHgEYww"
+        }
+      ]
+    },
+    "references": [
+      {
+        "label": "ALTIUS-700M model by KillCaptureDestroy, adapted by TPG",
+        "url": "https://sketchfab.com/3d-models/anduril-altius-700m-4e7fe35b0279418d85af34d33faa9db5"
+      },
+      {
+        "label": "Model license: CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "label": "Rail textures: Poly Haven Metal Plate 02",
+        "url": "https://polyhaven.com/a/metal_plate_02"
+      },
+      {
+        "label": "Sound effects: freesound_community on Pixabay",
+        "url": "https://pixabay.com/users/freesound_community-46691455/"
+      }
     ]
   },
   "fp1-drone": {
