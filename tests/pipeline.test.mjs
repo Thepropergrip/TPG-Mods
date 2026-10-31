@@ -5,14 +5,31 @@ import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 import { readFileSync } from 'node:fs';
 
-test('Alpha Releases contains APKWS, SAHIN and the Shahed truck together', () => {
+test('current mods are released by category with only Anduril in Alpha Releases', () => {
   const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
   const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
   const html = renderCatalog(mods, info);
   const section = html.match(/<section><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
   assert.ok(section);
-  for (const id of ['apkws-vshorad', 'sahin-cuas', 'shahed-238-truck']) {
-    assert.ok(section.includes(`/mods/${id}/`));
+  assert.ok(section.includes('/mods/anduril-rail/'));
+  const released = html.match(/<section><h2>Released<\/h2>[\s\S]*?<\/section>/)?.[0];
+  assert.ok(released);
+  for (const mod of mods.filter(m => m.statusConfirmed && m.github && m.id !== 'anduril-rail')) {
+    assert.equal(mod.status, 'released');
+    assert.ok(released.includes(`/mods/${mod.id}/`));
+    assert.ok(!section.includes(`/mods/${mod.id}/`));
+    assert.ok(!renderDetail(mod, info[mod.id], false).includes('Release Candidate'));
+  }
+  assert.ok(!released.includes('/mods/anduril-rail/'));
+  for (const [category, ids] of Object.entries({
+    'Ballistic Missiles': ['zolfaghar', 'v2'],
+    Artillery: ['12-pounder-cannon', 't34-calliope'],
+    Drones: ['shahed-238-truck', 'shahed-238'],
+    'SAM/SHORAD': ['grizzly', 'apkws-vshorad', 'sahin-cuas']
+  })) {
+    const group = released.split(`<h3 class="category-heading">${category}</h3>`)[1]?.split('<div class="catalog-category">')[0];
+    assert.ok(group, category);
+    for (const id of ids) assert.ok(group.includes(`/mods/${id}/`), id);
   }
   assert.doesNotMatch(html, /<h2>Release Candidates<\/h2>|<h2>Alpha Release Test Candidates<\/h2>/);
   const truck = renderDetail(mods.find(m => m.id === 'shahed-238-truck'), info['shahed-238-truck'], false);

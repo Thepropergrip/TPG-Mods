@@ -2,12 +2,12 @@
   {
     "id": "zolfaghar",
     "title": "TPG Zolfaghar",
-    "status": "release-candidate",
+    "status": "released",
     "statusConfirmed": true,
     "featured": false,
     "version": "1.03",
     "publicVersion": "1.03",
-    "releaseLabel": "Release Candidate",
+    "releaseLabel": "Released",
     "sourceFilename": "TPG Zolfaghar.zip",
     "image": "/assets/images/zolfaghar-ignition.jpg",
     "imageAlt": "TPG Zolfaghar launching a ballistic missile in DCS World",
@@ -34,17 +34,18 @@
       "assetName": "TPG.Zolfaghar.zip",
       "label": "TPG Zolfaghar.zip",
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.03/TPG.Zolfaghar.zip"
-    }
+    },
+    "category": "ballistic-missiles"
   },
   {
     "id": "shahed-238-truck",
     "title": "TPG Shahed-238 Truck GPS / ASM",
-    "status": "release-candidate",
+    "status": "released",
     "statusConfirmed": true,
     "featured": false,
     "version": "1.1.6",
     "publicVersion": "1.1.6",
-    "releaseLabel": "Release Candidate",
+    "releaseLabel": "Released",
     "github": {
       "tag": "shahed-238-truck-v1.1.6",
       "assetName": "TPG_Shahed238_Truck.zip",
@@ -67,7 +68,8 @@
         "image": "/assets/images/shahed-238-truck-flight.png",
         "caption": "Truck-launched Shahed-238 in flight in DCS World"
       }
-    ]
+    ],
+    "category": "drones"
   },
   {
     "id": "grizzly",
@@ -85,7 +87,9 @@
     "sourceFilename": "TPG Containerized SHORAD.zip",
     "image": "/assets/images/containerized-shorad.png",
     "publicVersion": "1.0.23",
-    "imageAlt": "TPG Containerized SHORAD launchers firing in DCS World"
+    "imageAlt": "TPG Containerized SHORAD launchers firing in DCS World",
+    "category": "sam-shorad",
+    "releaseLabel": "Released"
   },
   {
     "id": "akinci",
@@ -120,7 +124,9 @@
         "caption": "Shahed-238 in flight beside a cargo ship in DCS World"
       }
     ],
-    "publicVersion": "1.0.3"
+    "publicVersion": "1.0.3",
+    "category": "drones",
+    "releaseLabel": "Released"
   },
   {
     "id": "fps-132",
@@ -180,7 +186,9 @@
         "image": "/assets/images/v2-flight-trail.png",
         "caption": "V2 rocket exhaust trail in DCS World"
       }
-    ]
+    ],
+    "category": "ballistic-missiles",
+    "releaseLabel": "Released"
   },
   {
     "id": "12-pounder-cannon",
@@ -208,7 +216,9 @@
         "caption": "Lava ball in DCS World"
       }
     ],
-    "publicVersion": "1.3"
+    "publicVersion": "1.3",
+    "category": "artillery",
+    "releaseLabel": "Released"
   },
   {
     "id": "apkws-vshorad",
@@ -221,12 +231,13 @@
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG.APKWS.VSHORAD.zip",
       "label": "TPG APKWS VSHORAD.zip"
     },
-    "status": "release-candidate",
+    "status": "released",
     "statusConfirmed": true,
     "sourceFilename": "TPG APKWS VSHORAD.zip",
-    "releaseLabel": "Release Candidate",
+    "releaseLabel": "Released",
     "image": "/assets/images/apkws-vshorad.png",
-    "imageAlt": "TPG APKWS VSHORAD turret with four rocket pods"
+    "imageAlt": "TPG APKWS VSHORAD turret with four rocket pods",
+    "category": "sam-shorad"
   },
   {
     "id": "sahin-cuas",
@@ -239,10 +250,10 @@
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_SAHIN_CUAS.zip",
       "label": "TPG_SAHIN_CUAS.zip"
     },
-    "status": "release-candidate",
+    "status": "released",
     "statusConfirmed": true,
     "sourceFilename": "TPG_SAHIN_CUAS.zip",
-    "releaseLabel": "Release Candidate",
+    "releaseLabel": "Released",
     "image": "/assets/images/sahin-cuas.png",
     "imageAlt": "TPG SAHIN 40mm C-UAS in DCS World",
     "imageGallery": [
@@ -250,13 +261,14 @@
         "image": "/assets/images/sahin-cuas-secondary.png",
         "caption": "TPG SAHIN C-UAS in a DCS combat scene"
       }
-    ]
+    ],
+    "category": "sam-shorad"
   },
   {
     "id": "anduril-rail",
     "title": "TPG Anduril Rail",
     "featured": false,
-    "status": "released",
+    "status": "alpha",
     "statusConfirmed": true,
     "version": "1.0",
     "github": {
@@ -284,7 +296,9 @@
         "image": "/assets/images/anduril-approach.png",
         "caption": "ALTIUS-700M approaching a parked MiG-29"
       }
-    ]
+    ],
+    "category": "drones",
+    "releaseLabel": "Alpha"
   },
   {
     "id": "fp1-drone",
@@ -324,6 +338,7 @@
         "image": "/assets/images/calliope-m8.png",
         "caption": "Custom M8 rocket in flight in DCS World"
       }
-    ]
+    ],
+    "category": "artillery"
   }
 ]

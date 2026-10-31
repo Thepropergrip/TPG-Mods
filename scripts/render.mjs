@@ -36,13 +36,20 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   return groups.map(([status, heading]) => {
     const entries = mods.filter(m => m.statusConfirmed && (status === 'alpha' ? ['alpha', 'release-candidate'].includes(m.status) : m.status === status));
     if (!entries.length) return '';
-    return `<section><h2>${heading}</h2>${bylines[status] ? `<p class="section-byline">${escapeHtml(bylines[status])}</p>` : ''}<div class="catalog">${entries.map((mod, index) => {
+    const cards = items => `<div class="catalog">${items.map((mod, index) => {
       if (status === 'under-development') return developmentPreviews[index]
         ? `<article class="development-placeholder development-preview${developmentPreviews[index].blurred ? ' development-preview-blurred' : ''}">${photo(developmentPreviews[index])}</article>`
         : `<article class="development-placeholder">${photo()}</article>`;
       const details = info[mod.id];
-      return `<article>${photo(mod)}<h3>${escapeHtml(mod.title)}</h3><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
-    }).join('')}</div></section>`;
+      const titleTag = mod.category ? 'h4' : 'h3';
+      return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
+    }).join('')}</div>`;
+    const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD']];
+    const content = status === 'under-development' ? cards(entries) : categories.map(([category, label]) => {
+      const items = entries.filter(mod => mod.category === category);
+      return items.length ? `<div class="catalog-category"><h3 class="category-heading">${label}</h3>${cards(items)}</div>` : '';
+    }).join('') + cards(entries.filter(mod => !mod.category));
+    return `<section><h2>${heading}</h2>${bylines[status] ? `<p class="section-byline">${escapeHtml(bylines[status])}</p>` : ''}${content}</section>`;
   }).join('\n');
 }
 
