@@ -9,7 +9,7 @@ test('current mods are released by category with only Anduril in Alpha Releases'
   const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
   const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
   const html = renderCatalog(mods, info);
-  const section = html.match(/<section><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
+  const section = html.match(/<section id="alpha-releases"><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
   assert.ok(section);
   assert.ok(section.includes('/mods/anduril-rail/'));
   const released = html.match(/<section><h2>Released<\/h2>[\s\S]*?<\/section>/)?.[0];
@@ -27,7 +27,7 @@ test('current mods are released by category with only Anduril in Alpha Releases'
     Drones: ['shahed-238-truck', 'shahed-238'],
     'SAM/SHORAD': ['grizzly', 'apkws-vshorad', 'sahin-cuas']
   })) {
-    const group = released.split(`<h3 class="category-heading">${category}</h3>`)[1]?.split('<div class="catalog-category">')[0];
+    const group = released.split(`<h3 class="category-heading">${category}</h3>`)[1]?.split('<div class="catalog-category"')[0];
     assert.ok(group, category);
     for (const id of ids) assert.ok(group.includes(`/mods/${id}/`), id);
   }

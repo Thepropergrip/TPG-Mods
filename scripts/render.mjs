@@ -33,7 +33,11 @@ const bylines = {
 
 export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   const groups = [['released', 'Released'], ['alpha', 'Alpha Releases'], ['under-development', 'Under Development']];
-  return groups.map(([status, heading]) => {
+  const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD']];
+  const jumpLinks = categories.filter(([category]) => mods.some(mod => mod.statusConfirmed && mod.status === 'released' && mod.category === category)).map(([category, label]) => `<a class="button" href="#released-${category}">${label}</a>`);
+  if (mods.some(mod => mod.statusConfirmed && ['alpha', 'release-candidate'].includes(mod.status))) jumpLinks.push('<a class="button" href="#alpha-releases">Alpha Releases</a>');
+  const navigation = jumpLinks.length ? `<nav class="category-links" aria-label="Jump to category">${jumpLinks.join('')}</nav>` : '';
+  return navigation + groups.map(([status, heading]) => {
     const entries = mods.filter(m => m.statusConfirmed && (status === 'alpha' ? ['alpha', 'release-candidate'].includes(m.status) : m.status === status));
     if (!entries.length) return '';
     const cards = items => `<div class="catalog">${items.map((mod, index) => {
@@ -44,12 +48,11 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
       const titleTag = mod.category ? 'h4' : 'h3';
       return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
     }).join('')}</div>`;
-    const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD']];
     const content = status === 'under-development' ? cards(entries) : categories.map(([category, label]) => {
       const items = entries.filter(mod => mod.category === category);
-      return items.length ? `<div class="catalog-category"><h3 class="category-heading">${label}</h3>${cards(items)}</div>` : '';
-    }).join('') + cards(entries.filter(mod => !mod.category));
-    return `<section><h2>${heading}</h2>${bylines[status] ? `<p class="section-byline">${escapeHtml(bylines[status])}</p>` : ''}${content}</section>`;
+      return items.length ? `<div class="catalog-category" id="${status}-${category}"><div class="category-band"><h3 class="category-heading">${label}</h3><span class="category-count">${items.length} ${items.length === 1 ? 'mod' : 'mods'}</span></div>${cards(items)}</div>` : '';
+    }).join('') + (entries.some(mod => !mod.category) ? cards(entries.filter(mod => !mod.category)) : '');
+    return `<section${status === 'alpha' ? ' id="alpha-releases"' : ''}><h2>${heading}</h2>${bylines[status] ? `<p class="section-byline">${escapeHtml(bylines[status])}</p>` : ''}${content}</section>`;
   }).join('\n');
 }
 
