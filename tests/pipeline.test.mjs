@@ -5,22 +5,26 @@ import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 import { readFileSync } from 'node:fs';
 
-test('current mods are released by category with only Anduril in Alpha Releases', () => {
+test('current mods are released by category with Anduril and FP1 in Alpha Releases', () => {
   const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
   const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
   const html = renderCatalog(mods, info);
   const section = html.match(/<section id="alpha-releases"><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
   assert.ok(section);
-  assert.ok(section.includes('/mods/anduril-rail/'));
+  const alphaIds = new Set(['anduril-rail', 'fp1-drone']);
   const released = html.match(/<section><h2>Released<\/h2>[\s\S]*?<\/section>/)?.[0];
   assert.ok(released);
-  for (const mod of mods.filter(m => m.statusConfirmed && m.github && m.id !== 'anduril-rail')) {
+  for (const id of alphaIds) {
+    assert.equal(mods.find(m => m.id === id).status, 'alpha');
+    assert.ok(section.includes(`/mods/${id}/`));
+    assert.ok(!released.includes(`/mods/${id}/`));
+  }
+  for (const mod of mods.filter(m => m.statusConfirmed && m.github && !alphaIds.has(m.id))) {
     assert.equal(mod.status, 'released');
     assert.ok(released.includes(`/mods/${mod.id}/`));
     assert.ok(!section.includes(`/mods/${mod.id}/`));
     assert.ok(!renderDetail(mod, info[mod.id], false).includes('Release Candidate'));
   }
-  assert.ok(!released.includes('/mods/anduril-rail/'));
   for (const [category, ids] of Object.entries({
     'Ballistic Missiles': ['zolfaghar', 'v2'],
     Artillery: ['12-pounder-cannon', 't34-calliope'],
