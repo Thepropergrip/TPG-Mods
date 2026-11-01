@@ -304,21 +304,12 @@
     "id": "fp1-drone",
     "title": "TPG FP1 Drone",
     "featured": false,
-    "status": "alpha",
+    "status": "under-development",
     "statusConfirmed": true,
-    "version": "1.0.3",
-    "github": {
-      "tag": "fp1-drone-v1.0.3",
-      "assetName": "TPG_FP1_Drone.zip",
-      "label": "TPG_FP1_Drone.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/fp1-drone-v1.0.3/TPG_FP1_Drone.zip"
-    },
+    "version": null,
+    "github": null,
     "image": null,
-    "imagePlaceholder": "Photo Coming Soon",
-    "category": "drones",
-    "releaseLabel": "Alpha",
-    "publicVersion": "1.0.3",
-    "sourceFilename": "TPG_FP1_Drone.zip"
+    "imagePlaceholder": "Photo Coming Soon"
   },
   {
     "id": "t34-calliope",
