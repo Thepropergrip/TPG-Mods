@@ -1,183 +1,203 @@
 {
-  "generatedAt": "2026-10-31T17:03:16.955Z",
+  "generatedAt": "2026-11-01T21:13:27.776Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
     "zolfaghar": {
-      "currentDownloads": 57,
-      "lifetimeDownloads": 75,
+      "currentDownloads": 69,
+      "lifetimeDownloads": 88,
       "versions": [
         {
           "tag": "zolfaghar-v1.03",
           "assetName": "TPG.Zolfaghar.zip",
-          "downloads": 57,
+          "downloads": 69,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.03/TPG.Zolfaghar.zip",
           "prerelease": true
         },
         {
           "tag": "zolfaghar-v1.02",
           "assetName": "TPG.Zolfaghar.zip",
-          "downloads": 18,
+          "downloads": 19,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.02/TPG.Zolfaghar.zip",
           "prerelease": true
         }
       ]
     },
     "shahed-238-truck": {
-      "currentDownloads": 48,
-      "lifetimeDownloads": 48,
+      "currentDownloads": 68,
+      "lifetimeDownloads": 68,
       "versions": [
         {
           "tag": "shahed-238-truck-v1.1.6",
           "assetName": "TPG_Shahed238_Truck.zip",
-          "downloads": 48,
+          "downloads": 68,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-truck-v1.1.6/TPG_Shahed238_Truck.zip",
           "prerelease": true
         }
       ]
     },
     "grizzly": {
-      "currentDownloads": 43,
-      "lifetimeDownloads": 43,
+      "currentDownloads": 52,
+      "lifetimeDownloads": 52,
       "versions": [
         {
           "tag": "grizzly-v1.0.23-ready-cell-state",
           "assetName": "TPG.Containerized.SHORAD.zip",
-          "downloads": 43,
+          "downloads": 52,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/grizzly-v1.0.23-ready-cell-state/TPG.Containerized.SHORAD.zip",
           "prerelease": false
         }
       ]
     },
     "shahed-238": {
-      "currentDownloads": 72,
-      "lifetimeDownloads": 80,
+      "currentDownloads": 87,
+      "lifetimeDownloads": 97,
       "versions": [
         {
           "tag": "shahed-238-v1.0.3",
           "assetName": "TPG_Shahed238_Rail.zip",
-          "downloads": 72,
+          "downloads": 87,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.3/TPG_Shahed238_Rail.zip",
           "prerelease": false
         },
         {
           "tag": "shahed-238-v1.0.2",
           "assetName": "TPG_Shahed238_Rail.zip",
-          "downloads": 1,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.2/TPG_Shahed238_Rail.zip",
           "prerelease": false
         },
         {
           "tag": "shahed-238-v1.0.1",
           "assetName": "TPG_Shahed238_Rail.zip",
-          "downloads": 7,
+          "downloads": 8,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/shahed-238-v1.0.1/TPG_Shahed238_Rail.zip",
           "prerelease": false
         }
       ]
     },
     "v2": {
-      "currentDownloads": 45,
-      "lifetimeDownloads": 45,
+      "currentDownloads": 49,
+      "lifetimeDownloads": 49,
       "versions": [
         {
           "tag": "v2-v1.0",
           "assetName": "TPG.V2.zip",
-          "downloads": 45,
+          "downloads": 49,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/v2-v1.0/TPG.V2.zip",
           "prerelease": false
         }
       ]
     },
     "12-pounder-cannon": {
-      "currentDownloads": 14,
-      "lifetimeDownloads": 18,
+      "currentDownloads": 15,
+      "lifetimeDownloads": 20,
       "versions": [
         {
           "tag": "12-pounder-cannon-v1.3",
           "assetName": "TPG_12_Pounder_Cannon.zip",
-          "downloads": 14,
+          "downloads": 15,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.3/TPG_12_Pounder_Cannon.zip",
           "prerelease": false
         },
         {
           "tag": "12-pounder-cannon-v1.2",
           "assetName": "TPG_12_Pounder_Cannon.zip",
-          "downloads": 4,
+          "downloads": 5,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/12-pounder-cannon-v1.2/TPG_12_Pounder_Cannon.zip",
           "prerelease": false
         }
       ]
     },
     "apkws-vshorad": {
-      "currentDownloads": 38,
-      "lifetimeDownloads": 38,
+      "currentDownloads": 44,
+      "lifetimeDownloads": 44,
       "versions": [
         {
           "tag": "apkws-vshorad-v0.1.4",
           "assetName": "TPG.APKWS.VSHORAD.zip",
-          "downloads": 38,
+          "downloads": 44,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/apkws-vshorad-v0.1.4/TPG.APKWS.VSHORAD.zip",
           "prerelease": true
         }
       ]
     },
     "sahin-cuas": {
-      "currentDownloads": 38,
-      "lifetimeDownloads": 38,
+      "currentDownloads": 46,
+      "lifetimeDownloads": 46,
       "versions": [
         {
           "tag": "sahin-cuas-v1.0.34",
           "assetName": "TPG_SAHIN_CUAS.zip",
-          "downloads": 38,
+          "downloads": 46,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sahin-cuas-v1.0.34/TPG_SAHIN_CUAS.zip",
           "prerelease": true
         }
       ]
     },
+    "anduril-rail": {
+      "currentDownloads": 28,
+      "lifetimeDownloads": 28,
+      "versions": [
+        {
+          "tag": "anduril-rail-v1.0.1",
+          "assetName": "TPG_Anduril_Rail.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/anduril-rail-v1.0.1/TPG_Anduril_Rail.zip",
+          "prerelease": true
+        },
+        {
+          "tag": "anduril-rail-v1.0",
+          "assetName": "TPG_Anduril_Rail.zip",
+          "downloads": 28,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/anduril-rail-v1.0/TPG_Anduril_Rail.zip",
+          "prerelease": false
+        }
+      ]
+    },
     "t34-calliope": {
-      "currentDownloads": 32,
-      "lifetimeDownloads": 39,
+      "currentDownloads": 34,
+      "lifetimeDownloads": 46,
       "versions": [
         {
           "tag": "t34-calliope-v1.1.9-released-20261025",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 32,
+          "downloads": 34,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-released-20261025/TPG.T34.Calliope.zip",
           "prerelease": false
         },
         {
           "tag": "t34-calliope-v1.1.9-released-20261021",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 2,
+          "downloads": 3,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-released-20261021/TPG.T34.Calliope.zip",
           "prerelease": false
         },
         {
           "tag": "t34-calliope-v1.1.9-20261021",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 1,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-20261021/TPG.T34.Calliope.zip",
           "prerelease": true
         },
         {
           "tag": "t34-calliope-v1.1.9-20261017",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 1,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9-20261017/TPG.T34.Calliope.zip",
           "prerelease": true
         },
         {
           "tag": "t34-calliope-v1.1.9",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 1,
+          "downloads": 2,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.9/TPG.T34.Calliope.zip",
           "prerelease": true
         },
         {
           "tag": "t34-calliope-v1.1.5",
           "assetName": "TPG.T34.Calliope.zip",
-          "downloads": 2,
+          "downloads": 3,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/t34-calliope-v1.1.5/TPG.T34.Calliope.zip",
           "prerelease": true
         }
