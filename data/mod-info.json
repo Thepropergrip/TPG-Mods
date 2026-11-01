@@ -439,11 +439,20 @@
         "label": "Sound effects: freesound_community on Pixabay",
         "url": "https://pixabay.com/users/freesound_community-46691455/"
       }
+    ],
+    "changelog": [
+      {
+        "date": "2026-11-01",
+        "version": "1.0.1",
+        "items": [
+          "Fix DCS overriding propeller sound in later stages of flight"
+        ]
+      }
     ]
   },
   "fp1-drone": {
     "type": "Rail-launched one-way drone",
-    "summary": "A rail-launched FP1 drone with a booster mounted beneath it.",
+    "summary": "Rail-launched FP1 propeller drone with a rotating launcher and launch booster. Its engine uses a positional propeller sound.",
     "facts": [
       [
         "Range envelope",
@@ -455,7 +464,7 @@
       ],
       [
         "Cruise height",
-        "Approximately 100 m AGL"
+        "300 m above terrain"
       ],
       [
         "Endurance envelope",
@@ -471,7 +480,20 @@
       ]
     ],
     "notes": [
-      "Allow a clear departure path and plan the route around terrain and obstacles."
+      "For OVGME, close DCS and extract the ZIP into your OVGME mods folder. Enable TPG FP1 Drone using a configuration rooted at your active Saved Games/DCS folder. Keep Mods and Scripts together.",
+      "For a manual install, open the extracted TPG FP1 Drone folder and copy Mods and Scripts into Saved Games/DCS. The DLL stays in Mods/tech/TPG FP1 Drone/bin, and the propeller script goes in Scripts/Hooks. Restart DCS after copying both folders.",
+      "Use Ground vehicles → Missiles → TPG FP1 Drone, then Advanced Waypoint Actions → Perform Task → Fire at Point. Place the rail on level ground with a clear departure path.",
+      "The propeller sound fades in two seconds after launch. FP1 follows ground elevation at a nominal 300 m, then dives onto its target. Keep the launch corridor and final approach clear of trees, buildings and ridges. It does not plan a route around individual obstacles.",
+      "Configured range and endurance limits are 3,400 km and 20 hours; those full limits have not been flight-tested."
+    ],
+    "changelog": [
+      {
+        "date": "2026-11-01",
+        "version": "1.0.3",
+        "items": [
+          "Fix DCS overriding propeller sound in later stages of flight"
+        ]
+      }
     ]
   },
   "shahed-238": {

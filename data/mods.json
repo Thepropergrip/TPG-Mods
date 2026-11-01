@@ -270,16 +270,16 @@
     "featured": false,
     "status": "alpha",
     "statusConfirmed": true,
-    "version": "1.0",
+    "version": "1.0.1",
     "github": {
-      "tag": "anduril-rail-v1.0",
+      "tag": "anduril-rail-v1.0.1",
       "assetName": "TPG_Anduril_Rail.zip",
       "label": "TPG_Anduril_Rail.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/anduril-rail-v1.0/TPG_Anduril_Rail.zip"
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/anduril-rail-v1.0.1/TPG_Anduril_Rail.zip"
     },
     "image": "/assets/images/anduril-flight.png",
     "imagePlaceholder": "Photo Coming Soon",
-    "publicVersion": "1.0",
+    "publicVersion": "1.0.1",
     "sourceFilename": "TPG_Anduril_Rail.zip",
     "imageAlt": "ALTIUS-700M flying low over the Caucasus in DCS World",
     "photoTreatment": "dcs-crop",
@@ -304,12 +304,21 @@
     "id": "fp1-drone",
     "title": "TPG FP1 Drone",
     "featured": false,
-    "status": "under-development",
+    "status": "alpha",
     "statusConfirmed": true,
-    "version": null,
-    "github": null,
+    "version": "1.0.3",
+    "github": {
+      "tag": "fp1-drone-v1.0.3",
+      "assetName": "TPG_FP1_Drone.zip",
+      "label": "TPG_FP1_Drone.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/fp1-drone-v1.0.3/TPG_FP1_Drone.zip"
+    },
     "image": null,
-    "imagePlaceholder": "Photo Coming Soon"
+    "imagePlaceholder": "Photo Coming Soon",
+    "category": "drones",
+    "releaseLabel": "Alpha",
+    "publicVersion": "1.0.3",
+    "sourceFilename": "TPG_FP1_Drone.zip"
   },
   {
     "id": "t34-calliope",
