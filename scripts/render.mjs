@@ -36,7 +36,7 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD']];
   const jumpLinks = categories.filter(([category]) => mods.some(mod => mod.statusConfirmed && mod.status === 'released' && mod.category === category)).map(([category, label]) => `<a class="button" href="#released-${category}">${label}</a>`);
   if (mods.some(mod => mod.statusConfirmed && ['alpha', 'release-candidate'].includes(mod.status))) jumpLinks.push('<a class="button" href="#alpha-releases">Alpha Releases</a>');
-  const navigation = jumpLinks.length ? `<nav class="category-links" aria-label="Jump to category">${jumpLinks.join('')}</nav>` : '';
+  const navigation = jumpLinks.length ? `<nav class="category-links" aria-labelledby="jump-to-section"><p id="jump-to-section" class="category-links-label">Jump to section</p>${jumpLinks.join('')}</nav>` : '';
   return navigation + groups.map(([status, heading]) => {
     const entries = mods.filter(m => m.statusConfirmed && (status === 'alpha' ? ['alpha', 'release-candidate'].includes(m.status) : m.status === status));
     if (!entries.length) return '';

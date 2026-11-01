@@ -30,3 +30,4 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 @media(max-width:1008px){.catalog-category .catalog{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.category-heading{font-size:16px}.category-band{padding:13px 12px}.catalog-category .catalog{grid-template-columns:minmax(0,1fr)}}
 .page-shell>section:has(>.catalog-category[id^="released-"])>h2{color:#236332;font-weight:700}#alpha-releases>h2{color:#a34712;font-weight:700}
+.category-links{margin-top:56px}.category-links-label{flex-basis:100%;margin:0 0 2px;font-size:18px;font-weight:600;color:#30332e}
