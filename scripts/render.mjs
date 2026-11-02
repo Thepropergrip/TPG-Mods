@@ -4,6 +4,7 @@ const photo = (mod, includeGallery = false) => {
   if (!mod?.image) return '<div class="photo-placeholder">Photo Coming Soon</div>';
   const img = (src, alt) => {
     const image = `<img class="mod-photo" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">`;
+    if (mod.photoTreatment === 'screenshot-grade') return `<div class="graded-photo-frame">${image}</div>`;
     return mod.photoTreatment === 'dcs-crop' ? `<div class="dcs-photo-frame">${image}</div>` : image;
   };
   return img(mod.image, mod.imageAlt || mod.title) + (includeGallery && mod.imageGallery?.length
