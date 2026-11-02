@@ -313,12 +313,18 @@
       "label": "TPG_FP1_Drone.zip",
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/fp1-drone-v1.0/TPG_FP1_Drone.zip"
     },
-    "image": null,
-    "imagePlaceholder": "Photo Coming Soon",
+    "image": "/assets/images/fp1-launch.png",
     "category": "drones",
     "publicVersion": "1.0",
     "releaseLabel": "Alpha",
-    "sourceFilename": "TPG_FP1_Drone.zip"
+    "sourceFilename": "TPG_FP1_Drone.zip",
+    "imageAlt": "TPG FP1 Drone launching from its rail in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/fp1-in-flight.png",
+        "caption": "TPG FP1 Drone in flight over the countryside in DCS World"
+      }
+    ]
   },
   {
     "id": "t34-calliope",
