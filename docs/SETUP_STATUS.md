@@ -38,7 +38,7 @@ Current confirmed inventory:
 | Akıncı | Under Development | — | Excluded |
 | FP-132 Radar | Under Development | — | Excluded |
 | Anduril Rail | Under Development | — | Excluded |
-| FP1 Drone | Under Development | — | Excluded |
+| FP1 Drone | Alpha release | 1.0 | GitHub prerelease |
 
 The inventory above is retained for maintenance. On the website, the Under Development heading appears once above four anonymous cards: four supplied preview images, with no names, descriptions or actions. Development identities are excluded from published JSON and detail pages. The ten-card catalog uses the supplied screenshots for Containerized SHORAD, APKWS, Shahed-238, the cannon, SAHIN C-UAS and V2. V2, C-UAS, Cannon and Shahed galleries include the additional supplied screenshots. Development previews use 50% saturation; the third also uses a 1.75 px CSS blur (halved twice at user request). Original image files are preserved byte-for-byte; no generated imagery is used. See IMAGE_VERIFICATION.json for source filenames and hashes. The four development packages have not been uploaded to GitHub and are excluded from the download database. See `RELEASE_VERIFICATION.json` for public ZIP hashes and URLs.
 

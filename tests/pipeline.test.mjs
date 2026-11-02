@@ -5,17 +5,19 @@ import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 import { readFileSync } from 'node:fs';
 
-test('current mods are released by category with only Anduril in Alpha Releases', () => {
+test('current mods are released by category with Anduril and FP1 in Alpha Releases', () => {
   const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
   const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
   const html = renderCatalog(mods, info);
   const section = html.match(/<section id="alpha-releases"><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
   assert.ok(section);
-  const alphaIds = new Set(['anduril-rail']);
+  const alphaIds = new Set(['anduril-rail', 'fp1-drone']);
   const released = html.match(/<section><h2>Released<\/h2>[\s\S]*?<\/section>/)?.[0];
   assert.ok(released);
-  assert.equal(mods.find(m => m.id === 'fp1-drone').status, 'under-development');
-  assert.ok(!html.includes('/mods/fp1-drone/'));
+  const fp1 = mods.find(m => m.id === 'fp1-drone');
+  assert.equal(fp1.version, '1.0');
+  assert.equal(fp1.category, 'drones');
+  assert.ok(info['fp1-drone'].facts.some(([label, value]) => label === 'Reload / shot interval' && value === '3.5 minutes'));
   for (const id of alphaIds) {
     assert.equal(mods.find(m => m.id === id).status, 'alpha');
     assert.ok(section.includes(`/mods/${id}/`));
