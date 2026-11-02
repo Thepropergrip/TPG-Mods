@@ -509,7 +509,23 @@
         "label": "Installation and usage README",
         "url": "/mods/fp1-drone/README.txt"
       }
-    ]
+    ],
+    "history": {
+      "paragraphs": [
+        "FP-1 was developed by the Ukrainian company Fire Point during Russia’s full-scale invasion of Ukraine. In an October 2025 interview, chief designer Denys Shtilerman said the project began in November 2022 with the aim of building an affordable drone able to carry a substantial warhead over long distances. He dated the first flights to January 2023, military codification to May 2023, and the first production orders to August 2023. [1]",
+        "Shtilerman described 2024 as the year the drone entered large-scale combat use, with operational experience driving further work on navigation and resistance to electronic warfare. Fire Point now markets FP-1 as the long-range “Deep Strike” member of its drone family for fixed ground targets, alongside the related FP-2 “Front Strike” version. The manufacturer describes rocket-assisted launch systems for stationary platforms and truck-mounted launchers. [1, 2]"
+      ],
+      "references": [
+        {
+          "label": "[1] ZN.UA — Interview with Fire Point chief designer Denys Shtilerman, October 11, 2025",
+          "url": "https://zn.ua/amp/eng/inside-fire-point-drones-missiles-and-politicsan-interview-with-chief-designer-denys-shtilerman.html"
+        },
+        {
+          "label": "[2] Fire Point — FP-1 / FP-2 UAV systems (manufacturer)",
+          "url": "https://firepoint.technology/en/uav-systems-fp-1-fp-2/"
+        }
+      ]
+    }
   },
   "shahed-238": {
     "type": "Rail-launched jet-powered drone",
