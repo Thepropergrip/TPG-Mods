@@ -4,7 +4,7 @@ import { check } from './check.mjs';
 import { loadStats } from './stats.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from './render.mjs';
 function renderTopbar() {
-  return '<header class="topbar"><nav class="topbar-inner" aria-label="Main navigation"><a class="topbar-brand" href="/">TPG Mods</a></nav></header>';
+  return '<header class="topbar"><nav class="topbar-inner" aria-label="Main navigation"><a class="topbar-brand" href="/">TPG Mods</a><a class="topbar-discord" href="https://discord.gg/X9RuFfS79" target="_blank" rel="noopener noreferrer" aria-label="Join TPG DCS Mods and Tools on Discord (opens in a new tab)">Discord</a></nav></header>';
 }
 
 function withFooter(html) {
