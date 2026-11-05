@@ -1,0 +1,30 @@
+{
+  "iha230": {
+    "shots": 91,
+    "confirmed_hits": 91,
+    "no_hit": 0,
+    "maximum_confirmed_ground_range_nm": 80.81769222462204,
+    "minimum_confirmed_agl_ft": 952.7952755905511
+  },
+  "qfab": {
+    "shots": 14,
+    "confirmed_hits": 14,
+    "no_hit": 0,
+    "maximum_confirmed_ground_range_nm": 3.339688444924406,
+    "minimum_confirmed_agl_ft": 1021.3057742782152
+  },
+  "som": {
+    "shots": 26,
+    "confirmed_hits": 25,
+    "no_hit": 1,
+    "maximum_confirmed_ground_range_nm": 134.7515161987041,
+    "minimum_confirmed_agl_ft": 955.3444881889764
+  },
+  "somj": {
+    "shots": 24,
+    "confirmed_hits": 20,
+    "no_hit": 4,
+    "maximum_confirmed_ground_range_nm": 148.25048596112313,
+    "minimum_confirmed_agl_ft": 983.6515748031496
+  }
+}
