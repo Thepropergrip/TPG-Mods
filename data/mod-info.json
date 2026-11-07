@@ -924,5 +924,73 @@
         ]
       }
     ]
+  },
+  "uss-constitution": {
+    "type": "Age of Sail frigate",
+    "summary": "A 48-gun frigate with working broadsides, animated gunports and carriages, iron and incendiary round shot, and progressive battle damage. Available to every country and coalition, with automatic naval engagement and shore bombardment.",
+    "facts": [
+      [
+        "Best target types",
+        "Lightly protected ships and shore targets"
+      ],
+      [
+        "Engagement range",
+        "Approximately 80–1,200 m"
+      ],
+      [
+        "Armament",
+        "23 guns per broadside, plus two stern guns"
+      ],
+      [
+        "Muzzle velocity",
+        "400 m/s"
+      ],
+      [
+        "Broadside reload",
+        "Approximately 30 seconds"
+      ],
+      [
+        "Default ammunition",
+        "20 iron and 20 incendiary rounds per gun"
+      ],
+      [
+        "Maximum speed",
+        "13 knots"
+      ],
+      [
+        "Control",
+        "AI"
+      ],
+      [
+        "Requirements",
+        "Standalone; no hooks, mission scripts or other TPG mods required"
+      ]
+    ],
+    "notes": [
+      "Find TPG USS Constitution under Ships in Mission Editor. It is available to all countries and coalitions. Disable the historical unit filter if the mission date hides it.",
+      "Set Weapons Free for automatic engagement and present a broadside toward the enemy. Use Attack Group to engage a particular surface group or Fire at Point for bombardment. Each broadside can fire a full 23-gun volley. The two stern guns cover targets behind the ship.",
+      "The range rings show the normal broadside engagement window. Target bearing, elevation and obstructions affect which guns can fire. Shore bombardment can produce smaller volleys when individual barrels cannot reach the selected point. Accuracy falls with distance, so expect more scattered impacts near maximum range.",
+      "Alarm State Green stows the guns and closes the split gunport covers. In Red, a battery deploys when it takes a target: the covers open and the carriages roll forward. Allow approximately 12 seconds for deployment. Each barrel recoils independently and produces a dense black-powder smoke cloud that rises and fades over about 24 seconds.",
+      "Both ammunition types are carried aboard the same ship. Mission Editor ammunition controls let you adjust the iron and incendiary supplies for each broadside and stern gun. Set either type to zero to carry only the other type.",
+      "Damage opens progressively larger holes through the hull and deck. Heavy damage brings down unburned mast sections while the surviving surfaces retain their original paint and wood finish. At destruction, the ship changes to a charred wreck with breached planking, exposed splinters and fallen masts. The burned appearance remains as it sinks.",
+      "The model includes detailed collision geometry, open cannon bores and infrared mapping suited to an unpowered wooden ship."
+    ],
+    "history": {
+      "paragraphs": [
+        "USS Constitution was launched in Boston on October 21, 1797, as one of the six original frigates authorized for the United States Navy. She became famous during the War of 1812, earning the nickname “Old Ironsides” in her battle with HMS Guerriere.",
+        "The mod uses a common 24-pounder ammunition setup across all 48 guns, with both iron and incendiary round shot available."
+      ],
+      "references": [
+        {
+          "label": "Naval History and Heritage Command: USS Constitution",
+          "url": "https://www.history.navy.mil/our-collections/art/exhibits/communities/uss-constitution.html"
+        }
+      ]
+    },
+    "payloadNotes": [
+      "Iron round shot weighs approximately 10.89 kg and leaves the muzzle at 400 m/s. It has no explosive filling and damages targets through impact. It is useful against lighter ships and exposed targets, with limited effectiveness against heavily protected modern warships.",
+      "Incendiary round shot follows the same basic trajectory and adds a small thermal payload, with a glowing projectile and short visible trail. It delivers incendiary impact damage; persistent napalm-style ground fire is not included.",
+      "Both rounds use native DCS cannon-shell behavior and do not have individual F6 weapon-camera tracking."
+    ]
   }
 }

@@ -13,7 +13,7 @@ const photo = (mod, includeGallery = false) => {
 const facts = info => `<dl class="facts">${(info.facts || []).map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>`;
 const download = mod => mod.status !== 'under-development' && mod.github ? `<a class="button primary" href="${escapeHtml(mod.github.downloadUrl)}">Download Now</a>` : '';
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
-const version = mod => mod.version ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}${mod.status === 'release-candidate' ? ' · Release Candidate' : ''}</p>` : '';
+const version = mod => mod.version && mod.showVersion !== false ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
 const detailImages = items => items?.length
   ? `<div class="photo-gallery">${items.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"></figure>`).join('')}</div>` : '';
 const detailGallery = info => info.detailGallery?.length
@@ -26,35 +26,26 @@ const payload = info => info.payloadNotes?.length
 const changelog = info => info.changelog?.length
   ? `<section class="changelog"><h2>Change Log</h2>${info.changelog.map(entry => `<h3><time datetime="${escapeHtml(entry.date)}">${escapeHtml(new Date(`${entry.date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }))}</time>${entry.version ? ` · Version ${escapeHtml(entry.version)}` : ''}</h3><ul>${entry.items.map(text => `<li>${escapeHtml(text)}</li>`).join('')}</ul>`).join('')}</section>` : '';
 
-const bylines = {
-  'release-candidate': 'Try it in your missions and report any issues.',
-  released: "Perfection isn't claimed, but extensive testing and mission use has been completed.  Future upgrades always an option.",
-  alpha: "We've seen it working and it should be generally functional.  Visual and performance bugs to be expected, please report if encountered.  Thanks!"
-};
-
 export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
-  const groups = [['released', 'Released'], ['alpha', 'Alpha Releases'], ['under-development', 'Under Development']];
-  const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD']];
-  const jumpLinks = categories.filter(([category]) => mods.some(mod => mod.statusConfirmed && mod.status === 'released' && mod.category === category)).map(([category, label]) => `<a class="button" href="#released-${category}">${label}</a>`);
-  if (mods.some(mod => mod.statusConfirmed && ['alpha', 'release-candidate'].includes(mod.status))) jumpLinks.push('<a class="button" href="#alpha-releases">Alpha Releases</a>');
+  const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD'], ['naval', 'Naval']];
+  const entries = mods.filter(mod => mod.statusConfirmed && ['released', 'alpha', 'release-candidate'].includes(mod.status));
+  const jumpLinks = categories.filter(([category]) => entries.some(mod => mod.category === category)).map(([category, label]) => `<a class="button" href="#released-${category}">${label}</a>`);
   const navigation = jumpLinks.length ? `<nav class="category-links" aria-labelledby="jump-to-section"><p id="jump-to-section" class="category-links-label">Jump to section</p>${jumpLinks.join('')}</nav>` : '';
-  return navigation + groups.map(([status, heading]) => {
-    const entries = mods.filter(m => m.statusConfirmed && (status === 'alpha' ? ['alpha', 'release-candidate'].includes(m.status) : m.status === status));
-    if (!entries.length) return '';
-    const cards = items => `<div class="catalog">${items.map((mod, index) => {
-      if (status === 'under-development') return developmentPreviews[index]
-        ? `<article class="development-placeholder development-preview${developmentPreviews[index].blurred ? ' development-preview-blurred' : ''}">${photo(developmentPreviews[index])}</article>`
-        : `<article class="development-placeholder">${photo()}</article>`;
-      const details = info[mod.id];
-      const titleTag = mod.category ? 'h4' : 'h3';
-      return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
-    }).join('')}</div>`;
-    const content = status === 'under-development' ? cards(entries) : categories.map(([category, label]) => {
-      const items = entries.filter(mod => mod.category === category);
-      return items.length ? `<div class="catalog-category" id="${status}-${category}"><div class="category-band"><h3 class="category-heading">${label}</h3><span class="category-count">${items.length} ${items.length === 1 ? 'mod' : 'mods'}</span></div>${cards(items)}</div>` : '';
-    }).join('') + (entries.some(mod => !mod.category) ? cards(entries.filter(mod => !mod.category)) : '');
-    return `<section${status === 'alpha' ? ' id="alpha-releases"' : ''}><h2>${heading}</h2>${bylines[status] ? `<p class="section-byline">${escapeHtml(bylines[status])}</p>` : ''}${content}</section>`;
-  }).join('\n');
+  const cards = items => `<div class="catalog">${items.map(mod => {
+    const details = info[mod.id];
+    const titleTag = mod.category ? 'h4' : 'h3';
+    return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
+  }).join('')}</div>`;
+  const content = categories.map(([category, label]) => {
+    const items = entries.filter(mod => mod.category === category);
+    return items.length ? `<div class="catalog-category" id="released-${category}"><div class="category-band"><h3 class="category-heading">${label}</h3><span class="category-count">${items.length} ${items.length === 1 ? 'mod' : 'mods'}</span></div>${cards(items)}</div>` : '';
+  }).join('') + (entries.some(mod => !mod.category) ? cards(entries.filter(mod => !mod.category)) : '');
+  const released = entries.length ? `<section id="released-mods" aria-labelledby="released-mods-title"><h2 id="released-mods-title" class="release-heading">Released Mods</h2>${content}</section>` : '';
+  const development = mods.filter(mod => mod.statusConfirmed && mod.status === 'under-development');
+  const previews = development.length ? `<section><h2>Under Development</h2><div class="catalog">${development.map((_, index) => developmentPreviews[index]
+    ? `<article class="development-placeholder development-preview${developmentPreviews[index].blurred ? ' development-preview-blurred' : ''}">${photo(developmentPreviews[index])}</article>`
+    : '<article class="development-placeholder"><div class="photo-placeholder">Photo Coming Soon</div></article>').join('')}</div></section>` : '';
+  return navigation + released + previews;
 }
 
 export function renderQuickLooks(mods, info) {

@@ -268,7 +268,7 @@
     "id": "anduril-rail",
     "title": "TPG Anduril Rail",
     "featured": false,
-    "status": "alpha",
+    "status": "released",
     "statusConfirmed": true,
     "version": "1.0.1",
     "github": {
@@ -298,13 +298,13 @@
       }
     ],
     "category": "drones",
-    "releaseLabel": "Alpha"
+    "releaseLabel": "Released"
   },
   {
     "id": "fp1-drone",
     "title": "TPG FP1 Drone",
     "featured": false,
-    "status": "alpha",
+    "status": "released",
     "statusConfirmed": true,
     "version": "1.0",
     "github": {
@@ -316,7 +316,7 @@
     "image": "/assets/images/fp1-launch.png",
     "category": "drones",
     "publicVersion": "1.0",
-    "releaseLabel": "Alpha",
+    "releaseLabel": "Released",
     "sourceFilename": "TPG_FP1_Drone.zip",
     "imageAlt": "TPG FP1 Drone launching from its rail in DCS World",
     "imageGallery": [
@@ -356,5 +356,40 @@
       }
     ],
     "category": "artillery"
+  },
+  {
+    "id": "uss-constitution",
+    "title": "TPG USS Constitution",
+    "status": "released",
+    "statusConfirmed": true,
+    "featured": false,
+    "category": "naval",
+    "version": "0.1.11",
+    "showVersion": false,
+    "releaseLabel": "Released",
+    "sourceFilename": "TPG USS Constitution.zip",
+    "image": "/assets/images/constitution-hero.png",
+    "imageAlt": "TPG USS Constitution full-ship promotional view",
+    "imageGallery": [
+      {
+        "image": "/assets/images/constitution-broadside.png",
+        "caption": "TPG USS Constitution firing a broadside"
+      },
+      {
+        "image": "/assets/images/constitution-guns.png",
+        "caption": "Constitution gunports, cannons and gun smoke"
+      },
+      {
+        "image": "/assets/images/constitution-wreck.png",
+        "caption": "Destroyed Constitution with fallen masts and a burned hull"
+      }
+    ],
+    "github": {
+      "tag": "uss-constitution-v0.1.11",
+      "assetName": "TPG.USS.Constitution.zip",
+      "label": "TPG USS Constitution.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/uss-constitution-v0.1.11/TPG.USS.Constitution.zip"
+    },
+    "publicVersion": "0.1.11"
   }
 ]

@@ -5,41 +5,27 @@ import { validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 import { readFileSync } from 'node:fs';
 
-test('current mods are released by category with Anduril and FP1 in Alpha Releases', () => {
+test('available mods share Released Mods, including Naval and its quick navigation', () => {
   const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
   const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
   const html = renderCatalog(mods, info);
-  const section = html.match(/<section id="alpha-releases"><h2>Alpha Releases<\/h2>[\s\S]*?<\/section>/)?.[0];
-  assert.ok(section);
-  const alphaIds = new Set(['anduril-rail', 'fp1-drone']);
-  const released = html.match(/<section><h2>Released<\/h2>[\s\S]*?<\/section>/)?.[0];
-  assert.ok(released);
-  const fp1 = mods.find(m => m.id === 'fp1-drone');
-  assert.equal(fp1.version, '1.0');
-  assert.equal(fp1.category, 'drones');
-  assert.ok(info['fp1-drone'].facts.some(([label, value]) => label === 'Reload / shot interval' && value === '3.5 minutes'));
-  for (const id of alphaIds) {
-    assert.equal(mods.find(m => m.id === id).status, 'alpha');
-    assert.ok(section.includes(`/mods/${id}/`));
-    assert.ok(!released.includes(`/mods/${id}/`));
-  }
-  for (const mod of mods.filter(m => m.statusConfirmed && m.github && !alphaIds.has(m.id))) {
+  assert.equal((html.match(/>Released Mods<\/h2>/g) || []).length, 1);
+  assert.doesNotMatch(html, /Alpha Releases|Release Candidate|alpha-releases|Future upgrades|Perfection/);
+  for (const mod of mods.filter(m => m.statusConfirmed && m.github)) {
     assert.equal(mod.status, 'released');
-    assert.ok(released.includes(`/mods/${mod.id}/`));
-    assert.ok(!section.includes(`/mods/${mod.id}/`));
-    assert.ok(!renderDetail(mod, info[mod.id], false).includes('Release Candidate'));
+    assert.ok(html.includes(`/mods/${mod.id}/`));
   }
-  for (const [category, ids] of Object.entries({
-    'Ballistic Missiles': ['zolfaghar', 'v2'],
-    Artillery: ['12-pounder-cannon', 't34-calliope'],
-    Drones: ['shahed-238-truck', 'shahed-238'],
-    'SAM/SHORAD': ['grizzly', 'apkws-vshorad', 'sahin-cuas']
-  })) {
-    const group = released.split(`<h3 class="category-heading">${category}</h3>`)[1]?.split('<div class="catalog-category"')[0];
-    assert.ok(group, category);
-    for (const id of ids) assert.ok(group.includes(`/mods/${id}/`), id);
+  assert.match(html, /href="#released-naval">Naval<\/a>/);
+  assert.match(html, /id="released-naval"/);
+  assert.match(html, /<h3 class="category-heading">Naval<\/h3>/);
+  const ship = mods.find(m => m.id === 'uss-constitution');
+  for (const page of [renderQuickLooks([ship], info), renderDetail(ship, info[ship.id], false)]) {
+    const photos = [...page.matchAll(/src="([^"]+constitution-[^"]+)"/g)].map(m => m[1]);
+    assert.deepEqual(photos, [ship.image, ...ship.imageGallery.map(image => image.image)]);
+    assert.match(photos[1], /constitution-broadside\.png$/);
+    assert.doesNotMatch(page, /Lavaball|lava|Version 0\.1\.11/i);
+    assert.match(page, /Incendiary|incendiary/);
   }
-  assert.doesNotMatch(html, /<h2>Release Candidates<\/h2>|<h2>Alpha Release Test Candidates<\/h2>/);
   const truck = renderDetail(mods.find(m => m.id === 'shahed-238-truck'), info['shahed-238-truck'], false);
   assert.doesNotMatch(truck, /Give it a clear launch path|Includes three-round reloading|fix for it reappearing after burnout/);
   const rail = renderDetail(mods.find(m => m.id === 'shahed-238'), info['shahed-238'], false);
@@ -47,36 +33,23 @@ test('current mods are released by category with Anduril and FP1 in Alpha Releas
   assert.match(rail, /shahed-238-v1\.0\.3\/TPG_Shahed238_Rail.zip/);
 });
 
-test('release candidates share Alpha Releases with clear version labels and independent download counts', () => {
-  const candidate = {id:'shahed-238-truck',title:'Truck',status:'release-candidate',statusConfirmed:true,version:'1.1.6',github:{tag:'shahed-238-truck-v1.1.6',assetName:'truck.zip',downloadUrl:'https://example.test/truck.zip'}};
-  const details = {type:'Truck launcher',summary:'Truck.',facts:[['Ammunition','3']],notes:['Use Fire at Point.']};
-  validateMods([candidate]);
-  const catalog = renderCatalog([candidate], {[candidate.id]:details});
-  assert.match(catalog, /<h2>Alpha Releases<\/h2>/);
-  assert.doesNotMatch(catalog, /<h2>Released<\/h2>|<h2>Alpha Release Test Candidates<\/h2>/);
-  for (const html of [catalog, renderQuickLooks([candidate],{[candidate.id]:details}), renderDetail(candidate,details,false)]) {
-    assert.match(html, /Version 1\.1\.6 · Release Candidate/);
-    assert.match(html, /https:\/\/example.test\/truck.zip/);
-  }
-  const releases = [
-    {tag_name:'shahed-238-truck-v1.1.6',prerelease:true,assets:[{name:'truck.zip',download_count:4}]},
-    {tag_name:'shahed-238-v1.0.2',assets:[{name:'rail.zip',download_count:20}]}
-  ];
-  const stats = aggregate(releases,[candidate,{id:'shahed-238',github:{tag:'shahed-238-v1.0.2',assetName:'rail.zip'}}]);
-  assert.equal(stats.mods['shahed-238-truck'].currentDownloads,4);
-  assert.equal(stats.mods['shahed-238'].lifetimeDownloads,20);
-});
-
-test('status bylines replace per-mod caveats and source dropdowns', () => {
-  const mods = ['released', 'alpha'].map(status => ({id: status, title: status, status, statusConfirmed: true}));
-  const details = {summary: 'Vehicle.', type: 'Vehicle', facts: [], notes: [], sources: ['entry.lua']};
-  const info = {released: details, alpha: details};
+test('legacy release metadata does not split the public catalog or add candidate labels', () => {
+  const mods = ['released', 'alpha', 'release-candidate'].map((status, i) => ({id:`mod-${i}`,title:'Vehicle',status,statusConfirmed:true,version:'1.0',category:'drones',github:{tag:`mod-${i}-v1.0`,assetName:'mod.zip',downloadUrl:`https://example.test/${i}.zip`}}));
+  const details = {summary:'Vehicle.',type:'Vehicle',facts:[],notes:[]};
+  const info = Object.fromEntries(mods.map(mod => [mod.id, details]));
   const catalog = renderCatalog(mods, info);
-  assert.match(catalog, /Perfection isn&#39;t claimed, but extensive testing and mission use has been completed\.  Future upgrades always an option\./);
-  assert.match(catalog, /We&#39;ve seen it working and it should be generally functional\.  Visual and performance bugs to be expected, please report if encountered\.  Thanks!/);
-  for (const html of [renderQuickLooks(mods, info), ...mods.map(mod => renderDetail(mod, details, false))]) {
-    assert.doesNotMatch(html, /source-note|source-files|Source files for these facts|Figures from the supplied|<figcaption/);
+  assert.equal((catalog.match(/>Released Mods<\/h2>/g) || []).length, 1);
+  assert.doesNotMatch(catalog, /Alpha Releases|Release Candidate/);
+  for (const mod of mods) {
+    assert.ok(catalog.includes(mod.github.downloadUrl));
+    assert.doesNotMatch(renderDetail(mod,details,false), /Release Candidate/);
   }
+  const stats = aggregate([
+    {tag_name:'mod-0-v1.0',assets:[{name:'mod.zip',download_count:4}]},
+    {tag_name:'mod-1-v1.0',prerelease:true,assets:[{name:'mod.zip',download_count:20}]}
+  ],mods);
+  assert.equal(stats.mods['mod-0'].currentDownloads,4);
+  assert.equal(stats.mods['mod-1'].lifetimeDownloads,20);
 });
 
 test('development names and actions cannot appear in the catalog or Quick Look templates', () => {
