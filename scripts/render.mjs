@@ -13,7 +13,12 @@ const photo = (mod, includeGallery = false) => {
 const facts = info => `<dl class="facts">${(info.facts || []).map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>`;
 const download = mod => mod.status !== 'under-development' && mod.github ? `<a class="button primary" href="${escapeHtml(mod.github.downloadUrl)}">Download Now</a>` : '';
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
-const version = mod => mod.version && mod.showVersion !== false ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
+const formatDate = date => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const releaseMetadata = mod => {
+  const label = mod.version && mod.showVersion !== false ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
+  const date = mod.lastUpdated ? `<p class="last-updated">Last updated <time datetime="${escapeHtml(mod.lastUpdated)}">${escapeHtml(formatDate(mod.lastUpdated))}</time></p>` : '';
+  return label + date;
+};
 const detailImages = items => items?.length
   ? `<div class="photo-gallery">${items.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async">${item.credit ? `<figcaption>${escapeHtml(item.credit)}</figcaption>` : ''}</figure>`).join('')}</div>` : '';
 const detailGallery = info => info.detailGallery?.length
@@ -24,7 +29,7 @@ const history = info => info.history?.paragraphs?.length
 const payload = info => info.payloadNotes?.length
   ? `<section><h2>Warhead and ammunition</h2>${info.payloadNotes.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${detailImages(info.payloadGallery)}</section>` : '';
 const changelog = info => info.changelog?.length
-  ? `<section class="changelog"><h2>Change Log</h2>${info.changelog.map(entry => `<h3><time datetime="${escapeHtml(entry.date)}">${escapeHtml(new Date(`${entry.date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }))}</time>${entry.version ? ` · Version ${escapeHtml(entry.version)}` : ''}</h3><ul>${entry.items.map(text => `<li>${escapeHtml(text)}</li>`).join('')}</ul>`).join('')}</section>` : '';
+  ? `<section class="changelog"><h2>Change Log</h2>${info.changelog.map(entry => `<h3><time datetime="${escapeHtml(entry.date)}">${escapeHtml(formatDate(entry.date))}</time>${entry.version ? ` · Version ${escapeHtml(entry.version)}` : ''}</h3><ul>${entry.items.map(text => `<li>${escapeHtml(text)}</li>`).join('')}</ul>`).join('')}</section>` : '';
 
 export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   const categories = [['ballistic-missiles', 'Ballistic Missiles'], ['artillery', 'Artillery'], ['drones', 'Drones'], ['sam-shorad', 'SAM/SHORAD'], ['naval', 'Naval']];
@@ -34,7 +39,7 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   const cards = items => `<div class="catalog">${items.map(mod => {
     const details = info[mod.id];
     const titleTag = mod.category ? 'h4' : 'h3';
-    return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${version(mod)}${actions(mod, true)}</article>`;
+    return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${releaseMetadata(mod)}${actions(mod, true)}</article>`;
   }).join('')}</div>`;
   const content = categories.map(([category, label]) => {
     const items = entries.filter(mod => mod.category === category);
@@ -55,7 +60,7 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
 export function renderQuickLooks(mods, info) {
   return mods.filter(m => m.statusConfirmed && m.status !== 'under-development').map(mod => {
     const details = info[mod.id];
-    return `<template id="quick-${mod.id}"><p class="kicker">${escapeHtml(details.type)}</p><h2 id="quick-title-${mod.id}">${escapeHtml(mod.title)}</h2>${version(mod)}${photo(mod, true)}<p>${escapeHtml(details.summary)}</p>${facts(details)}${actions(mod)}</template>`;
+    return `<template id="quick-${mod.id}"><p class="kicker">${escapeHtml(details.type)}</p><h2 id="quick-title-${mod.id}">${escapeHtml(mod.title)}</h2>${releaseMetadata(mod)}${photo(mod, true)}<p>${escapeHtml(details.summary)}</p>${facts(details)}${actions(mod)}</template>`;
   }).join('\n');
 }
 
@@ -63,7 +68,7 @@ export function renderDetail(mod, info, launchReady) {
   const indexing = launchReady ? '' : '<meta name="robots" content="noindex,nofollow">';
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${indexing}<title>${escapeHtml(mod.title)} · TPG Mods</title><link rel="stylesheet" href="/assets/site.css"></head>
-<body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${version(mod)}${download(mod)}</header>
+<body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${releaseMetadata(mod)}${download(mod)}</header>
 ${photo(mod, true)}<section><h2>Quick facts</h2>${facts(info)}</section>
 ${info.installation?.length ? `<section><h2>Installation</h2>${info.installation.map(text => `<p>${escapeHtml(text)}</p>`).join('')}</section>` : ''}
 <section><h2>Usage notes</h2>${info.notes.map(note => `<p>${escapeHtml(note)}</p>`).join('')}${mod.sourceFilename ? `<p>Package: ${escapeHtml(mod.sourceFilename)}</p>` : ''}</section>

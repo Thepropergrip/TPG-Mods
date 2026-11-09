@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { aggregate } from '../scripts/stats.mjs';
-import { validateMods, validateVersion } from '../scripts/lib.mjs';
+import { releaseLastUpdated, validateMods, validateVersion } from '../scripts/lib.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from '../scripts/render.mjs';
 import { readFileSync } from 'node:fs';
 
@@ -14,6 +14,12 @@ test('available mods share Released Mods, including Naval and its quick navigati
   for (const mod of mods.filter(m => m.statusConfirmed && m.github)) {
     assert.equal(mod.status, 'released');
     assert.ok(html.includes(`/mods/${mod.id}/`));
+    assert.ok(mod.lastUpdated);
+    const date = `<p class="last-updated">Last updated <time datetime="${mod.lastUpdated}">`;
+    const version = mod.showVersion === false ? '' : `<p class="version">Version ${mod.publicVersion ?? mod.version}</p>`;
+    for (const page of [renderCatalog([mod], info), renderQuickLooks([mod], info), renderDetail(mod, info[mod.id], false)]) {
+      assert.ok(page.includes(version + date), mod.id);
+    }
   }
   assert.match(html, /href="#released-naval">Naval<\/a>/);
   assert.match(html, /id="released-naval"/);
@@ -31,6 +37,12 @@ test('available mods share Released Mods, including Naval and its quick navigati
   const rail = renderDetail(mods.find(m => m.id === 'shahed-238'), info['shahed-238'], false);
   assert.match(rail, /Version 1\.0\.3/);
   assert.match(rail, /shahed-238-v1\.0\.3\/TPG_Shahed238_Rail.zip/);
+});
+
+test('last updated reflects public availability of the current download in Eastern time', () => {
+  const release = { published_at: '2026-10-24T00:08:16Z' };
+  assert.equal(releaseLastUpdated(release, { created_at: '2026-10-24T00:06:24Z' }), '2026-10-23');
+  assert.equal(releaseLastUpdated(release, { created_at: '2026-10-29T16:20:28Z' }), '2026-10-29');
 });
 
 test('legacy release metadata does not split the public catalog or add candidate labels', () => {

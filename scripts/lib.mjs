@@ -41,7 +41,17 @@ export function validateMods(mods) {
     if (!['released', 'release-candidate', 'alpha', 'coming-soon', 'under-development'].includes(mod.status)) throw new Error(`Invalid status: ${mod.id}`);
     if (mod.status === 'under-development' && mod.github) throw new Error(`Under-development mods cannot have a download: ${mod.id}`);
     if (mod.github && (!mod.version || !mod.github.tag || !mod.github.assetName || !mod.github.downloadUrl)) throw new Error(`Incomplete release: ${mod.id}`);
+    if (mod.github && mod.statusConfirmed) {
+      const date = new Date(mod.lastUpdated);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(mod.lastUpdated) || Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== mod.lastUpdated) {
+        throw new Error(`Invalid or missing last updated date: ${mod.id}`);
+      }
+    }
   }
+}
+export function releaseLastUpdated(release, asset) {
+  const availableAt = Math.max(Date.parse(release.published_at), Date.parse(asset.created_at));
+  return new Intl.DateTimeFormat('en-CA', { dateStyle: 'short', timeZone: 'America/New_York' }).format(availableAt);
 }
 export function validateVersion(version) {
   if (!/^\d+(?:\.\d+){0,3}(?:-[A-Za-z0-9.-]+)?$/.test(version)) throw new Error('Use the actual numeric mod version, optionally with an alpha/beta suffix.');

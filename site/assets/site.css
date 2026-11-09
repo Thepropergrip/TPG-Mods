@@ -36,3 +36,5 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 .graded-photo-frame{position:relative;aspect-ratio:1280/690;overflow:hidden;background:#d2d7cf}.graded-photo-frame>.mod-photo{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;filter:contrast(.97) brightness(1.08) saturate(.94)}
 
 .topbar-discord img{display:block;flex-shrink:0}
+.version:has(+.last-updated){margin-bottom:0}
+.last-updated{margin:4px 0 12px;font-size:14px;color:#596056}
