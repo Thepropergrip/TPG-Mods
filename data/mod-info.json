@@ -51,7 +51,16 @@
           "url": "https://news.lockheedmartin.com/2026-06-03-Lockheed-Martin-Demonstrates-First-Ever-Sanctum-TM-C-UAS-Launch-from-GRIZZLY-TM-Containerized-Launcher"
         }
       ]
-    }
+    },
+    "changelog": [
+      {
+        "date": "2026-10-10",
+        "version": "1.0.23",
+        "items": [
+          "Made available for download."
+        ]
+      }
+    ]
   },
   "v2": {
     "type": "Ballistic rocket and launcher",
@@ -113,6 +122,15 @@
       {
         "image": "/assets/images/v2-ballistic-trajectories.png",
         "caption": "TPG V-2 trajectory plot: short, medium and long shots from a common launch point, with distance in nautical miles and altitude in feet"
+      }
+    ],
+    "changelog": [
+      {
+        "date": "2026-10-10",
+        "version": "1.0",
+        "items": [
+          "Made available for download."
+        ]
       }
     ]
   },
@@ -239,7 +257,16 @@
           "url": "https://www.l3harris.com/newsroom/press-release/2023/01/l3harris-receives-vampire-contract-ukrainian-security-defense"
         }
       ]
-    }
+    },
+    "changelog": [
+      {
+        "date": "2026-10-10",
+        "version": "0.1.4",
+        "items": [
+          "Made available for download."
+        ]
+      }
+    ]
   },
   "sahin-cuas": {
     "type": "40 mm counter-drone gun",
@@ -292,7 +319,16 @@
           "url": "https://cdn.aselsan.com/aselsanweb-prod/documents/capabilities/products/brochure/sahin-13040gl/sst-saha-n-130-40-gl-eng.pdf"
         }
       ]
-    }
+    },
+    "changelog": [
+      {
+        "date": "2026-10-10",
+        "version": "1.0.34",
+        "items": [
+          "Made available for download."
+        ]
+      }
+    ]
   },
   "akinci": {
     "type": "AI unmanned aircraft",
@@ -991,6 +1027,14 @@
       "Iron round shot weighs approximately 10.89 kg and leaves the muzzle at 400 m/s. It has no explosive filling and damages targets through impact. It is useful against lighter ships and exposed targets, with limited effectiveness against heavily protected modern warships.",
       "Incendiary round shot follows the same basic trajectory and adds a small thermal payload, with a glowing projectile and short visible trail. It delivers incendiary impact damage; persistent napalm-style ground fire is not included.",
       "Both rounds use native DCS cannon-shell behavior and do not have individual F6 weapon-camera tracking."
+    ],
+    "changelog": [
+      {
+        "date": "2026-11-06",
+        "items": [
+          "Made available for download."
+        ]
+      }
     ]
   },
   "sea-dragon": {

@@ -35,8 +35,7 @@
       "label": "TPG Zolfaghar.zip",
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/zolfaghar-v1.03/TPG.Zolfaghar.zip"
     },
-    "category": "ballistic-missiles",
-    "lastUpdated": "2026-10-29"
+    "category": "ballistic-missiles"
   },
   {
     "id": "shahed-238-truck",
@@ -70,8 +69,7 @@
         "caption": "Truck-launched Shahed-238 in flight in DCS World"
       }
     ],
-    "category": "drones",
-    "lastUpdated": "2026-10-23"
+    "category": "drones"
   },
   {
     "id": "grizzly",
@@ -91,8 +89,7 @@
     "publicVersion": "1.0.23",
     "imageAlt": "TPG Containerized SHORAD launchers firing in DCS World",
     "category": "sam-shorad",
-    "releaseLabel": "Released",
-    "lastUpdated": "2026-10-10"
+    "releaseLabel": "Released"
   },
   {
     "id": "akinci",
@@ -129,8 +126,7 @@
     ],
     "publicVersion": "1.0.3",
     "category": "drones",
-    "releaseLabel": "Released",
-    "lastUpdated": "2026-10-23"
+    "releaseLabel": "Released"
   },
   {
     "id": "fps-132",
@@ -192,8 +188,7 @@
       }
     ],
     "category": "ballistic-missiles",
-    "releaseLabel": "Released",
-    "lastUpdated": "2026-10-10"
+    "releaseLabel": "Released"
   },
   {
     "id": "12-pounder-cannon",
@@ -223,8 +218,7 @@
     ],
     "publicVersion": "1.3",
     "category": "artillery",
-    "releaseLabel": "Released",
-    "lastUpdated": "2026-10-16"
+    "releaseLabel": "Released"
   },
   {
     "id": "apkws-vshorad",
@@ -243,8 +237,7 @@
     "releaseLabel": "Released",
     "image": "/assets/images/apkws-vshorad.png",
     "imageAlt": "TPG APKWS VSHORAD turret with four rocket pods",
-    "category": "sam-shorad",
-    "lastUpdated": "2026-10-10"
+    "category": "sam-shorad"
   },
   {
     "id": "sahin-cuas",
@@ -269,8 +262,7 @@
         "caption": "TPG SAHIN C-UAS in a DCS combat scene"
       }
     ],
-    "category": "sam-shorad",
-    "lastUpdated": "2026-10-10"
+    "category": "sam-shorad"
   },
   {
     "id": "anduril-rail",
@@ -306,8 +298,7 @@
       }
     ],
     "category": "drones",
-    "releaseLabel": "Released",
-    "lastUpdated": "2026-11-01"
+    "releaseLabel": "Released"
   },
   {
     "id": "fp1-drone",
@@ -334,8 +325,7 @@
         "caption": "TPG FP1 Drone in flight over the countryside in DCS World"
       }
     ],
-    "photoTreatment": "screenshot-grade",
-    "lastUpdated": "2026-11-02"
+    "photoTreatment": "screenshot-grade"
   },
   {
     "id": "t34-calliope",
@@ -365,8 +355,7 @@
         "caption": "Custom M8 rocket in flight in DCS World"
       }
     ],
-    "category": "artillery",
-    "lastUpdated": "2026-10-25"
+    "category": "artillery"
   },
   {
     "id": "uss-constitution",
@@ -401,8 +390,7 @@
       "label": "TPG USS Constitution.zip",
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/uss-constitution-v0.1.11/TPG.USS.Constitution.zip"
     },
-    "publicVersion": "0.1.11",
-    "lastUpdated": "2026-11-06"
+    "publicVersion": "0.1.11"
   },
   {
     "id": "sea-dragon",
@@ -432,7 +420,6 @@
       "label": "TPG_Sea_Dragon_v1.1.zip",
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-v1.1/TPG_Sea_Dragon_v1.1.zip"
     },
-    "publicVersion": "1.1",
-    "lastUpdated": "2026-11-09"
+    "publicVersion": "1.1"
   }
 ]

@@ -2,7 +2,7 @@ import { stat, open, mkdir, copyFile } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve, basename } from 'node:path';
-import { at, project, readJson, writeJson, flags, validateVersion, releaseLastUpdated, gh, command } from './lib.mjs';
+import { at, project, readJson, writeJson, flags, validateVersion, gh, command } from './lib.mjs';
 
 function findRelease(repo, tag) {
   const byTag = gh(['api', `repos/${repo}/releases/tags/${tag}`], { allowFailure: true });
@@ -82,15 +82,7 @@ async function main() {
   const publishedAsset = published.assets.find(a => a.id === asset.id);
   const mods = await readJson(at('data/mods.json'));
   const mod = mods.find(m => m.id === plan.mod);
-  Object.assign(mod, {
-    version: plan.version,
-    publicVersion: plan.publicVersion ?? plan.version,
-    lastUpdated: releaseLastUpdated(published, publishedAsset),
-    status: plan.status,
-    statusConfirmed: true,
-    sourceFilename: basename(plan.zipPath),
-    github: { tag: plan.tag, assetName: publishedAsset.name, label: publishedAsset.label || basename(plan.zipPath), downloadUrl: publishedAsset.browser_download_url },
-  });
+  Object.assign(mod, { version: plan.version, publicVersion: plan.publicVersion ?? plan.version, status: plan.status, statusConfirmed: true, sourceFilename: basename(plan.zipPath), github: { tag: plan.tag, assetName: publishedAsset.name, label: publishedAsset.label || basename(plan.zipPath), downloadUrl: publishedAsset.browser_download_url } });
   await writeJson(at('data/mods.json'), mods);
   console.log('Published release. Updated data/mods.json locally; commit and push that file to update the website.');
 }
