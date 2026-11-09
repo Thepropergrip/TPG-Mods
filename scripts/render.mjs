@@ -61,6 +61,7 @@ export function renderDetail(mod, info, launchReady) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${indexing}<title>${escapeHtml(mod.title)} · TPG Mods</title><link rel="stylesheet" href="/assets/site.css"></head>
 <body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${version(mod)}${download(mod)}</header>
 ${photo(mod, true)}<section><h2>Quick facts</h2>${facts(info)}</section>
+${info.installation?.length ? `<section><h2>Installation</h2>${info.installation.map(text => `<p>${escapeHtml(text)}</p>`).join('')}</section>` : ''}
 <section><h2>Usage notes</h2>${info.notes.map(note => `<p>${escapeHtml(note)}</p>`).join('')}${mod.sourceFilename ? `<p>Package: ${escapeHtml(mod.sourceFilename)}</p>` : ''}</section>
 ${history(info)}
 ${payload(info)}

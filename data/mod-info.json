@@ -992,5 +992,61 @@
       "Incendiary round shot follows the same basic trajectory and adds a small thermal payload, with a glowing projectile and short visible trail. It delivers incendiary impact damage; persistent napalm-style ground fire is not included.",
       "Both rounds use native DCS cannon-shell behavior and do not have individual F6 weapon-camera tracking."
     ]
+  },
+  "sea-dragon": {
+    "type": "Air-defense USV",
+    "summary": "TPG Sea Dragon is an uncrewed air-defense boat for DCS World. It carries two custom infrared AIM-9X Sidewinders adapted for launch from the boat. The mod includes an AI naval unit and a Combined Arms variant you can operate on the water.",
+    "facts": [
+      [
+        "Targets",
+        "Helicopters, drones and low-flying aircraft"
+      ],
+      [
+        "Configured engagement range",
+        "300 m to 10 km"
+      ],
+      [
+        "Ammunition capacity",
+        "2 missiles per boat"
+      ],
+      [
+        "Turret travel",
+        "360 degrees of traverse, -5 to +45 degrees of elevation"
+      ],
+      [
+        "Paint schemes",
+        "Original Gray, Mediterranean Blue-Gray, Venetian Blue and WWII Dazzle"
+      ]
+    ],
+    "installation": [
+      "Close DCS. One install includes both variants. Combined Arms is required for player control.",
+      "Manual: Unzip the download. Open TPG_Sea_Dragon_v1.0\\Mods\\tech and copy the TPG Sea Dragon folder into Saved Games\\DCS\\Mods\\tech.",
+      "OvGME: Import and enable TPG_Sea_Dragon_v1.0.zip in a configuration rooted at Saved Games\\DCS. Keep the ZIP filename as downloaded.",
+      "Use your active DCS Saved Games profile if it has a different name."
+    ],
+    "notes": [
+      "TPG Sea Dragon is under Ships in the Mission Editor. Give the AI boat a route on the water, set Alarm State to Red and select an ROE that allows it to engage.",
+      "TPG Sea Dragon CA is under Ground Units > Air Defense. DCS uses its ground-unit system for direct vehicle control. We made the CA variant amphibious so it can use that system while operating on the water. Enable player control for the unit, add a Combined Arms role for the player's coalition and select the boat on the F10 map.",
+      "DCS gives naval units limited ability to turn the hull toward a target. The rotating turret lets the boat aim independently of its heading. Targets nearly overhead can pass outside the turret's elevation range."
+    ],
+    "history": {
+      "paragraphs": [
+        "The mod is inspired by Ukraine's Sea Baby uncrewed surface vessel. The Security Service of Ukraine identified Sea Baby as the boat used in the July 2023 attack on the Crimean Bridge. In December 2024, it reported that Sea Baby boats armed with heavy machine guns engaged Russian aircraft near Kerch."
+      ],
+      "references": [
+        {
+          "label": "2023 Sea Baby account",
+          "url": "https://ssu.gov.ua/en/novyny/morski-drony-unikalna-rozrobka-sbu-vasyl-maliuk-rozkryv-detali-rezonansnykh-spetsoperatsii-sluzhby-bezpeky-ukrainy"
+        },
+        {
+          "label": "2024 Kerch engagement",
+          "url": "https://ssu.gov.ua/novyny/morski-drony-sbu-vidpratsiuvaly-po-rosiiskykh-vertolotakh-ta-litakakh-ekskliuzyvni-kadry-spetsoperatsii-sea-baby-v-kerchenskii-bukhti"
+        }
+      ]
+    },
+    "payloadNotes": [
+      "TPG Mods adapted the AIM-9X for launch from the Sea Dragon's twin-rail turret. Each boat carries two of these custom Sidewinders. They pair DCS's AIM-9 air-to-air warhead with a cooled infrared seeker, with flare rejection tuned by TPG Mods for this loadout. Once a missile leaves the rail, it homes on the target's heat without further input from the operator.",
+      "The launcher is set up for short-range engagements against helicopters, drones and low-flying aircraft. Practical range depends on line of sight, target altitude, approach angle and heat signature."
+    ]
   }
 }

@@ -391,5 +391,35 @@
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/uss-constitution-v0.1.11/TPG.USS.Constitution.zip"
     },
     "publicVersion": "0.1.11"
+  },
+  {
+    "id": "sea-dragon",
+    "title": "TPG Sea Dragon",
+    "status": "released",
+    "statusConfirmed": true,
+    "featured": false,
+    "category": "naval",
+    "version": "1.0",
+    "releaseLabel": "Released",
+    "sourceFilename": "TPG_Sea_Dragon_v1.0.zip",
+    "image": "/assets/images/sea-dragon-rail-ignition.webp",
+    "imageAlt": "TPG Sea Dragon launching a Sidewinder in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/sea-dragon-wwii-dazzle.webp",
+        "caption": "TPG Sea Dragon in WWII Dazzle camouflage in DCS World"
+      },
+      {
+        "image": "/assets/images/sea-dragon-coastal-patrol.webp",
+        "caption": "TPG Sea Dragon underway off the coast in DCS World"
+      }
+    ],
+    "github": {
+      "tag": "sea-dragon-v1.0",
+      "assetName": "TPG_Sea_Dragon_v1.0.zip",
+      "label": "TPG_Sea_Dragon_v1.0.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-v1.0/TPG_Sea_Dragon_v1.0.zip"
+    },
+    "publicVersion": "1.0"
   }
 ]
