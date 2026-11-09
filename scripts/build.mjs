@@ -4,7 +4,15 @@ import { check } from './check.mjs';
 import { loadStats } from './stats.mjs';
 import { renderCatalog, renderQuickLooks, renderDetail } from './render.mjs';
 function renderTopbar() {
-  return '<header class="topbar"><nav class="topbar-inner" aria-label="Main navigation"><a class="topbar-brand" href="/">TPG Mods</a><a class="topbar-discord" href="https://discord.gg/X9RuFfS79" target="_blank" rel="noopener noreferrer" aria-label="Join TPG DCS Mods and Tools on Discord (opens in a new tab)"><img src="/assets/discord-symbol-white.svg" width="24" height="18" alt="" aria-hidden="true">Discord</a></nav></header>';
+  return `<header class="topbar">
+  <nav class="topbar-inner" aria-label="Main navigation">
+    <a class="topbar-brand" href="/">TPG Mods</a>
+    <div class="topbar-contact">
+      <a class="topbar-discord" href="https://discord.gg/X9RuFfS79" target="_blank" rel="noopener noreferrer" aria-label="Join TPG DCS Mods and Tools on Discord (opens in a new tab)"><img src="/assets/discord-symbol-blurple.svg" width="24" height="18" alt="" aria-hidden="true">Discord</a>
+      <a class="topbar-email" href="mailto:Thepropergrip@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M7.76 7.76a6 6 0 0 0 0 8.48m8.48-8.48a6 6 0 0 1 0 8.48M4.93 4.93a10 10 0 0 0 0 14.14m14.14-14.14a10 10 0 0 1 0 14.14"/></svg>Email us</a>
+    </div>
+  </nav>
+</header>`;
 }
 
 function withFooter(html) {

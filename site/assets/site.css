@@ -26,8 +26,13 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 @media(max-width:760px){.intro-video-grid{grid-template-columns:minmax(0,1fr)}.intro-video-short{width:100%;max-width:216px}}
 
 .topbar{background:#090909;color:#fff;font-size:15px;position:relative;z-index:10}.topbar-inner{min-height:48px;max-width:1800px;margin:auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:24px}.topbar a{color:#fff;text-decoration:none}.topbar-brand{font-weight:600;letter-spacing:.02em}.topbar a:focus-visible{outline-color:#fff}[hidden]{display:none!important}
-@media(max-width:560px){.topbar-inner{padding:0 20px}}
-.topbar-discord{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;font-weight:600}.topbar-discord:hover{text-decoration:underline}
+.topbar-contact{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.topbar-discord,.topbar-email{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;font-weight:600}
+.topbar-contact a:hover{text-decoration:underline}
+.topbar-email{--topbar-email-accent:#f79e00;min-height:48px;padding-top:3px;border-bottom:3px solid var(--topbar-email-accent)}
+.topbar-email svg{flex-shrink:0;color:var(--topbar-email-accent)}
+@media(max-width:560px){.topbar-inner{padding:0 16px;gap:12px}.topbar-contact{gap:4px}}
+@media(max-width:340px){.topbar-inner{padding:0 12px}.topbar-discord,.topbar-email{gap:6px;padding-inline:6px}}
 .category-links{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px}.catalog-category{margin-bottom:38px;scroll-margin-top:20px}.category-band{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#e5e9df;border-left:5px solid #43513b;padding:13px 17px;margin-bottom:20px}.category-heading{font-size:20px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0}.category-count{font-size:13px;color:#4b5743;white-space:nowrap}.catalog-category .catalog{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.catalog-category article{border-top:0;padding-top:0;min-width:0}.catalog-category .mod-photo{width:100%;aspect-ratio:16/9;object-fit:cover}.catalog-category .dcs-photo-frame{aspect-ratio:16/9}.catalog h4{font-size:19px;font-weight:600;margin:18px 0 8px}
 @media(max-width:1008px){.catalog-category .catalog{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.category-heading{font-size:16px}.category-band{padding:13px 12px}.catalog-category .catalog{grid-template-columns:minmax(0,1fr)}}
