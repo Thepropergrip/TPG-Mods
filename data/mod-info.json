@@ -1031,7 +1031,8 @@
     ],
     "history": {
       "paragraphs": [
-        "The mod is inspired by Ukraine's Sea Baby uncrewed surface vessel. The Security Service of Ukraine identified Sea Baby as the boat used in the July 2023 attack on the Crimean Bridge. In December 2024, it reported that Sea Baby boats armed with heavy machine guns engaged Russian aircraft near Kerch."
+        "The mod is inspired by Ukraine's Sea Baby uncrewed surface vessel. The Security Service of Ukraine identified Sea Baby as the boat used in the July 2023 attack on the Crimean Bridge. In December 2024, it reported that Sea Baby boats armed with heavy machine guns engaged Russian aircraft near Kerch.",
+        "In a separate operation on December 31, 2024, Defence Intelligence of Ukraine reported that a Magura V5 armed with R-73 missiles shot down a Russian Mi-8 near Cape Tarkhankut in the Black Sea."
       ],
       "references": [
         {
@@ -1041,6 +1042,21 @@
         {
           "label": "2024 Kerch engagement",
           "url": "https://ssu.gov.ua/novyny/morski-drony-sbu-vidpratsiuvaly-po-rosiiskykh-vertolotakh-ta-litakakh-ekskliuzyvni-kadry-spetsoperatsii-sea-baby-v-kerchenskii-bukhti"
+        },
+        {
+          "label": "Defence Intelligence of Ukraine report on the Magura V5 engagement",
+          "url": "https://gur.gov.ua/en/content/istorychnyi-udar-voiny-hur-vpershe-u-sviti-znyshchyly-povitrianu-tsil-za-dopomohoiu-morskoho-drona-magura-v5/"
+        },
+        {
+          "label": "Image source from The Aviationist",
+          "url": "https://theaviationist.com/2024/12/31/ukrainian-magura-usv-r-73-vs-mi-8-helicopter/"
+        }
+      ],
+      "gallery": [
+        {
+          "image": "/assets/images/sea-dragon-history-magura-v5.png",
+          "caption": "Magura V5 carrying an R-73 missile, with targeting footage in the inset",
+          "credit": "Magura V5 with an R-73 missile. Composite by The Aviationist, with the boat image from Russian Telegram channels and the inset from Defence Intelligence of Ukraine."
         }
       ]
     },

@@ -16,10 +16,7 @@
       "image": "/assets/images/development-preview.png",
       "imageAlt": "Work in progress preview"
     },
-    {
-      "image": "/assets/images/development-preview-2.png",
-      "imageAlt": "Work in progress preview"
-    },
+    null,
     {
       "image": "/assets/images/development-preview-3.png",
       "imageAlt": "Work in progress preview",

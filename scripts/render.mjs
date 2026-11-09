@@ -15,12 +15,12 @@ const download = mod => mod.status !== 'under-development' && mod.github ? `<a c
 const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a class="button" href="${modPath(mod)}" data-quick-look="${mod.id}" aria-haspopup="dialog">Quick Look</a>` : ''}${download(mod)}<a class="button" href="${modPath(mod)}">More Info</a></div>`;
 const version = mod => mod.version && mod.showVersion !== false ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
 const detailImages = items => items?.length
-  ? `<div class="photo-gallery">${items.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async"></figure>`).join('')}</div>` : '';
+  ? `<div class="photo-gallery">${items.map(item => `<figure><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.caption)}" loading="lazy" decoding="async">${item.credit ? `<figcaption>${escapeHtml(item.credit)}</figcaption>` : ''}</figure>`).join('')}</div>` : '';
 const detailGallery = info => info.detailGallery?.length
   ? `<section class="detail-gallery"><h2>${escapeHtml(info.detailGalleryHeading || 'Model profiles and research')}</h2>${info.detailGalleryIntro ? `<p>${escapeHtml(info.detailGalleryIntro)}</p>` : ''}${detailImages(info.detailGallery)}</section>` : '';
 const links = items => `<ul>${items.map(item => `<li><a href="${escapeHtml(item.url)}">${escapeHtml(item.label)}</a></li>`).join('')}</ul>`;
 const history = info => info.history?.paragraphs?.length
-  ? `<section><h2>Brief history</h2>${info.history.paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${info.history.references?.length ? links(info.history.references) : ''}</section>` : '';
+  ? `<section><h2>Brief history</h2>${info.history.paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${detailImages(info.history.gallery)}${info.history.references?.length ? links(info.history.references) : ''}</section>` : '';
 const payload = info => info.payloadNotes?.length
   ? `<section><h2>Warhead and ammunition</h2>${info.payloadNotes.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${detailImages(info.payloadGallery)}</section>` : '';
 const changelog = info => info.changelog?.length
@@ -42,9 +42,13 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   }).join('') + (entries.some(mod => !mod.category) ? cards(entries.filter(mod => !mod.category)) : '');
   const released = entries.length ? `<section id="released-mods" aria-labelledby="released-mods-title"><h2 id="released-mods-title" class="release-heading">Released Mods</h2>${content}</section>` : '';
   const development = mods.filter(mod => mod.statusConfirmed && mod.status === 'under-development');
-  const previews = development.length ? `<section><h2>Under Development</h2><div class="catalog">${development.map((_, index) => developmentPreviews[index]
-    ? `<article class="development-placeholder development-preview${developmentPreviews[index].blurred ? ' development-preview-blurred' : ''}">${photo(developmentPreviews[index])}</article>`
-    : '<article class="development-placeholder"><div class="photo-placeholder">Photo Coming Soon</div></article>').join('')}</div></section>` : '';
+  const developmentCards = development.map((_, index) => {
+    const preview = developmentPreviews[index];
+    if (preview === null) return '';
+    if (!preview) return '<article class="development-placeholder"><div class="photo-placeholder">Photo Coming Soon</div></article>';
+    return `<article class="development-placeholder development-preview${preview.blurred ? ' development-preview-blurred' : ''}">${photo(preview)}</article>`;
+  }).join('');
+  const previews = developmentCards ? `<section><h2>Under Development</h2><div class="catalog">${developmentCards}</div></section>` : '';
   return navigation + released + previews;
 }
 
