@@ -1020,8 +1020,8 @@
     ],
     "installation": [
       "Close DCS. One install includes both variants. Combined Arms is required for player control.",
-      "Manual: Unzip the download. Open TPG_Sea_Dragon_v1.0\\Mods\\tech and copy the TPG Sea Dragon folder into Saved Games\\DCS\\Mods\\tech.",
-      "OvGME: Import and enable TPG_Sea_Dragon_v1.0.zip in a configuration rooted at Saved Games\\DCS. Keep the ZIP filename as downloaded.",
+      "Manual: Unzip the download. Open TPG_Sea_Dragon_v1.1\\Mods\\tech and copy the TPG Sea Dragon folder into Saved Games\\DCS\\Mods\\tech.",
+      "OvGME: Import and enable TPG_Sea_Dragon_v1.1.zip in a configuration rooted at Saved Games\\DCS. Keep the ZIP filename as downloaded.",
       "Use your active DCS Saved Games profile if it has a different name."
     ],
     "notes": [
@@ -1063,6 +1063,15 @@
     "payloadNotes": [
       "TPG Mods adapted the AIM-9X for launch from the Sea Dragon's twin-rail turret. Each boat carries two of these custom Sidewinders. They pair DCS's AIM-9 air-to-air warhead with a cooled infrared seeker, with flare rejection tuned by TPG Mods for this loadout. Once a missile leaves the rail, it homes on the target's heat without further input from the operator.",
       "The launcher is set up for short-range engagements against helicopters, drones and low-flying aircraft. Practical range depends on line of sight, target altitude, approach angle and heat signature."
+    ],
+    "changelog": [
+      {
+        "date": "2026-11-09",
+        "version": "1.1",
+        "items": [
+          "Confined player controlled variants seeker tone to within reticle boundaries."
+        ]
+      }
     ]
   }
 }
