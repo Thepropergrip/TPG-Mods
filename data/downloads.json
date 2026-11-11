@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T19:49:45.159Z",
+  "generatedAt": "2026-11-11T19:57:04.226Z",
   "source": "github-release-assets",
   "status": "ok",
   "mods": {
@@ -229,15 +229,15 @@
         }
       ]
     },
-    "uss-constitution": {
-      "currentDownloads": 12,
-      "lifetimeDownloads": 12,
+    "sea-dragon-r-73": {
+      "currentDownloads": 0,
+      "lifetimeDownloads": 0,
       "versions": [
         {
-          "tag": "uss-constitution-v0.1.11",
-          "assetName": "TPG.USS.Constitution.zip",
-          "downloads": 12,
-          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/uss-constitution-v0.1.11/TPG.USS.Constitution.zip",
+          "tag": "sea-dragon-r-73-v1.1",
+          "assetName": "TPG_Sea_Dragon_R-73_v1.1.zip",
+          "downloads": 0,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-r-73-v1.1/TPG_Sea_Dragon_R-73_v1.1.zip",
           "prerelease": false
         }
       ]
@@ -266,6 +266,19 @@
           "downloads": 11,
           "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-v1.1.6-ir-ca3-tester/TPG_Sea_Dragon_Tester.zip",
           "prerelease": true
+        }
+      ]
+    },
+    "uss-constitution": {
+      "currentDownloads": 12,
+      "lifetimeDownloads": 12,
+      "versions": [
+        {
+          "tag": "uss-constitution-v0.1.11",
+          "assetName": "TPG.USS.Constitution.zip",
+          "downloads": 12,
+          "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/uss-constitution-v0.1.11/TPG.USS.Constitution.zip",
+          "prerelease": false
         }
       ]
     }
