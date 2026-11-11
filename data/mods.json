@@ -191,6 +191,35 @@
     "releaseLabel": "Released"
   },
   {
+    "id": "gustav-rail-gun",
+    "title": "TPG Gustav Rail Gun",
+    "status": "released",
+    "statusConfirmed": true,
+    "featured": false,
+    "version": "2.2.3",
+    "publicVersion": "2.2.3",
+    "category": "artillery",
+    "image": "/assets/images/gustav-firing-at-sunset.jpg",
+    "imageAlt": "The Gustav firing at sunset in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/gustav-elevated-on-turnout.jpg",
+        "caption": "Gustav with the barrel elevated on the turnout in DCS World"
+      },
+      {
+        "image": "/assets/images/gustav-wreck-breech.jpg",
+        "caption": "Damage behind the breech of the wrecked Gustav in DCS World"
+      }
+    ],
+    "sourceFilename": "TPG Gustav Rail Gun.zip",
+    "github": {
+      "tag": "gustav-rail-gun-v2.2.3",
+      "assetName": "TPG.Gustav.Rail.Gun.zip",
+      "label": "TPG Gustav Rail Gun.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/gustav-rail-gun-v2.2.3/TPG.Gustav.Rail.Gun.zip"
+    }
+  },
+  {
     "id": "12-pounder-cannon",
     "title": "TPG 12 Pounder Cannon",
     "featured": false,

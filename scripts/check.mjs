@@ -8,12 +8,14 @@ export async function check() {
   validateMods(mods);
   const info = await readJson(at('data/mod-info.json'));
   for (const mod of mods.filter(mod => mod.statusConfirmed && mod.github)) {
-    const entries = info[mod.id]?.changelog;
-    if (!entries?.length) throw new Error(`Missing Change Log for ${mod.id}`);
-    for (const entry of entries) {
-      const date = new Date(entry.date);
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.date) || Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== entry.date) {
-        throw new Error(`Invalid Change Log date for ${mod.id}: ${entry.date}`);
+    const details = info[mod.id];
+    const dates = (details?.changelog ?? []).map(entry => entry.date);
+    if (details?.releaseDate) dates.push(details.releaseDate);
+    if (!dates.length) throw new Error(`Missing release date for ${mod.id}`);
+    for (const value of dates) {
+      const date = new Date(value);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== value) {
+        throw new Error(`Invalid release date for ${mod.id}: ${value}`);
       }
     }
   }

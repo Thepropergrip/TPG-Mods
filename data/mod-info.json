@@ -1117,5 +1117,65 @@
         ]
       }
     ]
+  },
+  "gustav-rail-gun": {
+    "type": "WWII railway artillery",
+    "summary": "Krupp’s 80 cm Schwerer Gustav for DCS World. The carriage rolls onto curved track to aim left or right, the barrel elevates independently, and both shell types can be fired from the Combined Arms gunner seat.",
+    "releaseDate": "2026-11-11",
+    "facts": [
+      [
+        "Caliber",
+        "80 cm"
+      ],
+      [
+        "Ammunition",
+        "High explosive and concrete-piercing"
+      ],
+      [
+        "AI firing range",
+        "Approx. 1.1–47.1 km HE / 1.0–38.0 km concrete-piercing"
+      ],
+      [
+        "Reload",
+        "5 minutes of simulation time"
+      ],
+      [
+        "Traverse",
+        "15° left or right using the fitted track turnouts"
+      ],
+      [
+        "Player control",
+        "Combined Arms"
+      ],
+      [
+        "Mission Editor",
+        "Ground Units → Artillery"
+      ]
+    ],
+    "notes": [
+      "Copy TPG Gustav Rail Gun from the ZIP’s Mods/tech folder into your active Saved Games/DCS/Mods/tech/ folder and restart DCS. The package uses stock DCS controls and sound, with no separate hook required.",
+      "Place the Gustav under Artillery in Mission Editor. Give the front of the track room for the carriage to move onto either branch. Use Fire at Point for AI indirect fire, or take control from the F10 map in Combined Arms and enter the gunner view. A parked version is also available under Static Objects → Ground vehicles.",
+      "The two shells have separate flight models and dispersion in DCS. The gun has custom collision and armor zones, infrared textures, and a wreck with torn plating, shrapnel holes, scorched paint and a barrel dropped at the pivot."
+    ],
+    "history": {
+      "paragraphs": [
+        "Krupp built the Schwerer Gustav as an 80 cm railway gun. It weighed about 1,350 tonnes and traveled in sections before being assembled at its firing position. To aim left or right, the crew rolled the entire gun along a curve in the twin tracks. It saw combat at Sevastopol in June 1942. The turnout animation brings that part of its operation into DCS."
+      ],
+      "references": [
+        {
+          "label": "Polish Army Museum",
+          "url": "https://muzeumwp.pl/mwpedia/dzialo-kolejowe-dora-kal-800-mm/"
+        }
+      ]
+    },
+    "credits": [
+      "DCS conversion, animation, materials and wreck by TPG. The supplied Gustav model was posted by Leafia dev. on Sketchfab."
+    ],
+    "animation": {
+      "title": "Traverse and elevation",
+      "image": "/assets/images/gustav-traverse-and-elevation.gif",
+      "poster": "/assets/images/gustav-elevated-on-turnout.jpg",
+      "description": "The carriage moves between the left and right turnouts as the barrel raises and lowers. Recorded in DCS at 6× simulation speed."
+    }
   }
 }

@@ -14,7 +14,8 @@ test('available mods share Released Mods, including Naval and its quick navigati
   for (const mod of mods.filter(m => m.statusConfirmed && m.github)) {
     assert.equal(mod.status, 'released');
     assert.ok(html.includes(`/mods/${mod.id}/`));
-    const latest = info[mod.id].changelog.map(entry => entry.date).sort().at(-1);
+    const details = info[mod.id];
+    const latest = [details.releaseDate, ...(details.changelog ?? []).map(entry => entry.date)].filter(Boolean).sort().at(-1);
     const date = `<p class="last-updated">Last updated <time datetime="${latest}">`;
     const version = mod.showVersion === false ? '' : `<p class="version">Version ${mod.publicVersion ?? mod.version}</p>`;
     for (const page of [renderCatalog([mod], info), renderQuickLooks([mod], info), renderDetail(mod, info[mod.id], false)]) {
@@ -46,6 +47,27 @@ test('last updated uses the newest Change Log date even when entries are out of 
     changelog: [{ date: '2026-10-23', items: ['Released.'] }, { date: '2026-10-29', items: ['Updated.'] }],
   };
   assert.match(renderDetail(mod, info, false), /Last updated <time datetime="2026-10-29">October 29, 2026<\/time>/);
+});
+
+test('the Gustav is first in Artillery and its detail page has the selected media without a Change Log', () => {
+  const mods = JSON.parse(readFileSync(new URL('../data/mods.json', import.meta.url), 'utf8'));
+  const info = JSON.parse(readFileSync(new URL('../data/mod-info.json', import.meta.url), 'utf8'));
+  const artillery = mods.filter(mod => mod.category === 'artillery' && mod.status === 'released');
+  const gustav = artillery[0];
+  assert.equal(gustav.id, 'gustav-rail-gun');
+  const catalog = renderCatalog(artillery, info);
+  assert.match(catalog, /<article><img[^>]+gustav-firing-at-sunset\.jpg[^>]+><h4>TPG Gustav Rail Gun/);
+  assert.doesNotMatch(catalog, /gustav-traverse-and-elevation\.gif/);
+  const page = renderDetail(gustav, info[gustav.id], false);
+  assert.deepEqual([...page.matchAll(/src="([^"]+gustav-[^"]+)"/g)].map(match => match[1]), [
+    '/assets/images/gustav-firing-at-sunset.jpg',
+    '/assets/images/gustav-elevated-on-turnout.jpg',
+    '/assets/images/gustav-wreck-breech.jpg',
+    '/assets/images/gustav-traverse-and-elevation.gif',
+  ]);
+  assert.match(page, /Last updated <time datetime="2026-11-11">/);
+  assert.match(page, /Leafia dev\. on Sketchfab\./);
+  assert.doesNotMatch(page, /Change Log|href="https:\/\/sketchfab/);
 });
 
 test('legacy release metadata does not split the public catalog or add candidate labels', () => {

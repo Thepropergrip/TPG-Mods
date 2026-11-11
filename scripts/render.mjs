@@ -16,7 +16,7 @@ const actions = (mod, quick = false) => `<div class="actions">${quick ? `<a clas
 const formatDate = date => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 const releaseMetadata = (mod, info) => {
   const label = mod.version && mod.showVersion !== false ? `<p class="version">Version ${escapeHtml(mod.publicVersion ?? mod.version)}</p>` : '';
-  const latest = (info.changelog ?? []).reduce((date, entry) => entry.date > date ? entry.date : date, '');
+  const latest = (info.changelog ?? []).reduce((date, entry) => entry.date > date ? entry.date : date, info.releaseDate ?? '');
   return label + (latest ? `<p class="last-updated">Last updated <time datetime="${escapeHtml(latest)}">${escapeHtml(formatDate(latest))}</time></p>` : '');
 };
 const detailImages = items => items?.length
@@ -28,6 +28,10 @@ const history = info => info.history?.paragraphs?.length
   ? `<section><h2>Brief history</h2>${info.history.paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${detailImages(info.history.gallery)}${info.history.references?.length ? links(info.history.references) : ''}</section>` : '';
 const payload = info => info.payloadNotes?.length
   ? `<section><h2>Warhead and ammunition</h2>${info.payloadNotes.map(text => `<p>${escapeHtml(text)}</p>`).join('')}${detailImages(info.payloadGallery)}</section>` : '';
+const animation = item => item
+  ? `<section><h2>${escapeHtml(item.title)}</h2><picture><source media="(prefers-reduced-motion: reduce)" srcset="${escapeHtml(item.poster)}"><img class="mod-photo" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.description)}" width="640" height="360" loading="lazy" decoding="async"></picture></section>` : '';
+const credits = info => info.credits?.length || info.references?.length
+  ? `<section><h2>Credits and references</h2>${(info.credits ?? []).map(text => `<p>${escapeHtml(text)}</p>`).join('')}${info.references?.length ? links(info.references) : ''}</section>` : '';
 const changelog = info => info.changelog?.length
   ? `<section class="changelog"><h2>Change Log</h2>${info.changelog.map(entry => `<h3><time datetime="${escapeHtml(entry.date)}">${escapeHtml(formatDate(entry.date))}</time>${entry.version ? ` · Version ${escapeHtml(entry.version)}` : ''}</h3><ul>${entry.items.map(text => `<li>${escapeHtml(text)}</li>`).join('')}</ul>`).join('')}</section>` : '';
 
@@ -69,13 +73,15 @@ export function renderDetail(mod, info, launchReady) {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${indexing}<title>${escapeHtml(mod.title)} · TPG Mods</title><link rel="stylesheet" href="/assets/site.css"></head>
 <body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${releaseMetadata(mod, info)}${download(mod)}</header>
-${photo(mod, true)}<section><h2>Quick facts</h2>${facts(info)}</section>
+${photo(mod, true)}
+${animation(info.animation)}
+<section><h2>Quick facts</h2>${facts(info)}</section>
 ${info.installation?.length ? `<section><h2>Installation</h2>${info.installation.map(text => `<p>${escapeHtml(text)}</p>`).join('')}</section>` : ''}
 <section><h2>Usage notes</h2>${info.notes.map(note => `<p>${escapeHtml(note)}</p>`).join('')}${mod.sourceFilename ? `<p>Package: ${escapeHtml(mod.sourceFilename)}</p>` : ''}</section>
 ${history(info)}
 ${payload(info)}
 ${detailGallery(info)}
-${info.references?.length ? `<section><h2>Credits and references</h2>${links(info.references)}</section>` : ''}
+${credits(info)}
 ${changelog(info)}
 </main></body></html>`;
 }
