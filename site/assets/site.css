@@ -43,3 +43,6 @@ dialog{border:1px solid #d5d8ce;border-radius:6px;background:#f8f7f3;color:#3033
 .topbar-discord img{display:block;flex-shrink:0}
 .version:has(+.last-updated){margin-bottom:0}
 .last-updated{margin:4px 0 12px;font-size:14px;color:#596056}
+
+.mod-title-variant[data-variant="R-73"]{color:#a8212c}
+.mod-title-variant[data-variant="AIM-9X"]{color:#1755a3}

@@ -387,6 +387,68 @@
     "category": "artillery"
   },
   {
+    "id": "sea-dragon-r-73",
+    "title": "TPG Sea Dragon R-73",
+    "status": "released",
+    "statusConfirmed": true,
+    "featured": false,
+    "category": "naval",
+    "version": "1.1",
+    "releaseLabel": "Released",
+    "sourceFilename": "TPG_Sea_Dragon_R-73_v1.1.zip",
+    "image": "/assets/images/sea-dragon-r73-hero.webp",
+    "imageAlt": "TPG Sea Dragon R-73 at sea in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/sea-dragon-r73-rails.webp",
+        "caption": "Twin R-73 missiles on the TPG Sea Dragon turret in DCS World"
+      },
+      {
+        "image": "/assets/images/sea-dragon-r73-dazzle.webp",
+        "caption": "TPG Sea Dragon R-73 CA in WWII Dazzle camouflage in DCS World"
+      }
+    ],
+    "publicVersion": "1.1",
+    "titleVariant": "R-73",
+    "github": {
+      "tag": "sea-dragon-r-73-v1.1",
+      "assetName": "TPG_Sea_Dragon_R-73_v1.1.zip",
+      "label": "TPG_Sea_Dragon_R-73_v1.1.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-r-73-v1.1/TPG_Sea_Dragon_R-73_v1.1.zip"
+    }
+  },
+  {
+    "id": "sea-dragon",
+    "title": "TPG Sea Dragon AIM-9X",
+    "status": "released",
+    "statusConfirmed": true,
+    "featured": false,
+    "category": "naval",
+    "version": "1.1",
+    "releaseLabel": "Released",
+    "sourceFilename": "TPG_Sea_Dragon_v1.1.zip",
+    "image": "/assets/images/sea-dragon-rail-ignition.webp",
+    "imageAlt": "TPG Sea Dragon launching a Sidewinder in DCS World",
+    "imageGallery": [
+      {
+        "image": "/assets/images/sea-dragon-wwii-dazzle.webp",
+        "caption": "TPG Sea Dragon in WWII Dazzle camouflage in DCS World"
+      },
+      {
+        "image": "/assets/images/sea-dragon-coastal-patrol.webp",
+        "caption": "TPG Sea Dragon underway off the coast in DCS World"
+      }
+    ],
+    "github": {
+      "tag": "sea-dragon-v1.1",
+      "assetName": "TPG_Sea_Dragon_v1.1.zip",
+      "label": "TPG_Sea_Dragon_v1.1.zip",
+      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-v1.1/TPG_Sea_Dragon_v1.1.zip"
+    },
+    "publicVersion": "1.1",
+    "titleVariant": "AIM-9X"
+  },
+  {
     "id": "uss-constitution",
     "title": "TPG USS Constitution",
     "status": "released",
@@ -420,35 +482,5 @@
       "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/uss-constitution-v0.1.11/TPG.USS.Constitution.zip"
     },
     "publicVersion": "0.1.11"
-  },
-  {
-    "id": "sea-dragon",
-    "title": "TPG Sea Dragon",
-    "status": "released",
-    "statusConfirmed": true,
-    "featured": false,
-    "category": "naval",
-    "version": "1.1",
-    "releaseLabel": "Released",
-    "sourceFilename": "TPG_Sea_Dragon_v1.1.zip",
-    "image": "/assets/images/sea-dragon-rail-ignition.webp",
-    "imageAlt": "TPG Sea Dragon launching a Sidewinder in DCS World",
-    "imageGallery": [
-      {
-        "image": "/assets/images/sea-dragon-wwii-dazzle.webp",
-        "caption": "TPG Sea Dragon in WWII Dazzle camouflage in DCS World"
-      },
-      {
-        "image": "/assets/images/sea-dragon-coastal-patrol.webp",
-        "caption": "TPG Sea Dragon underway off the coast in DCS World"
-      }
-    ],
-    "github": {
-      "tag": "sea-dragon-v1.1",
-      "assetName": "TPG_Sea_Dragon_v1.1.zip",
-      "label": "TPG_Sea_Dragon_v1.1.zip",
-      "downloadUrl": "https://github.com/Thepropergrip/TPG-Mods/releases/download/sea-dragon-v1.1/TPG_Sea_Dragon_v1.1.zip"
-    },
-    "publicVersion": "1.1"
   }
 ]

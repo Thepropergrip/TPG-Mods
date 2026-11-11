@@ -1,5 +1,12 @@
 export const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const modPath = mod => `/mods/${mod.id}/`;
+const modTitle = ({ title, titleVariant }) => {
+  const suffix = ` ${titleVariant}`;
+  if (!titleVariant || !title.endsWith(suffix)) return escapeHtml(title);
+  return `${escapeHtml(title.slice(0, -suffix.length))} <span class="mod-title-variant" data-variant="${escapeHtml(titleVariant)}">${escapeHtml(titleVariant)}</span>`;
+};
+const intro = info => `<p>${escapeHtml(info.summary)}</p>${info.introNote ? `<p>${escapeHtml(info.introNote)}</p>` : ''}`;
+
 const photo = (mod, includeGallery = false) => {
   if (!mod?.image) return '<div class="photo-placeholder">Photo Coming Soon</div>';
   const img = (src, alt) => {
@@ -43,7 +50,7 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
   const cards = items => `<div class="catalog">${items.map(mod => {
     const details = info[mod.id];
     const titleTag = mod.category ? 'h4' : 'h3';
-    return `<article>${photo(mod)}<${titleTag}>${escapeHtml(mod.title)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${releaseMetadata(mod, details)}${actions(mod, true)}</article>`;
+    return `<article>${photo(mod)}<${titleTag}>${modTitle(mod)}</${titleTag}><p class="card-summary">${escapeHtml(details.summary)}</p>${releaseMetadata(mod, details)}${actions(mod, true)}</article>`;
   }).join('')}</div>`;
   const content = categories.map(([category, label]) => {
     const items = entries.filter(mod => mod.category === category);
@@ -64,7 +71,7 @@ export function renderCatalog(mods, info, { developmentPreviews = [] } = {}) {
 export function renderQuickLooks(mods, info) {
   return mods.filter(m => m.statusConfirmed && m.status !== 'under-development').map(mod => {
     const details = info[mod.id];
-    return `<template id="quick-${mod.id}"><p class="kicker">${escapeHtml(details.type)}</p><h2 id="quick-title-${mod.id}">${escapeHtml(mod.title)}</h2>${releaseMetadata(mod, details)}${photo(mod, true)}<p>${escapeHtml(details.summary)}</p>${facts(details)}${actions(mod)}</template>`;
+    return `<template id="quick-${mod.id}"><p class="kicker">${escapeHtml(details.type)}</p><h2 id="quick-title-${mod.id}">${modTitle(mod)}</h2>${releaseMetadata(mod, details)}${photo(mod, true)}${intro(details)}${facts(details)}${actions(mod)}</template>`;
   }).join('\n');
 }
 
@@ -72,7 +79,7 @@ export function renderDetail(mod, info, launchReady) {
   const indexing = launchReady ? '' : '<meta name="robots" content="noindex,nofollow">';
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${indexing}<title>${escapeHtml(mod.title)} · TPG Mods</title><link rel="stylesheet" href="/assets/site.css"></head>
-<body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${escapeHtml(mod.title)}</h1><p>${escapeHtml(info.summary)}</p>${releaseMetadata(mod, info)}${download(mod)}</header>
+<body><main class="page-shell detail-page"><nav><a href="/">← All mods</a></nav><header><p class="kicker">${escapeHtml(info.type)}</p><h1>${modTitle(mod)}</h1>${intro(info)}${releaseMetadata(mod, info)}${download(mod)}</header>
 ${photo(mod, true)}
 ${animation(info.animation)}
 <section><h2>Quick facts</h2>${facts(info)}</section>
